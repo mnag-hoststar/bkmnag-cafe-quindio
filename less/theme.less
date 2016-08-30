@@ -140,13 +140,12 @@ body {
 // ------------------------------
 
 .template-header {
-    position: absolute;
+    position:relative;
     top: 0;
     z-index: 10002;
     text-align:center;
     width: 100%;
-    max-width: @value__container--width;
-    padding: 30px 70px;
+    padding: 50px 0px;
 
     @media @bp-global-below-fullwidth {
         width: 100%;
@@ -179,7 +178,7 @@ body {
 
     // Flex Item
     .flex-item {
-        width: 33.333%;
+        width: 100%;
 
         @media @tablet {
             width: 40%;
