@@ -1,26 +1,26 @@
 
 @color__primary:@color__link--text;
-@color__secondary: #f5f6f7;
+@color__secondary: #413a31;
 
 
-@color__body--background:#fff;
-@color__link--text:#314beb;
+@color__body--background:#f3f0eb;
+@color__link--text:#8f8272;
 
 
 @font__companyname--font-family:@font-swatch10-font-family;
-@font__companyname--font-size:26px;
-@font__companyname--font-weight:400;
-@font__companyname--line-height:32px;
-@font__companyname--letter-spacing:2px;
-@color__companyname--text: #fff;
+@font__companyname--font-size:@font-swatch10-font-size;
+@font__companyname--font-weight:@font-swatch10-font-weight
+@font__companyname--line-height:@font-swatch10-line-height;
+@font__companyname--letter-spacing:@font-swatch10-letter-spacing;
+@color__companyname--text: @font-swatch10-color;
 
 
 @font__h1--font-family:@font-swatch1-font-family;
-@font__h1--font-size:30px;
+@font__h1--font-size:@font-swatch1-font-size;
 @font__h1--font-weight:@font-swatch1-font-weight;
-@font__h1--line-height:44px;
+@font__h1--line-height:@font-swatch1-line-height;
 @font__h1--letter-spacing:@font-swatch1-letter-spacing;
-@color__h1--text: #30323e;
+@color__h1--text: @font-swatch1-color;
 
 
 @font__h2--font-family:@font-swatch2-font-family;
@@ -28,15 +28,15 @@
 @font__h2--font-weight:@font-swatch2-font-weight;
 @font__h2--line-height:@font-swatch2-line-height;
 @font__h2--letter-spacing:inherit;
-@color__h2--text: #30323e;
+@color__h2--text: @font-swatch2-color;
 
 
 @font__h3--font-family:@font-swatch3-font-family;
-@font__h3--font-size:22px;
+@font__h3--font-size:@font-swatch3-font-size;
 @font__h3--font-weight:@font-swatch3-font-weight;
-@font__h3--line-height:34px;
+@font__h3--line-height:@font-swatch3-line-height;
 @font__h3--letter-spacing:inherit;
-@color__h3--text: #30323e;
+@color__h3--text: @font-swatch3-color;
 
 
 @font__h4--font-family:@font-swatch4-font-family;
@@ -44,75 +44,76 @@
 @font__h4--font-weight:@font-swatch4-font-weight;
 @font__h4--line-height:@font-swatch4-line-height;
 @font__h4--letter-spacing:@font-swatch4-letter-spacing;
-@color__h4--text: #30323e;
+@color__h4--text: @font-swatch4-color;
 
 
 @font__p--font-family:@font-swatch5-font-family;
-@font__p--font-size:15px;
-@font__p--font-weight:400;
-@font__p--line-height:30px;
+@font__p--font-size:@font-swatch5-font-size;
+@font__p--font-weight:@font-swatch5-font-weight;
+@font__p--line-height:@font-swatch5-line-height;
 @font__p--letter-spacing:@font-swatch5-letter-spacing;
-@color__p--text:#747682;
+@color__p--text:@font-swatch5-color;
 
 
-@color__header--background: #22242b;
+@color__header--background: #f3f0eb;
 
 @color__navigation--icon: #fff;
 @font__navigation--font-family:@font-swatch6-font-family;
-@font__navigation--font-size:20px;
-@font__navigation--font-weight:700;
-@font__navigation--line-height:26px;
-@font__navigation--letter-spacing:2px;
-@color__navigation--text: #c5c6ce;
-@color__navigation--text--selected:#fff;
+@font__navigation--font-size:@font-swatch6-font-size;
+@font__navigation--font-weight:@font-swatch6-font-weight;
+@font__navigation--line-height:@font-swatch6-line-height;
+@font__navigation--letter-spacing:@font-swatch6-letter-spacing;
+@color__navigation--text: @font-swatch6-color;
+@color__navigation--text--selected:@font-swatch6-color-hover;
 
 
 @color__form-legend--text:#fff;
-@color__form-legend--background:@color__primary;
+@color__form-legend--background:transparent;
 
 
-@color__button--background: @color__secondary;
-@color__button--text:#7e8a8e;
-@color__button--background--hover:darken(@color__button--background, 4%);
+@color__button--background: transparent;
+@color__button--text:@color__secondary;
+@color__button--background--hover:transparent;
 @font__button--font-family:@font-swatch7-font-family;
-@font__button--font-size:13px;
-@font__button--font-weight:700;
-@font__button--line-height:44px;
-@font__button--letter-spacing:2px;
+@font__button--font-size:@font-swatch7-font-size;
+@font__button--font-weight:@font-swatch7-font-weight;
+@font__button--line-height:@font-swatch7-line-height;
+@font__button--letter-spacing:@font-swatch7-letter-spacing;
 
-@color__feature-content--background: #26292f;
+@color__feature-content--background: transparent;
 @font__feature-headline--font-family:@font-swatch8-font-family;
-@font__feature-headline--font-size:70px;
-@font__feature-headline--font-weight:700;
-@font__feature-headline--line-height:72px;
-@font__feature-headline--letter-spacing:6px;
-@color__feature-headline--text:#fff;
+@font__feature-headline--font-size:@font-swatch8-font-size;
+@font__feature-headline--font-weight:@font-swatch8-font-weight;
+@font__feature-headline--line-height:@font-swatch8-line-height;
+@font__feature-headline--letter-spacing:@font-swatch8-letter-spacing;
+@color__feature-headline--text:@font-swatch8-color;
 
 @font__feature-strapline--font-family:@font-swatch9-font-family;
-@font__feature-strapline--font-size:16px;
-@font__feature-strapline--font-weight:400;
-@font__feature-strapline--line-height:34px;
+@font__feature-strapline--font-size:@font-swatch9-font-size;
+@font__feature-strapline--font-weight:@font-swatch9-font-weight;
+@font__feature-strapline--line-height:@font-swatch9-line-height;
 @font__feature-strapline--letter-spacing:@font-swatch9-letter-spacing;
-@color__feature-strapline--text:#bebebe;
+@color__feature-strapline--text:@font-swatch9-color;
 
-@color__feature-button--border:fade(@color__body--background, 10%);
+@color__feature-button--border:@color__feature-button--text;
 @color__feature-button--background:transparent;
-@color__feature-button--background--hover:fade(@color__body--background, 4%);
+@color__feature-button--background--hover:transparent;
 @color__feature-button--text:#fff;
 
-@color__gallery-caption--background: #26292f;
-@color__gallery-title--text: #fff;
-@color__gallery-description--text: #bebebe;
+@color__gallery-caption--background: fade(@color__body--background, 4%);
+@color__gallery-title--text: @color__primary;
+@color__gallery-description--text: @color__primary;
 
-@color__slideshow-caption--background: #26292f;
-@color__slideshow-title--text: #fff;
-@color__slideshow-description--text: #bebebe;
+@color__slideshow-caption--background: fade(@color__body--background, 4%);
+@color__slideshow-title--text: @color__primary;
+@color__slideshow-description--text: @color__primary;
 
 
-@color__menusections--background:darken(desaturate(@color__primary, 10%), 5%);
-@color__menu--background:fade(@color__p--text, 3%);
-@color__menu-section-header--background:@color__primary;
-@color__menu-section-featured--background:@color__primary;
+@color__menusections--background:transparent;
+@color__menu--background:transparent;
+@color__menu-section-header--background:transparent;
+@color__menu-section-featured--border:1px solid @color__primary;
+@color__menu-section-featured--background:transparent;
 
 
 @color__blogsearch-legend--background:@color__form-legend--background;
