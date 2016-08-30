@@ -23,12 +23,6 @@ html.nav-open {
 
 
 .navigation-body {
-	z-index: -1000;
-	outline: 0;
-	height: 0;
-	width: 0;
-	overflow: hidden;
-	opacity: 0;
 	-webkit-transition: opacity 0.8s ease;
 	-moz-transition: opacity 0.8s ease;
 	-o-transition: opacity 0.8s ease;
@@ -84,6 +78,9 @@ html.nav-open {
 	}
 }
 
+.template-navigation {
+    width:100%;
+}
 
 // Open navigation page overlay
 .widget__extendednavigation {
@@ -122,8 +119,8 @@ html.nav-open {
 
 
 .navigation-list {
-    max-width: 500px;
-    margin: 13% auto 0;
+    margin: 0px;
+    padding:0px;
     text-align: center;
 
     @media @mobile {
@@ -155,7 +152,7 @@ html.nav-open {
 
 
 .navigation-body .navigation-item {
-	display: block;
+	display: inline-block;
 
 	&, * {
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -168,7 +165,6 @@ html.nav-open {
 // Item Name
 // ------------------------------
 
-@color__navigation--text--hover: @color__navigation--text;
 
 .navigation-body .item-name {
 	box-shadow: inset 0px 0px 0px 2px fade(@color__navigation--text, 0%);
