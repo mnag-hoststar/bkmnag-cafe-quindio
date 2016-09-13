@@ -900,6 +900,7 @@ blockquote:before {
   line-height: 42px;
   letter-spacing: inherit;
   color: #aea293;
+    text-align:center;
   -ms-word-break: break-word;
   word-break: break-word;
   word-wrap: break-word;
