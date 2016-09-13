@@ -70,12 +70,12 @@
 // Widget Extended Navigation
 // --------------------------
 .widget.extendednavigation {
-    text-transform:uppercase!important;
     width: 100%;
     ul {
         margin: 0 auto;
         padding: 0;
         display: block;
+        text-transform:uppercase!important;
         li {
             a {
                 padding: 10px 30px;
@@ -127,7 +127,7 @@
             }
         }
     }
-    button.js-pull {
+    button.js-pull.navigation-toggle {
         display:none;
     }
 }
@@ -153,7 +153,7 @@
 		transform: none; */
 	}
 
-	.widget .extendednavigation a.pull {
+	.widget .extendednavigation button.js-pull.navigation-toggle {
 		top: -27px;
 		left: 50%;
 		transform: translate(-50%, 0);
@@ -211,7 +211,7 @@
 }
     
 @media @mobile {
-    .widget .extendednavigation a.pull {
+    .widget .extendednavigation button.js-pull.navigation-toggle {
         top: -15px;
     }
 }
