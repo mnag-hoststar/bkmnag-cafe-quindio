@@ -1,47 +1,36 @@
 {% extends "layout.twig" %}
 
 {% block content %}
+<div class="container">
+<header class="bk-header">
+	<div class="clearfix">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	</div>
+		{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+</header>
 
-<!-- Page Content -->
-<section class="page  page--home">
-	{% include "includes/hero.twig" %}
-    {{widget('gallery', 'gallery1', {'albumRef':0,'showDescription': true,'showTitle': true,'images':[{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/1.jpg'), 'title':'Image  1',  'description': 'This is image 1'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/2.jpg'), 'title':'Image  2',  'description': 'This is image 2'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/3.jpg'), 'title':'Image  3',  'description': 'This is image 3'},]})|raw}}
 
-	<!-- Zone Content -->
-    <div id="main-scroll" class="main-content">
-        <div class="container">
-
-            {{zone('main')|raw}}
-
-        </div>
-    </div>
+<section class="bk-section">
+	{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Go to Gallery","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+        {{widget('gallery', 'gallery1', {'albumRef':0,'showDescription': true,'showTitle': true,'images':[{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/1.jpg'), 'title':'Image  1',  'description': 'This is image 1'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/2.jpg'), 'title':'Image  2',  'description': 'This is image 2'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/3.jpg'), 'title':'Image  3',  'description': 'This is image 3'},]})|raw}}
 </section>
 
-{% endblock %}
+
+<div class="main container clearfix">
+	{{zone('main')|raw}}
+</div>
 
 
-{% block bodyscripts %}
+<footer class="bk-footer">
+		<div class="footerleft">
+		{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
+		</div>
+		<div class="footerright">
+		{{widget('profile', 'footerprofileright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+		</div>
+</footer>
+    </div>
 
-<script src="{{asset('js/hero.js')}}"></script>
-
-<!-- Smooth Scroll -->
-<script>
-    $(document).ready(function(){
-
-        $('a[href*=#]').bind('click', function(e) {
-            e.preventDefault();
-
-            var target = $(this).attr("href");
-
-            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
-                location.hash = target;
-            });
-
-            return false;
-        });
-
-    });
-
-</script>
 
 {% endblock %}

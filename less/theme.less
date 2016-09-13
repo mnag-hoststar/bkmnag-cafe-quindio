@@ -1,295 +1,411 @@
-// -------------------------------------
-// Kings Template: LESS > Theme
-// -------------------------------------
-// ------------------------------
+// ------------------------------------
+// BaseKit Standard Theme: LESS > Theme
+// ------------------------------------
+
+
+// -----------------------------
 // #Table of Contents
-// ------------------------------
-//  #Global Breakpoints
-//  #Site Styles
-//  #Page Styles
-//  #Header
-//  #Footer
-// ------------------------------
-// #Global Breakpoints
-// ------------------------------
-// Page is contained and centered
-@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
-// Page displayed full width
-@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
-@bp-global-large: ~"only screen and (min-width: 1400px)";
-@bp-global-medium: ~"only screen and (min-width: 770px) and (max-width: 1400px)";
-@bp-global-small: ~"only screen and (max-width: 769px)";
-@mobile: ~"only screen and (max-width: 650px)";
-// When specific styles for responsive columns styles are applied
-@bp-global-columns: ~"only screen and (min-width: 478px)";
-// ------------------------------
-// Site Styles
-// ------------------------------
+// -----------------------------
+
+
+// 1. #TYPOGRAPHY
+// 2. #CUSTOM PAGE
+// 3. #HEADER
+// 4. #FOOTER
+
+
+
+// -----------------------------
+// 1. #TYPOGRAPHY
+// -----------------------------
+
+
+// Colour Variables
+// ----------------
+
+@bg-color: @color__body--background;
+@color__primary: @color__secondary;
+@button-color: @color__button--background;
+
+@spare-color: #ffffff;
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
 body {
-    background-color: @color__body--background;
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
+	letter-spacing: .04em;
 }
 
-// Site Container
-.site-container {
-    margin 0 auto;
-    max-width: 1500px;
-    padding: 0 3%;
-    background-color: @color__container--background;
-    @media @bp-global-above-fullwidth {
-        width: 90%;
-        max-width: @value__container--width;
-        margin: 0 auto;
+
+h1, h2, h3, h4, h5, h6 {
+	padding-bottom: 7px;
+}
+
+p {
+	padding-bottom: 7px;
+    line-height: 20px;
+}
+
+ul, ol {
+	padding: 0 0 .5em 2em;
+}
+
+blockquote {
+	padding: 30px;
+}
+
+.content .bk-content-text ol {
+	list-style-position: inherit;
+}
+
+a {
+    letter-spacing: 1px;
+    &:hover {
+        font-weight: 700;
+        letter-spacing: 0.615px;
+        .transition (all, 0.1s, ease);
+        text-decoration:none;
     }
 }
 
-// Main
-.main-content {
-    position: relative;
-    padding: 40px 0;
-    z-index: 50;
-    background-color: @color__container--background;
-    @media @bp-global-large {
-        margin-top: @value__widget--spacing--desktop;
-    }
-    @media @bp-global-medium {
-        margin-top: @value__widget--spacing--laptop;
-    }
-    @media @tablet {
-        margin-top: @value__widget--spacing--tablet;
-    }
+
+
+// -----------------------------
+// 2. #CUSTOM PAGE
+// -----------------------------
+
+
+body.edit .widget.navigation, body.edit .widget.extendednavigation {
+	overflow: visible;
+}
+
+// Default Page Style
+// ------------------
+
+.bk-pt-default .bk-header {
+	border-bottom: 1px solid @color__primary;
+}
+
+
+
+// -----------------------------
+// 3. #HEADER & #BK-NAV
+// -----------------------------
+
+
+/*.bk-nav {
+	background-color: @spare-color;
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	top: 0;
+	z-index: 1;
+}*/
+
+
+.bk-header {
+	padding: 50px 0px;
     @media @mobile {
-        margin-top: @value__widget--spacing--mobile;
+        padding:20px 0;
     }
-}
-
-// ------------------------------
-// Page Styles
-// ------------------------------
-.page {
-    .flex(1 1 auto);
-    // Default Page
-    &--default .main-content,
-    &--blogpost .main-content {
-        margin-top: 0;
-        .widget:first-child {
-            margin-top: 60px;
-        }
-    }
-}
-
-// Page Title
-.pagetitle {
-    padding: 6px 70px;
-    background-color: darken(@color__container--background, 4%);
-    border-bottom: 1px solid darken(@color__container--background, 10%);
-    text-align: center;
-    @media @bp-global-medium {
-        padding: 6px 40px;
-    }
-    @media @bp-global-small {
-        padding: 6px 20px;
-    }
-}
-
-// Page Title Text
-.pagetitle-text {
-    padding-bottom: 0;
-    .heading--4;
-    @media @mobile {
-        font-size: bkscale(@font__h4--font-size, 0.7);
-        line-height: bkscale(@font__h4--line-height, 0.7);
-        text-align: center;
-    }
-}
-
-// ------------------------------
-// #Header
-// ------------------------------
-.template-header {
-    position: relative;
-    top: 0;
-    z-index: 10002;
-    text-align: center;
-    width: 100%;
-    max-width: @value__container--width;
-    padding: 50px 0px;
-    @media @bp-global-below-fullwidth {
-        width: 100%;
-    }
-    @media @bp-global-medium {
-        padding: 30px 40px;
-    }
-    @media @tablet {
-        padding: 20px;
-    }
-    @media @mobile {
-        position: relative;
-        order: 1;
-        padding: 0 0 20px;
-        background-color: @color__header--background;
-        border-bottom: 1px solid lighten(@color__header--background, 5%);
-    }
-    // Container
-    .container {
-        display:block!important;
-        .flex-display;
-        .justify-content(space-between);
-        .align-items(center);
-        @media @mobile {
-            display: block;
-        }
-    }
-    // Flex Item
-    .flex-item {
-        width: 100%;
         @media @tablet {
-            width: 100%;
-            &:first-child,
-            &:last-child {
-                width: 30%;
-            }
-        }
-        @media @mobile {
-            width: 100%;
-            &:first-child {
-                .flex-display;
-                .flex-direction(column);
-                .justify-content(center);
-                width: 80%;
-                padding: 0;
-                background-color: darken(@color__header--background, 2%);
-                border-bottom: 1px solid lighten(@color__header--background, 5%);
-                min-height: 43px;
-            }
-            &:nth-child(2) {
-                margin-top: 20px;
-            }
-            &:last-child {
-                position: absolute;
-                top: -2px;
-                right: 0;
-                width: 20%;
-                background-color: darken(@color__header--background, 2%);
-                border-bottom: 1px solid lighten(@color__header--background, 5%);
-            }
-        }
+        padding:30px 0;
     }
 }
 
-// Header: Additional
-// ------------------------------
-// For default page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
-.page--default .template-header {
-    position: relative;
-    z-index: inherit;
-    width: 100%;
-    background-color: @color__container--background;
-    min-height: auto;
-    border-bottom: 1px solid darken(@color__container--background, 10%);
-    // Flex Item
+
+
+// -----------------------------
+// 4. #FOOTER
+// -----------------------------
+.bk-footer {
+    color: @color__p--text;
+    border-top: 1px solid lighten(@color__p--text, 40%);
+    padding: 0px;
     @media @mobile {
-        .flex-item:first-child,
-        .flex-item:last-child {
-            background-color: darken(@color__container--background, 4%);
-            border-bottom: 1px solid darken(@color__container--background, 10%);
-        }
+        padding: 0px;
     }
-    // Profile Widget
-    .profile {
-        p,
-        h2,
-        h3,
-        .phone-number-link,
-        .company-link,
-        .social-link:before,
-        .emailaddress__email,
-        .button {
+    .widget.profile {
+        margin: 20px 0px;
+        @media @mobile {
+            margin: 10px 0px;
         }
-        // Twitter
-        .tweet-content a {
-            color: @color__primary;
+        .bk-profile-socialicons {
+            margin: 20px 0px;
         }
-        // Email
-        .emailaddress__email {
-            @media @tablet {
-                color: transparent;
-                &:before {
-                    color: @color__h2--text;
+        span {
+            display: inline-block;
+            a {
+                background-size: 32px;
+                background-color: transparent;
+                border: 2px solid @spare-color;
+                margin: 0 5px;
+                width: 35px;
+                height: 35px;
+                .transition (all, 0.5s, ease);
+                &:hover {
+                    background-color: @color__primary;
+                    border-bottom: 2px solid @color__primary;
+                    .transition (all, 0.5s, ease);
+                }
+                @media @mobile {
+                    margin: 0 2px;
                 }
             }
         }
-        // Form
-        .input {
-            color: @color__h2--text;
-            border-color: darken(@color__container--background, 10%);
-        }
-        // Placeholder
-        .input::-webkit-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input:-moz-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input:-ms-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        .input::-ms-input-placeholder {
-            opacity: .6;
-            color: @color__p--text;
-        }
-        // Button
-        .button {
-            position: relative;
-            top: 1px;
-            margin-top: 0;
-            padding: 0 10px;
-            border-left: 0;
-            border-right: 1px solid darken(@color__container--background, 10%);
-        }
-    }
-    // Comapny Link
-    .company-link {
-        color: @color__companyname--text;
-    }
-    // Navigation Toggle Button
-    .navigation-toggle {
-        background-color: @color__h2--text;
-        &:after,
-        &:before {
-            background: @color__h2--text;
-        }
-    }
-    .open .navigation-toggle {
-        background-color: transparent;
-        &:after,
-        &:before {
-            background: @color__container--background;
-        }
     }
 }
 
-// ------------------------------
-// #Footer
-// ------------------------------
-.template-footer {
-    width: 100%;
-    background-color: @color__container--background;
-    border-top: 1px solid darken(@color__container--background, 10%);
-    text-align: center;
-    // Widget
-    .widget {
-        @media @bp-global-large {
-            padding: 40px 70px;
-        }
-        @media @bp-global-medium {
-            padding: 30px 40px;
-        }
-        @media @bp-global-small {
-            padding: 20px 20px;
-        }
+.footerright, .footerleft {
+	display: inline-block;
+	vertical-align: middle;
+	width: 49.5%;
+	@media @mobile {
+		width: 100%;
+		text-align: center !important;
+	}
+}
+
+.footerright {
+	text-align: right;
+}
+
+.bk-footer h1,
+.bk-footer h2,
+.bk-footer h3,
+.bk-footer h4 {
+	color: @color__navigation--text;
+	padding-bottom: 1em;
+}
+
+
+// -----------------------------
+// 5. #CONTENT
+// -----------------------------
+
+.widget.content {
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.widget.content span.expand {
+    font-family: @font__button--font-family;
+    margin: 10px 0;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.expand .more,
+.expand .less {
+    font-family: @font-swatch4-font-family;
+    font-size: 12px;
+    color: @color__primary;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px;
+    border-bottom: 1px solid @color__primary;
+    letter-spacing: 1px;
+    &:hover {
+        letter-spacing: 1px!important;
+        border-bottom: 2px solid @color__primary;
+        cursor: pointer;
+        .transition (all, 0.2s, ease);
     }
+}
+
+
+
+// -----------------------------
+// 6. #GENERAL FORMS
+// -----------------------------
+
+.form-group {
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 13px!important;
+    letter-spacing: 0px!important;
+}
+
+input[type=search],
+input[type=text],
+input[type=email],
+textarea,select,
+.widget.profile form fieldset input,
+.signupform fieldset input,
+input#search-term{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid @color__body--background;
+    height: 3rem;
+    font-size: 1rem;
+    padding: 0;
+    box-shadow: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    &:focus {
+        border-bottom: 1px solid @color__primary;
+        box-shadow: 0 1px 0 0 @color__primary;
+    }
+}
+
+input:active + label,
+input:focus + label{
+    color: @color__primary;
+    display: block;
+    content: "";
+    position: absolute;
+    top: -0.8rem;
+    opacity: 1;
+    transition: .2s opacity ease-out, .2s color ease-out;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type=search],
+input[type=text],
+input[type=email],
+.signupform fieldset input {
+    width: 65%;
+    min-height: 38px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+input.js-email.email {
+    width:77%!important;
+}
+
+.blogsearch input.blog-search-input {
+    -webkit-appearance: none;
+    height: 42px;
+    width: 65%;
+    border: 0;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+
+.contactform {
+    input[type=email] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    label {
+        margin-bottom: 10px;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: block;
+    background: image('/images/arrow-small-down.svg') no-repeat center right;
+    background-size: 2.5%;
+}
+select:hover {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
+}
+option {
+    background-color: #fff;
+    margin: 0;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 999;
+    width: 520px;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    background-color: #fff;
+    margin: 0;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    z-index: 999;
+    will-change: width, height;
+}
+
+select > ul {
+    background-color: #fff;
+    margin: 0;
+    min-width: 100px;
+    max-height: 650px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 999;
+}
+
+select span {
+    color: initial;
+    position: absolute;
+    right: 0;
+    top: 16px;
+    font-size: 10px;
+}
+
+// Clearfix
+// --------
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
 }

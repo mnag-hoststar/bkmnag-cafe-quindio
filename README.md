@@ -1,2 +1,4 @@
-# variable-template
-Variable template showing new v2 variables for style editor
+Café Quindio
+=============
+
+Standard Basekit Template by Hoststar

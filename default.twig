@@ -1,29 +1,31 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-
-<section class="page  page--default">
-
-
-    {% include "includes/header.twig" %}
-
-
-    <div class="page-title">
-        {{widget('pagetitle', 'page-title', {})|raw}}
-    </div>
-
-
-    <!-- Zone Content -->
-    <div class="main-content">
-        <div class="container">
-
-            {{zone('main')|raw}}
-
-        </div>
-    </div>
+<div class="container">
+<div class="bk-pt-default">
+ <header class="bk-header">
+	<div class="clearfix">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	</div>
+		{{widget('extendednavigation', 'navigationheader', {"align":"center"})|raw}}
+</header>
 
 
-</section>
+<div class="main container clearfix">
+	{{zone('main')|raw}}
+</div>
 
+
+<footer class="bk-footer">
+		<div class="footerleft">
+		{{widget('profile', 'footerprofileleft', { 'profileType' : 'socialicons' })|raw}}
+		</div>
+		<div class="footerright">
+		{{widget('profile', 'footerprofileright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+		</div>
+</footer>
+
+</div>
+</div>
 {% endblock %}
-
