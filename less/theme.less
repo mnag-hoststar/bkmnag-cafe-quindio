@@ -71,8 +71,33 @@ ul, ol {
 
 blockquote {
 	padding: 30px;
+    &:before: {
+        content: open-quote;
+        left:-10px;
+        position:relative;
+        font-family: georgia;
+        font-size:3.05em;
+        top:.19em;
+    }
+}
+pre {
+    padding-bottom: 1em;
+    margin:0;
+    line-height:1.8em;
+    overflow:auto;
+    border: 1px solid #413a31;
+    padding:0.5em;
+    background-color:transparent;
 }
 
+code{
+    background-color:transparent;
+}
+
+legend {
+    text-transform:uppercase;
+    font-weight:700;
+}
 .content .bk-content-text ol {
 	list-style-position: inherit;
 }
@@ -145,17 +170,17 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
     @media @mobile {
         padding: 0px;
     }
-    .widget.profile {
+    .widget__profile {
         margin: 20px 0px;
         @media @mobile {
             margin: 10px 0px;
         }
-        .bk-profile-socialicons {
+        .socialicons.profile__socialicons ul.social-list {
             margin: 20px 0px;
         }
-        span {
+        li.social-item {
             display: inline-block;
-            a {
+            a.social-link {
                 background-size: 32px;
                 background-color: transparent;
                 border: 2px solid @spare-color;
@@ -164,17 +189,27 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                 height: 35px;
                 .transition (all, 0.5s, ease);
                 &:hover {
-                    background-color: @color__primary;
+                    background-color: transparent;
+                    font-weight: 300;
                     border-bottom: 2px solid @color__primary;
                     .transition (all, 0.5s, ease);
                 }
                 @media @mobile {
                     margin: 0 2px;
                 }
+                span.social-name {
+                    display: none;
+                }
+                .icon {
+                    &:before {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }
 }
+
 
 .footerright, .footerleft {
 	display: inline-block;
