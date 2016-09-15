@@ -15,28 +15,39 @@
 // -----------------------------
 
 
-.widget.blogpostlist,
-.widget.blogpost {
+.widget__blogpostlist,
+.widget__blogpost {
     margin-bottom: 40px;
 }
 
-footer.blog-list-footer {
+footer.post-list-footer {
     text-align: center;
 }
 
-.blog-list-footer a {
-    margin: 0 1em;
-    border-bottom: 1px solid @color__primary;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    color: @color__primary;
-    &:hover {
-        border-bottom: 2px solid @color__primary;
-        letter-spacing: 1px;
-        font-weight: 700;
-        text-decoration: none;
+.pagination-item {
+    letter-spacing: 1px;
+    text-align: center;
+    display: inline-block;
+    a {
+        margin: 0 1em;
+        border-bottom: 1px solid @color__primary;
+        padding: 10px 20px;
+        text-transform: uppercase;
         color: @color__primary;
-        .transition (all, 0.2s, ease);
+        background-color: transparent;
+        &:before,
+        &:after {
+            display: none;
+        }
+        &:hover {
+            border-bottom: 2px solid @color__primary;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-decoration: none;
+            color: @color__primary;
+            background-color: transparent;
+            .transition (all, 0.2s, ease);
+        }
     }
 }
 
@@ -57,6 +68,7 @@ footer.blog-list-footer {
         }
         .post-image .image {
             height:450px;
+            max-height:100%;
             background-size:cover;
             background-position:center center;
             margin-bottom:40px;
@@ -111,6 +123,7 @@ footer.blog-list-footer {
             text-decoration: none;
             padding: 14px 0px;
             letter-spacing: 0px;
+            font-size:12px;
             &:hover {
                 letter-spacing: 0px!important;
                 font-weight: 400!important;
@@ -131,20 +144,21 @@ footer.blog-list-footer {
 }
 
 //BlogPost Content section
-section.blog-post-content {
+.widget__blogpost .post-content{
     border-bottom: 1px solid @color__primary;
     padding-bottom: 25px;
 }
 
 //BlogPost Footer metadata
-footer.blog-post-metadata {
+footer.post-footer {
     margin-top: 8px;
     font-size: 0.9em!important;
 }
 
 //BlogPost Footer Category and Tags
-div.blog-post-category,
-div.blog-post-tags {
+.post-attributes{
+.post-tags.blogpost__post-category,
+.post-tags.blogpost__post-tags {
     display: inline;
     border-right: 1px solid @color__primary;
     padding: 0px 20px;
@@ -164,67 +178,62 @@ div.blog-post-tags {
         display: block;
     }
 }
-
+}
 //Blog Post Publish Date
-.blog-post-publish-date {
+footer.post-footer time.timestamp {
     font-size: 0.9em!important;
     border-right: 1px solid @color__primary;
     padding-right: 20px;
 }
 
 //Social Sharing Icon Group
-aside.blog-post-sharing {
+ul.sharing-links {
     float: right;
     position: relative;
     top: -28px;
 }
 
 //Social Sharing Blog Post Icons
-.facebook.js-facebook-btn,
-.twitter.js-twitter-btn,
-.googleplus.js-googleplus-btn {
-    width: 35px;
-    height: 35px;
-    background-color: @color__primary;
-    background-position: center center;
-    background-size: 35px;
-    outline: none;
-    span {
-        font-size: 0px;
-    }
-    &:hover {
-        border-bottom: 2px solid @color__primary;
-        .transition (all, 0.1s, ease);
+li.network-item {
+    button.button.icon.icon--facebook,
+    button.button.icon.icon--twitter,
+    button.button.icon.icon--googleplus {
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        color: @color__primary;
+        background-position: center center;
+        background-size: 35px;
         outline: none;
+        font-size:0px;
+        &:before {
+            font-size:15px;
+        }
+        &:hover {
+            border-bottom: 2px solid @color__primary;
+            .transition (all, 0.1s, ease);
+            outline: none;
+        }
+        &:active {
+            border-bottom: 2px solid @color__primary;
+            .transition (all, 0.1s, ease);
+            outline: none;
+        }
     }
-    &:active {
-        border-bottom: 2px solid @color__primary;
-        .transition (all, 0.1s, ease);
-        outline: none;
-    }
 }
-
-.facebook.js-facebook-btn {
-    background-image: image('/images/social/socialicons-facebook_mask.svg');
-}
-
-.twitter.js-twitter-btn {
-    background-image: image('/images/social/socialicons-twitter_mask.svg');
-}
-
-.googleplus.js-googleplus-btn {
-    background-image: image('/images/social/socialicons-googleplus_mask.svg');
-}
-
 // -----------------------------
 // 2. #MENU
 // -----------------------------
-.widget.menusections {
+.widget__menu {
     text-align: center;
     margin: 0 0 40px;
-    ul {
-        li {
-            a {
+    header.section-header {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .menusections-list {
+        .menusections-item {
+            a.menu-item-name {
                 border-bottom: 1px solid @color__primary;
                 padding: 10px 20px;
                 text-transform: uppercase;
@@ -244,45 +253,44 @@ aside.blog-post-sharing {
 
 .menu {
     margin-bottom: 40px;
-    .menu-header {
-        text-align: center;
-        margin-bottom: 2em;
-    }
+
     .menu-items {
         text-align: center;
         h3.menu-item-name,
         .menu-item-price {
             margin-bottom: 5px;
         }
-        li {
-            padding: 2em 0;
-        }
-        li.menu-item-promoted {
+        .menu-item{
             padding: 30px;
+        }
+        .menu-item--featured {
+            padding: 30px;
+            background-color:transparent;
             border: 1px solid @color__primary;
         }
-        .menu-item-price p {
+        .item-price p {
             color: @color__p--text;
             font-family: @font-swatch4-font-family;
             font-size: @font__button--font-size;
         }
-        h4.menu-item-nutritional-title {
+        .item-subtitle {
             text-transform: uppercase;
             padding: 15px 0px 0px 0px;
         }
-        h4.menu-item-nutritional-title,
-        .menu-item-nutritional-prop {
+        .item-subtitle,
+        .item-details {
             font-size: 12px;
         }
-        .menu-section-item-dietary-props {
+        .dietary-list {
             margin-top: 10px;
         }
-        .dietary-icon {
+        .dietary-item {
             text-transform: uppercase;
             font-size: 0.9em !important;
             margin: 0px 5px;
             font-weight: 400;
             color: @color__primary;
+            letter-spacing:1px;
             &:hover {
                 font-weight: 700;
                 text-decoration: none;
@@ -290,21 +298,22 @@ aside.blog-post-sharing {
             }
         }
     }
-    .menu-item-image-wrap {
+    .item-image {
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         height: 350px;
         margin-bottom: 20px;
-        .menu-item-image {
+        .img.image.menu__image {
             display: none;
         }
     }
     .menu-subsection {
         padding: 30px;
+        background-color: fade(@color__primary, 10%);
         border: 1px solid @color__primary;
-        .menu-subsection-header {
+        header.section-header{
             text-align: center;
         }
     }
