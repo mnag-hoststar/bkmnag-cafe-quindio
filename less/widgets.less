@@ -841,6 +841,7 @@
 .buttonwidget__button,
 .button.contactform__button,
 .button.signupform__button,
+.advancedcontactform__button,
 .button.button--submit,
 .widget.profile fieldset button.btn,
 .widget.signupform fieldset button.btn,
@@ -967,11 +968,11 @@ button.ecombasket-remove-button.js-remove,
 // -------------------------------
 // 10.  #SIGNUP FORM
 // -------------------------------
-.form-group {
+.form-group, .form-group .advancedcontactform {
     padding: 0px;
 }
 
-.widget.signupform {
+.widget__signupform {
     margin-bottom: 40px;
     fieldset {
         label {
@@ -1015,7 +1016,7 @@ button.ecombasket-remove-button.js-remove,
 // -------------------------------
 // 11.  #BLOGSEARCH FORM
 // -------------------------------
-.widget.blogsearch {
+.widget__blogsearch {
     margin-bottom: 40px;
     label {
         font-family: @font__p--font-family;
@@ -1041,7 +1042,7 @@ button.ecombasket-remove-button.js-remove,
     }
 }
 
-.widget.blogsearch button {
+.widget__blogsearch button {
     position: absolute;
     bottom: 0;
     right: 0;
