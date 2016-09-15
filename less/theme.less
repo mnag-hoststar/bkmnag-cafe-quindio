@@ -183,11 +183,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
             a.social-link {
                 background-size: 32px;
                 background-color: transparent;
-                border: 2px solid @spare-color;
                 margin: 0 5px;
                 width: 35px;
                 height: 35px;
-                .transition (all, 0.5s, ease);
                 &:hover {
                     background-color: transparent;
                     font-weight: 300;
@@ -238,19 +236,20 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 // 5. #CONTENT
 // -----------------------------
 
-.widget.content {
+.widget__content {
     padding: 0;
     overflow: hidden;
     margin-bottom: 40px;
 }
 
-.widget.content span.expand {
+.widget__content span.expand {
     font-family: @font__button--font-family;
     margin: 10px 0;
     cursor: pointer;
     display: inline-block;
     letter-spacing: .1em;
     text-transform: uppercase;
+    background-color:transparent;
 }
 
 .expand .more,
@@ -267,6 +266,7 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
         letter-spacing: 1px!important;
         border-bottom: 2px solid @color__primary;
         cursor: pointer;
+        background-color:transparent;
         .transition (all, 0.2s, ease);
     }
 }
