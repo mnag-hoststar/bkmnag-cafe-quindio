@@ -66,8 +66,9 @@
     @media @mobile {
         padding: 0px;
     }
-    a:hover {
+    &:hover {
         color: @color__secondary;
+        font-weight:400;
     }
 }
 
@@ -101,7 +102,7 @@
 .navigation-item .item-name {
     padding: 5px 15px;
     &:hover {
-        color: @color__navigation--text;
+        color: @color__navigation--text--hover;
         text-decoration: none;
     }
 }
@@ -533,11 +534,15 @@
             font-weight: @font-swatch2-font-weight;
             line-height: @font-swatch2-line-height;
             letter-spacing: @font-swatch2-letter-spacing;
+            margin-bottom:15px;
+            &:hover {
+                letter-spacing: 1px;
+            }
             &:before {
                 content: '';
                 display: block;
                 width: 80%;
-                border-top: 2px solid #ffffff;
+                border-top: 2px solid @color__gallery-title--text;
                 position: absolute;
                 margin: 5%;
                 top: 5%;
@@ -549,15 +554,15 @@
             font-weight: @font-swatch5-font-weight;
             line-height: @font-swatch5-line-height;
             letter-spacing: @font-swatch5-letter-spacing;
+            text-transform:uppercase;
             &:after {
                 content: '';
                 display: block;
                 width: 80%;
-                border-bottom: 2px solid #ffffff;
+                border-bottom: 2px solid @color__gallery-title--text;
                 position: absolute;
                 margin: 5%;
                 bottom: 5%;
-                text-transform:uppercase;
             }
         }
     }
@@ -987,7 +992,6 @@ button.ecombasket-remove-button.js-remove,
             height: 52px;
             width: 86%;
             margin-bottom: 0;
-            text-transform: uppercase;
             font-size: 0.9em;
             @media @tablet {
                 width: 78%!important;
@@ -999,7 +1003,7 @@ button.ecombasket-remove-button.js-remove,
         }
         button {
             position: absolute;
-            float: right;
+            float: left;
             bottom: 0;
             right: 0;
             background-color: #ffffff!important;
@@ -1048,7 +1052,7 @@ button.ecombasket-remove-button.js-remove,
     right: 0;
     background-color: #ffffff!important;
     border: none!important;
-    float: right;
+    float: left;
     &:focus {
         outline: none;
     }

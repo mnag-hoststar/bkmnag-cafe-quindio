@@ -208,9 +208,9 @@
             "font__navigation--font-weight": "400",
             "font__navigation--line-height": "30px",
             "font__navigation--letter-spacing": "1px",
-            "color__navigation--text": "#aea293",
-            "color__navigation--text--hover": "#fff",
-            "color__navigation--text--selected": "#fff"
+            "color__navigation--text": "#413a31",
+            "color__navigation--text--hover": "#8f8272",
+            "color__navigation--text--selected": "#413a31"
         },
         "form": {
             "color__form-legend--text" : "#aea293"
