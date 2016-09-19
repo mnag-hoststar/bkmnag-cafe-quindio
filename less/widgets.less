@@ -318,70 +318,70 @@
         -o-background-size: cover;
         background-size: cover;
         height: 500px;
-        width:100%;
-        display:table;
+        width: 100%;
+        display: table;
         @media @tablet {
-            height:350px;
+            height: 350px;
         }
-        .feature__content-wrap {
-            text-align: center;
-            margin: auto 0;
-            display: table-cell;
-            vertical-align: middle;
-            h2.feature__headline {
-                text-shadow: 1px 1px 10px #000000;
-                letter-spacing: 0px;
-                padding-bottom: 25px;
-                @media @tablet {
-                    font-size: 43px;
-                    line-height:50px;
-                    word-break: break-word; 
-                }
-                @media @mobile {
-                    font-size:32px;
-                    line-height:38px;
-                    word-break: break-word; 
-                }
+    }
+    .feature__content-wrap {
+        text-align: center;
+        margin: auto 0;
+        display: table-cell;
+        vertical-align: middle;
+        h2.feature__headline {
+            text-shadow: 1px 1px 10px #000000;
+            letter-spacing: 0px;
+            padding-bottom: 25px;
+            @media @tablet {
+                font-size: 43px;
+                line-height: 50px;
+                word-break: break-word;
             }
-            h3.feature__strapline {
-                color: #ffffff;
-                text-transform: uppercase;
-                text-shadow: 1px 1px 10px #000000;
-                word-break: break-word; 
-                @media @tablet {
-                    font-size:14px;
-                    font-weight:600;
-                    line-height:30px;
-                    word-break: break-word; 
-                }
-                @media @mobile {
-                    font-size: 12px;
-                    font-weight:600;
-                    line-height:22px;
-                    letter-spacing:1.5px;
-                    word-break: break-word; 
-                }
+            @media @mobile {
+                font-size: 32px;
+                line-height: 38px;
+                word-break: break-word;
             }
-            button.button.button--primary.feature__button.js-feature-btn {
-                padding: 15px 25px;
+        }
+        h3.feature__strapline {
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 10px #000000;
+            word-break: break-word;
+            @media @tablet {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 30px;
+                word-break: break-word;
+            }
+            @media @mobile {
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 22px;
+                letter-spacing: 1.5px;
+                word-break: break-word;
+            }
+        }
+        button.button.button--primary.feature__button.js-feature-btn {
+            padding: 15px 25px;
+            background-color: transparent;
+            border-bottom: 1px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 21px;
+            &:hover {
                 background-color: transparent;
-                border-bottom: 1px solid #ffffff;
-                color: #ffffff;
-                text-decoration: none;
-                text-transform: uppercase;
-                line-height: 21px;
-                &:hover {
-                    background-color: transparent;
-                    border-bottom: 2px solid #ffffff;
-                    font-size: 1.05em;
-                    transition: all 0.1s ease-out;
-                    @media @mobile {
-                        font-size: 1.025em!important;
-                    }
+                border-bottom: 2px solid #ffffff;
+                font-size: 1.05em;
+                transition: all 0.1s ease-out;
+                @media @mobile {
+                    font-size: 1.025em!important;
                 }
-                &:focus {
-                    outline: none;
-                }
+            }
+            &:focus {
+                outline: none;
             }
         }
     }
