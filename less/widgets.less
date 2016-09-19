@@ -526,7 +526,10 @@
         width: 32.5%;
         margin-bottom: 15px;
         @media @tablet {
-            width: 48%;
+            width: 32.5%;
+        }
+        @media @mobile {
+            width:100%
         }
         span.gallery__image-title {
             font-family: @font-swatch2-font-family;
@@ -692,6 +695,15 @@
         .image-description {
             font-size: bkscale(@font-swatch9-font-size, .9);
             line-height: bkscale(@font-swatch9-line-height, .9);
+                        &:after {
+                content: '';
+                display: block;
+                width: 80%;
+                border-bottom: 2px solid @color__gallery-title--text;
+                position: absolute;
+                margin: 5%;
+                bottom: 5%;
+            }
         }
     }
 }
@@ -700,7 +712,6 @@
 @media @tablet {
     .gallery-item {
         .image-description {
-            display: none;
         }
     }
     .gallery__figure:hover .gallery__caption .image-title:after {
@@ -994,7 +1005,7 @@ button.ecombasket-remove-button.js-remove,
             margin-bottom: 0;
             font-size: 0.9em;
             @media @tablet {
-                width: 78%!important;
+                width: 100%!important;
             }
             @media @mobile {
                 width: 100%!important;
