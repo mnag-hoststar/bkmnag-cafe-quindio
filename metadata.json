@@ -231,8 +231,8 @@
             "color__gallery-description--text" : "#ffffff"
         },
         "slideshow": {
-            "color__slideshow-title--text" : "#aea293",
-            "color__slideshow-description--text" : "#413a31"
+            "color__slideshow-title--text" : "#ffffff",
+            "color__slideshow-description--text" : "#ffffff"
         },
         "feature": {
             "color__feature-content--background": "#ffffff",
