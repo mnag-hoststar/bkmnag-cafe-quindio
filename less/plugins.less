@@ -105,7 +105,7 @@
             nav.post-pagination {
                 letter-spacing: 1px;
                 text-align: center;
-                padding:0px;
+                padding: 0px;
                 .pagination-item {
                     display: inline-block;
                     a.button.button--pagination.button--previous,
@@ -119,6 +119,9 @@
                         font-weight: 400;
                         padding: 0px;
                         width: 96%;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
                         &:before,
                         &:after {
                             display: none;
@@ -180,6 +183,9 @@
                         text-transform: uppercase;
                         a.tag-link,
                         a.category-link {
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
                             font-size: 0.9em!important;
                             margin: 0px 5px;
                             &:hover {
@@ -212,6 +218,9 @@
                             background-size: 35px;
                             outline: none;
                             font-size: 0px;
+                            -webkit-box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
                             &:before {
                                 font-size: 15px;
                             }
@@ -232,130 +241,141 @@
         }
     }
     
-// -----------------------------
-// 2. #MENU
-// -----------------------------
-//Menusection Toggle (Categories)
-.bk-menusections.menusections.widget__menusections {
-    nav.menusections-body {
-        text-align: center;
-        margin: 0 0 40px;
-        .menusections-list {
-            .menusections-item {
-                a.menu-item-name {
-                    margin: 0 1em;
-                    border-bottom: 1px solid @color__primary;
-                    padding: 10px 20px;
-                    text-transform: uppercase;
-                    color: @color__primary;
-                    background-color: transparent;
-                    &:before,
-                    &:after {
-                        display: none;
-                    }
-                    &:hover {
-                        border-bottom: 2px solid @color__primary;
-                        letter-spacing: 1px;
-                        font-weight: 700;
-                        text-decoration: none;
+    // -----------------------------
+    // 2. #MENU
+    // -----------------------------
+    //Menusection Toggle (Categories)
+    .bk-menusections.menusections.widget__menusections {
+        nav.menusections-body {
+            text-align: center;
+            margin: 0 0 40px;
+            .menusections-list {
+                .menusections-item {
+                    a.menu-item-name {
+                        margin: 0 1em;
+                        border-bottom: 1px solid @color__primary;
+                        padding: 10px 20px;
+                        text-transform: uppercase;
                         color: @color__primary;
                         background-color: transparent;
-                        .transition (all, 0.2s, ease);
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                        &:before,
+                        &:after {
+                            display: none;
+                        }
+                        &:hover {
+                            border-bottom: 2px solid @color__primary;
+                            letter-spacing: 1px;
+                            font-weight: 700;
+                            text-decoration: none;
+                            color: @color__primary;
+                            background-color: transparent;
+                            .transition (all, 0.2s, ease);
+                        }
                     }
                 }
             }
         }
     }
-}
-
-//Menu Widget
-.widget__menu {
-    margin-bottom: 40px;
-    .menu-section .menu-items {
-        text-align: center;
-        .menu-item {
+    
+    //Menu Widget
+    .widget__menu {
+        margin-bottom: 40px;
+        .menu-section .menu-items {
+            text-align: center;
+            .menu-item {
+                padding: 30px;
+                .item-image {
+                    height: 350px;
+                    a.image-link {
+                        height: 100%;
+                        margin-bottom: 40px;
+                        background-color: transparent;
+                        img.image {
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            min-height: 100%;
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-subsection,
+        .menu-section {
+            margin-bottom: 30px;
             padding: 30px;
-            .item-image {
-                height: 350px;
-                a.image-link {
-                    height: 100%;
-                    margin-bottom: 40px;
-                    background-color: transparent;
-                    img.image {
-                        background-size: cover;
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        min-height: 100%;
-                        width: auto;
-                    }
-                }
-            }
+            background-color: transparent;
+            text-align: center;
+            margin: 1.5em 0;
+        }
+        footer.section-footer {
+            text-align: center;
         }
     }
-    .menu-subsection,
-    .menu-section {
-        margin-bottom: 30px;
+    
+    //Featured Menu- Sections
+    section.menu-section--featured {
+        border: 1px solid @color__primary;
+    }
+    
+    .menu-item--featured,
+    .menu-section--featured {
         padding: 30px;
-        background-color: transparent;
-        text-align: center;
-        margin: 1.5em 0;
+        background-color: transparent!important;
+        border: 1px solid @color__primary;
     }
-    footer.section-footer {
+    
+    //Section Header
+    header.section.header {
         text-align: center;
+        padding-bottom: 2em;
     }
-}
-
-//Featured Menu- Sections
-section.menu-section--featured {
-    border: 1px solid @color__primary;
-}
-.menu-item--featured,
-.menu-section--featured {
-    padding: 30px;
-    background-color: transparent!important;
-    border: 1px solid @color__primary;
-}
-//Section Header
-header.section.header {
-    text-align: center;
-    padding-bottom: 2em;
-}
-.section-subtitle {
+    
+    .section-subtitle {
         font-family: @font-swatch5-font-family;
         font-size: @font-swatch5-font-size;
     }
-//Item Footer 
-.item-footer {
-    .item-price p {
-        color: @color__p--text;
-        font-family: @font-swatch4-font-family;
-        font-size: @font__button--font-size;
-    }
-    .item-subtitle {
-        text-transform: uppercase;
-        padding: 15px 0px 0px 0px;
-    }
-    .item-subtitle,
-    .item-details {
-        font-size: 12px;
-    }
-    .dietary-list {
-        margin-top: 10px;
-    }
-    .dietary-item {
-        text-transform: uppercase;
-        font-size: 0.9em !important;
-        margin: 0px 5px;
-        font-weight: 400;
-        color: @color__primary;
-        letter-spacing: 1px;
-        &:hover {
-            font-weight: 700;
-            text-decoration: none;
+    
+    //Item Footer 
+    .item-footer {
+        .item-price p {
+            color: @color__p--text;
+            font-family: @font-swatch4-font-family;
+            font-size: @font__button--font-size;
+        }
+        .item-subtitle {
+            text-transform: uppercase;
+            padding: 15px 0px 0px 0px;
+        }
+        .item-subtitle,
+        .item-details {
+            font-size: 12px;
+        }
+        .dietary-list {
+            margin-top: 10px;
+        }
+        .dietary-item {
+            text-transform: uppercase;
+            font-size: 0.9em !important;
+            margin: 0px 5px;
+            font-weight: 400;
+            color: @color__primary;
             letter-spacing: 1px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            &:hover {
+                font-weight: 700;
+                text-decoration: none;
+                letter-spacing: 1px;
+            }
         }
     }
-}
+    
     // -----------------------------
     // 3. #E-COMMERCE
     // -----------------------------
@@ -388,7 +408,7 @@ header.section.header {
                     font-family: @font__p--font-family;
                     letter-spacing: 1px;
                     &:hover {
-                        background-color:transparent;
+                        background-color: transparent;
                     }
                 }
                 input {
