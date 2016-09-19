@@ -69,7 +69,7 @@
     }
     &:hover {
         color: @color__secondary;
-        font-weight:400;
+        font-weight: 400;
     }
 }
 
@@ -386,6 +386,7 @@
         }
     }
 }
+
 // Feature Button Alignments //
 .widget.feature button.btn.justifyleft {
     text-align: left;
@@ -503,7 +504,7 @@
             text-align: left;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-weight:700;
+            font-weight: 700;
             &:hover {
                 color: lighten(@color__h2--text, 10%);
                 letter-spacing: 1px;
@@ -557,7 +558,7 @@
             width: 32.5%;
         }
         @media @mobile {
-            width:100%
+            width: 100%
         }
         span.gallery__image-title {
             font-family: @font-swatch2-font-family;
@@ -565,7 +566,8 @@
             font-weight: @font-swatch2-font-weight;
             line-height: @font-swatch2-line-height;
             letter-spacing: @font-swatch2-letter-spacing;
-            margin-bottom:15px;
+            margin-bottom: 15px;
+            word-break: break-word;
             &:hover {
                 letter-spacing: 1px;
             }
@@ -578,7 +580,7 @@
                 margin: 5%;
                 top: 5%;
                 @media @tablet {
-                    margin-left:0px;
+                    margin-left: 0px;
                 }
             }
         }
@@ -588,7 +590,8 @@
             font-weight: @font-swatch5-font-weight;
             line-height: @font-swatch5-line-height;
             letter-spacing: @font-swatch5-letter-spacing;
-            text-transform:uppercase;
+            word-break: break-word;
+            text-transform: uppercase;
             &:after {
                 content: '';
                 display: block;
@@ -598,7 +601,7 @@
                 margin: 5%;
                 bottom: 5%;
                 @media @tablet {
-                    margin-left:0px;
+                    margin-left: 0px;
                 }
             }
         }
@@ -723,7 +726,7 @@
         .image-description {
             font-size: bkscale(@font-swatch9-font-size, .9);
             line-height: bkscale(@font-swatch9-line-height, .9);
-                        &:after {
+            &:after {
                 content: '';
                 display: block;
                 width: 80%;
@@ -739,8 +742,7 @@
 //Tablet
 @media @tablet {
     .gallery-item {
-        .image-description {
-        }
+        .image-description {}
     }
     .gallery__figure:hover .gallery__caption .image-title:after {
         display: none;
@@ -992,7 +994,6 @@ button.ecombasket-remove-button.js-remove,
     }
 }
 
-
 // -----------------------------
 // 9.  #CONTACT FORM
 // -----------------------------
@@ -1022,11 +1023,11 @@ button.ecombasket-remove-button.js-remove,
     }
 }
 
-
 // -------------------------------
 // 10.  #SIGNUP FORM
 // -------------------------------
-.form-group, .form-group .advancedcontactform {
+.form-group,
+.form-group .advancedcontactform {
     padding: 0px;
 }
 
@@ -1118,7 +1119,7 @@ button.ecombasket-remove-button.js-remove,
 .widget__profile .profile__socialicons {
     margin: 40px 0px;
     ul.social-list {
-        padding:0px;
+        padding: 0px;
         li.social-item {
             display: inline-block;
             padding-bottom: 10px;
@@ -1149,6 +1150,7 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
+
 // Nav Bar Icons // 
 .bk-nav {
     .widget__profile {
@@ -1315,13 +1317,15 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
+
 // -----------------------------
 // 13. #TWITER FEED
 // -----------------------------
-    .widget__twitter, .profile__twitter {
+.widget__twitter,
+.profile__twitter {
     margin-bottom: 40px;
     ul.tweet-list {
-        padding:0px;
+        padding: 0px;
         li.tweet-item {
             padding: 30px;
             margin-bottom: 1em;
@@ -1369,6 +1373,7 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
+
 .widget__profile {
     .profile__twitter {
         .tweet-item {
@@ -1387,6 +1392,7 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
+
 // -----------------------------
 // 14. #DIVIDER - LINE WIDGET
 // -----------------------------
@@ -1398,7 +1404,7 @@ button.ecombasket-remove-button.js-remove,
 hr.rule {
     background-color: @color__primary;
     margin: 0;
-    height:1px;
+    height: 1px;
 }
 
 // -----------------------------
