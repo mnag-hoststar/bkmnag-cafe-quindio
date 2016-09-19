@@ -180,6 +180,9 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
         }
         li.social-item {
             display: inline-block;
+            &:hover {
+                border-bottom:2px solid @color__primary;
+            }
             .social-link {
                 background-size: 32px;
                 background-color: transparent;
@@ -189,8 +192,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
                 &:hover {
                     background-color: transparent;
                     font-weight: 300;
-                    border-bottom: 2px solid @color__primary;
-                    .transition (all, 0.5s, ease);
                 }
                 @media @mobile {
                     margin: 0 2px;

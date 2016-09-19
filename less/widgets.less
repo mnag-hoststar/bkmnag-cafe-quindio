@@ -64,7 +64,8 @@
     display: inline-block;
     padding: 0.65em 0 0.8em;
     @media @mobile {
-        padding: 0px;
+        padding: 20px 0px;
+        font-size: 24px;
     }
     &:hover {
         color: @color__secondary;
@@ -792,22 +793,23 @@
 // -----------------------------
 .widget__responsiveslideshow {
     margin-bottom: 40px;
-    ul.slides-list .contain {
+    ul.slides-list {
         padding: 0px;
         li.slide-item {
-            .figure.figure {
+            .figure {
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
                 min-height: 650px;
-                .caption {
+                padding: 0px;
+                .image-title.responsiveslideshow__image-title {
+                    font-weight: 600;
+                    text-transform: uppercase;
                     color: @color__slideshow-title--text;
-                    span.image-title {
-                        font-weight:600;
-                        text-transform:uppercase;
-                    }
-                    span.image-description {}
+                }
+                .image-description.responsiveslideshow__image-description {
+                    color: @color__slideshow-title--text;
                 }
             }
         }
@@ -862,6 +864,7 @@
         }
     }
     nav.slide-pagination {
+        text-align: center;
         .pagination-list {
             margin: 10px 0;
             .pagination-item {
@@ -873,10 +876,11 @@
                     height: 8px!important;
                     margin: 0 4px;
                     cursor: pointer;
-                }
-                .button.button--pagination.selected {
-                    background-color: @color__primary;
-                    border: none;
+                    padding: 0px;
+                    .selected {
+                        background-color: @color__primary;
+                        border: none;
+                    }
                 }
             }
         }
@@ -967,7 +971,7 @@ button.ecombasket-remove-button.js-remove,
         border-bottom: 1px solid @color__primary;
         text-transform: uppercase;
         font-weight: 700;
-        letter-spacing:0px;
+        letter-spacing: 0px;
         &:before {
             font-size: 1.25em;
         }
