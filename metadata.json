@@ -244,8 +244,8 @@
             "font__feature-headline--letter-spacing": "inherit",
 
             "font__feature-strapline--font-family" : "@font-swatch9-font-family",
-            "font__feature-strapline--font-size" : "20px",
-            "font__feature-strapline--font-weight" : "400",
+            "font__feature-strapline--font-size" : "16px",
+            "font__feature-strapline--font-weight" : "600",
             "font__feature-strapline--line-height" : "30px",
             "font__feature-strapline--letter-spacing" : "2px",
             "color__feature-strapline--text" : "#ffffff"
