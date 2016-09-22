@@ -27,6 +27,8 @@
 // 16.   #MAP
 // 17.   #YOUTUBE
 // 18.   #YELP, SOUNDCLOUD ...
+
+
 // -----------------------------
 // 1.  #LOGO
 // -----------------------------
@@ -49,7 +51,7 @@
 // -----------------------------
 // 2.  #COMPANY NAME
 // -----------------------------
-.widget.companyname {
+.companyname {
     width: 100%;
     text-align: center;
     margin: 20px 0px;
@@ -58,7 +60,7 @@
     }
 }
 
-.companyname a {
+a.company-link {
     font-style: normal;
     position: relative;
     display: inline-block;
@@ -91,7 +93,7 @@
 
 // Default Page
 .default-page .navigation-list--children {
-    background-color: @color-swatch2;
+    background-color: @color__primary;
 }
 
 // Navigation Item
@@ -178,7 +180,7 @@
 
 .navigation-list--children,
 .default-page .navigation-list--children {
-    background-color: @color-swatch1;
+    background-color: @color__body--background;
     z-index: 99999;
     .navigation__item-name {
         color: @color__feature-strapline--text;
@@ -259,10 +261,10 @@
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch3;
+            background-color: @color__primary;
             &:before {
                 margin-top: 21px;
-                background: @color-swatch1;
+                background: @color__body--background;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -281,7 +283,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color-swatch1;
+                background: @color__primary;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
@@ -315,189 +317,89 @@
 // -----------------------------
 // 4.  #FEATURE
 // -----------------------------
-.widget__feature {
-    .feature__background-image {
-        background-repeat: no-repeat;
-        background-position: center top;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        height: 500px;
-        width: 100%;
-        display: table;
-        @media @tablet {
-            height: 350px;
-        }
-    }
-    .feature__content-wrap {
-        text-align: center;
-        margin: auto 0;
-        display: table-cell;
-        vertical-align: middle;
-        h2.feature__headline {
-            text-shadow: 1px 1px 10px #000000;
-            letter-spacing: 0px;
-            padding-bottom: 25px;
-            @media @tablet {
-                font-size: 43px;
-                line-height: 50px;
-                word-break: break-word;
-            }
-            @media @mobile {
-                font-size: 32px;
-                line-height: 38px;
-                word-break: break-word;
-            }
-        }
-        h3.feature__strapline {
-            color: #ffffff;
-            text-transform: uppercase;
-            text-shadow: 1px 1px 10px #000000;
-            word-break: break-word;
-            @media @tablet {
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 30px;
-                word-break: break-word;
-            }
-            @media @mobile {
-                font-size: 12px;
-                font-weight: 600;
-                line-height: 22px;
-                letter-spacing: 1.5px;
-                word-break: break-word;
-            }
-        }
-        button.button.button--primary.feature__button.js-feature-btn {
-            padding: 15px 25px;
-            background-color: transparent;
-            border-bottom: 1px solid #ffffff;
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            line-height: 21px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            &:hover {
-                background-color: transparent;
-                box-shadow: 0 2px 0 white;
-                font-size: 1.05em;
-                transition: all 0.1s ease-out;
-                @media @mobile {
-                    font-size: 1.025em!important;
-                }
-            }
-            &:focus {
-                outline: none;
-            }
-        }
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: table;
+    @media @tablet {
+        height: 350px;
     }
 }
 
-// Feature Button Alignments //
-.widget.feature button.btn.justifyleft {
-    text-align: left;
-}
+// Feature Content Wrap
+// --------------------
 
-.widget.feature button.btn.justifycenter {
+.feature__content-wrap {
     text-align: center;
+    margin: auto 0;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.widget.feature button.btn.justifyright {
-    text-align: right;
-}
-
-.widget.feature button.btn.justifyfull {
-    text-align: justify;
-}
-
-.widget.feature button.btn.italic {
-    font-style: italic;
-}
-
-.widget.feature button.btn.bold {
-    font-weight: bold;
-}
-
-.widget.feature button i {
-    margin-right: 5px;
-}
-
-// Feature Layouts//
-
-/* LEFT ALIGN */
-
-.widget.feature.align-left .content {
-    width: 100%;
-    text-align: left;
-}
-
-
-/* CENTER ALIGN */
-
-.widget.feature.align-center .content {
-    width: 100%;
-    text-align: center;
-}
-
-
-/* RIGHT ALIGN */
-
-.widget.feature.align-right .content {
-    width: 100%;
-    text-align: right;
-}
-
-// Responsive Feature// 
-@media @tablet {
-    .widget.feature {
-        .feature-bgimg {
-            height: 300px;
-            .content {
-                height: 300px;
-            }
-        }
-        h2 {
-            font-size: bkscale(@font__feature-headline--font-size, 0.8);
-            line-height: bkscale(@font__feature-headline--line-height, 0.8);
-            letter-spacing: .1em;
-        }
-        h3 {
-            font-size: bkscale(@font__feature-strapline--font-size, 0.9);
-            line-height: bkscale(@font__feature-strapline--line-height, 0.9);
-        }
-        .feature-btn button {}
+// Feature Content
+// ---------------
+h2.feature__headline {
+    text-shadow: 1px 1px 10px #000000;
+    letter-spacing: 0px;
+    padding-bottom: 25px;
+    @media @tablet {
+        font-size: 43px;
+        line-height: 50px;
+        word-break: break-word;
+    }
+    @media @mobile {
+        font-size: 32px;
+        line-height: 38px;
+        word-break: break-word;
     }
 }
 
-@media @mobile {
-    .widget.feature {
-        .feature-bgimg {
-            height: 300px;
-            .content {
-                height: 220px;
-            }
+h3.feature__strapline {
+    color: @color__feature-headline--text;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000000;
+    word-break: break-word;
+    @media @tablet {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 30px;
+        word-break: break-word;
+    }
+    @media @mobile {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+        word-break: break-word;
+    }
+}
+
+// Feature Button
+// ---------------
+.feature__button {
+    padding: 15px 25px;
+    background-color: transparent;
+    border-bottom: 1px solid @color__feature-headline--text;
+    text-transform: uppercase;
+    line-height: 21px;
+    &:hover {
+        background-color: transparent;
+        box-shadow: 0 2px 0 @color__feature-headline--text;
+        font-size: 1.05em;
+        transition: all 0.1s ease-out;
+        @media @mobile {
+            font-size: 1.025em!important;
         }
-        h2 {
-            font-size: bkscale(@font__feature-headline--font-size, 0.6);
-            line-height: bkscale(@font__feature-headline--line-height, 0.6);
-            padding-bottom: .1em;
-        }
-        h3 {
-            font-size: bkscale(@font__feature-strapline--font-size, 0.8);
-            line-height: bkscale(@font__feature-strapline--line-height, 0.8);
-            padding-bottom: .8em;
-        }
-        .feature-btn {
-            button {
-                width: 65%;
-                padding: 10px!important;
-                font-size: bkscale(@font__button--font-size, 0.8);
-                line-height: bkscale(@font__button--line-height, 0.8);
-            }
-        }
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -511,7 +413,6 @@
             margin: 10px 0 0;
             color: @color__h2--text;
             text-align: left;
-            letter-spacing: 1px;
             text-transform: uppercase;
             font-weight: 700;
             -webkit-box-sizing: border-box;
@@ -519,7 +420,6 @@
             box-sizing: border-box;
             &:hover {
                 color: lighten(@color__h2--text, 10%);
-                letter-spacing: 1px;
             }
         }
         span.image-description {
@@ -580,7 +480,7 @@
             font-size: @font-swatch2-font-size;
             font-weight: @font-swatch2-font-weight;
             line-height: @font-swatch2-line-height;
-            letter-spacing: @font-swatch2-letter-spacing;
+            letter-spacing: 1px;
             margin-bottom: 15px;
             word-break: break-word;
             &:hover {
@@ -1019,13 +919,12 @@ button.ecombasket-remove-button.js-remove,
             font-size: 1.25em;
         }
         &:hover {
-            box-shadow: 0 3px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__primary;
             -webkit-transition: all 0.2s ease;
             -moz-transition: all 0.2s ease;
             -ms-transition: all 0.2s ease;
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease;
-            letter-spacing: 1px;
         }
     }
 }
@@ -1207,144 +1106,6 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
-
-// SVG Icons // 
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/social/socialicons-linkedin_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-facebook a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/social/socialicons-facebook_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-rss a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/social/socialicons-rss_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/social/socialicons-googleplus_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-youtube a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/social/socialicons-youtube_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-instagram a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
-    background-image: image('/images/social/socialicons-instagram_mask.svg');
-    background-color: @color__primary;
-}
-
-.svg .widget.socialicons span.bk-socialicons-pinterest a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
-    background-image: image('/images/social/socialicons-pinterest_mask.svg');
-    background-color: @color__primary;
-}
-
-// PNG Icons // 
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-    background-image: image('/images/social/socialicons-twitter_mask.svg');
-}
-
-.widget.socialicons span.bk-socialicons-linkedin a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-    background-image: image('/images/social/socialicons-linkedin.svg');
-}
-
-.widget.socialicons span.bk-socialicons-facebook a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-    background-image: image('/images/social/socialicons-facebook.svg');
-}
-
-.widget.socialicons span.bk-socialicons-rss a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-    background-image: image('/images/social/socialicons-rss.svg');
-}
-
-.widget.socialicons span.bk-socialicons-googleplus a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-    background-image: image('/images/social/socialicons-googleplus.svg');
-}
-
-.widget.socialicons span.bk-socialicons-youtube a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-    background-image: image('/images/social/socialicons-youtube.svg');
-}
-
-.widget.socialicons span.bk-socialicons-instagram a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
-    background-image: image('/images/social/socialicons-instagram.svg');
-}
-
-.widget.socialicons span.bk-socialicons-pinterest a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
-    background-image: image('/images/social/socialicons-pinterest.svg');
-}
-
-
-/*
-
-// BK-NAV & FOOTER SVG Icons
-// -------------------------
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-	background-image: image('/images/social/socialicons-twitter.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-	background-image: image('/images/social/socialicons-linkedin.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-	background-image: image('/images/social/socialicons-facebook.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-	background-image: image('/images/social/socialicons-rss.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-	background-image: image('/images/social/socialicons-googleplus.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-	background-image: image('/images/social/socialicons-youtube.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-instagram a {
-	background-image: image('/images/social/socialicons-instagram.svg');
-}
-
-.bk-nav .widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a,
-.bk-footer .widget.profile .bk-profile-socialicons span.bk-socialicons-pinterest a {
-	background-image: image('/images/social/socialicons-pinterest.svg');
-}
-
-*/
 
 .widget__companyphone {
     a.phone-number-link {
