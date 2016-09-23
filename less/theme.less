@@ -479,18 +479,21 @@ input[type="checkbox"]:checked {
     box-shadow: 0px 0px 0px 2px @color__primary;
 }
 
-.label--checkbox, .label--radio {
+.form-group > .label{
     text-transform: uppercase;
     font-weight: 700;
 }
 
-.option-item {
-    .label--checkbox,
-    .label--radio {
-        left: 25px;
-        position: relative;
-        bottom: 5px;
-    }
+.option-item > .label--checkbox,
+.option-item > .label--radio {
+    left: 25px;
+    text-transform: none;
+    font-weight: 300;
+    position: relative;
+    bottom: 5px;
+}
+
+
 }
 .option-item--radio, 
 .option-item--checkbox {
