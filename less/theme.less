@@ -442,6 +442,32 @@ select span {
     }
 }
 
+.advancedcontactform__option-list {
+    padding:0px;
+    
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none!important;
+    width: 20px!important;
+    height: 20px!important;
+    margin-right: 20px;
+    position: absolute;
+    border: 3px solid @color__primary;
+}
+
+input[type="radio"] {
+    border-radius: 100%;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  background-color: @color__primary;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s
+}
+
 .option-item--radio, 
 .option-item--checkbox {
     display: block;

@@ -257,10 +257,9 @@
             "color__twitter-account-name--text" : "#413a31"
         },
         "socialicons": {
-            "color__socialicons--icon" : "#aea293",
-            "color__socialicons--icon--hover" : "#8f8272",
-            "color__socialicons--icon--background" : "#ffffff",
-            "color__socialicons--icon--hover" : "#ffffff"
+            "color__socialicons--icon": "@color__primary",
+            "color__socialicons--icon--hover": "@color-swatch1",
+            "color__socialicons--icon--background": "transparent"
         },
         "feature": {
             "color__feature-content--background": "#ffffff",

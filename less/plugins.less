@@ -356,135 +356,98 @@ header.section.header {
 
 // Products List
 // -------------
-.widget__ecomproductslist {
+.widget__ecomproductslist,
+.widget__ecomfeaturedproducts {
     max-width: none;
     margin-left: 0;
     margin-bottom: 40px;
-    .product-filters {
-        margin-left: 0;
-        margin-bottom: 40px;
-        form.form {
-            text-align: left;
-            .form-group,
-            .form-group .advancedcontactform {
-                width: 100%;
-                margin: 0;
-            }
-            label {
-                font-family: @font__p--font-family;
-                font-size: @font__p--font-size;
-                font-weight: @font__p--font-weight;
-                line-height: @font__p--line-height;
-                color: @color__p--text;
-                letter-spacing: @font__p--letter-spacing;
-            }
-            select {
-                width: 100%;
-                font-family: @font__p--font-family;
-                letter-spacing: 1px;
-                &:hover {
-                    background-color: transparent!important;
-                }
-            }
-            input {
-                height: 52px;
-                width: 100%;
-                margin-bottom: 0;
-                margin-top: 10px;
-                border-bottom: 1px solid @color__body--background;
-                display: block;
-            }
-            .productlist-search {
-                position: relative;
-                button {
-                    float: right;
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                }
-            }
-            label,
-            select,
-            input {
-                @media @mobile {
-                    width: 100%;
-                }
-            }
-        }
-        .productlist-item-count {
-            padding-top: 10px;
-            font-size: 13px;
-        }
+}
+
+.ecomproductslist__product-filters {
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+.ecomproductlist__product-list,
+.ecomfeaturedproducts__product-list {
+    padding: 0px;
+}
+
+.ecomproductslist__product-item,
+.ecomfeaturedproducts__product-item {
+    display: inline-block;
+    width: 30.36%;
+    padding: 0 40px 0 0;
+    vertical-align: top;
+    overflow: hidden;
+    margin-left: 3%;
+    margin-right: -0.25em;
+    margin-bottom: 15px;
+    @media @tablet {
+        width: 45%;
     }
-    li.product-item.ecomproductslist__product-item {
-        display: inline-block;
-        width: 30.36%;
-        padding: 0 40px 0 0;
-        vertical-align: top;
-        overflow: hidden;
-        margin-left: 3%;
-        margin-right: -0.25em;
-        margin-bottom: 15px;
-        @media @tablet {
-            width: 45%;
-        }
-        @media @mobile {
-            width: 100%;
-            margin-right: 0;
-            padding: 0px
-        }
+    @media @mobile {
+        width: 100%;
+        margin-right: 0;
+        padding: 0px
     }
-    .product-item-title {
-        margin-bottom: 5px;
-        letter-spacing: 1px;
+}
+
+.product-item-title {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.product-item-price {}
+
+.product-item-image {
+    display: block;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.product-item-details {
+    padding-top: 1em;
+    border-top: 1px solid @color__body--background;
+    text-align: center;
+}
+
+.ecomproductslist__pagination-list {
+    text-align: center;
+    margin-left: 3%;
+    border-top: 1px solid darken(@color__body--background, 7%);
+    padding-top: 1em;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    .current {
+        color: @color__primary;
+        border: 1px solid @color__primary;
     }
-    .product-item-price {}
-    .product-item-image {
-        display: block;
-        height: 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-        overflow: hidden;
-        background-color: #ffffff;
+}
+
+.ecomproductslist__pagination-item {
+    font-family: @font__button--font-family;
+    color: @color__button--text;
+    font-size: @font__button--font-size;
+    font-weight: @font__button--font-weight;
+    line-height: @font__button--line-height;
+    border: 1px solid darken(@color__body--background, 7%);
+    margin: 5px 10px 0 0;
+    padding: 8px;
+    text-decoration: none;
+    &:hover {
+        border: 1px solid @color__primary;
     }
-    .product-item-details {
-        padding-top: 1em;
-        border-top: 1px solid @color__body--background;
-        text-align: center;
-    }
-    .pagination-list {
-        text-align: center;
-        margin-left: 3%;
-        border-top: 1px solid darken(@color__body--background, 7%);
-        padding-top: 1em;
-        margin-top: 3em;
-        margin-bottom: 5em;
-        .pagination-item.current {
-            color: @color__primary;
-            border: 1px solid @color__primary;
-        }
-        .pagination-item {
-            font-family: @font__button--font-family;
-            color: @color__button--text;
-            font-size: @font__button--font-size;
-            font-weight: @font__button--font-weight;
-            line-height: @font__button--line-height;
-            border: 1px solid darken(@color__body--background, 7%);
-            margin: 5px 10px 0 0;
-            padding: 8px;
-            text-decoration: none;
-            &:hover {
-                border: 1px solid @color__primary;
-            }
-            a.button {
-                background-color: transparent;
-                color: @color__primary;
-            }
-        }
+    a.button {
+        background-color: transparent;
+        color: @color__primary;
     }
 }
 
