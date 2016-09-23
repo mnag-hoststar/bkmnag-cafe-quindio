@@ -2213,7 +2213,6 @@ hr.rule {
 }
 @media only screen and (max-width: 769px) {
   .menu .item-image .image-link {
-    height: 200px;
     line-height: 200px;
   }
 }
