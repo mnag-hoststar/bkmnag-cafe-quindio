@@ -434,8 +434,11 @@ select span {
         width:100%;
     }
     .select-wrap {
-        max-width: 50%;
+        width: 100%;
         margin: 0px auto;
+        &:hover {
+            background-color: transparent;
+        }
         @media @mobile {
             max-width: 100%;
         }
@@ -469,8 +472,8 @@ input[type="checkbox"]:checked {
     box-shadow: 0px 0px 0px 2px @color__primary;
 }
 
-.advancedcontactform__label {
-    padding-left: 25px;
+.label--checkbox, label--radio {
+    left: 25px;
     position:relative;
     bottom: 5px;
 }
