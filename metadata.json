@@ -246,21 +246,21 @@
             "color__gallery-description--text" : "#ffffff"
         },
         "slideshow": {
-            "color__slideshow-caption--background" : "rgba(0, 0, 0, 0.2)",
+            "color__slideshow-caption--background" : "fade(#000000, 10%)",
             "color__slideshow-title--text" : "#ffffff",
             "color__slideshow-description--text" : "#ffffff",
             "color__slideshow-pagination-item--background" : "#ffffff",
-            "color__slideshow-pagination-item--background--selected" : "@color__primary"
+            "color__slideshow-pagination-item--background--selected" : "#8f8272"
         },
         "twitter": {
             "color__twitter-item--background" : "#ffffff",
             "color__twitter-account-name--text" : "#413a31"
         },
         "socialicons": {
-            "color__socialicons--icon" : "@color__primary",
-            "color__socialicons--icon--hover" : "@color__secondary",
-            "color__socialicons--icon--background" : "transparent",
-            "color__socialicons--icon--hover" : "transparent"
+            "color__socialicons--icon" : "#aea293",
+            "color__socialicons--icon--hover" : "#8f8272",
+            "color__socialicons--icon--background" : "#ffffff",
+            "color__socialicons--icon--hover" : "#ffffff"
         },
         "feature": {
             "color__feature-content--background": "#ffffff",
