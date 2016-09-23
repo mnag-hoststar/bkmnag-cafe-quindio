@@ -47,6 +47,7 @@
     letter-spacing: 0px;
     &:hover {
         font-weight: 400;
+        letter-spacing: 0px;
     }
 }
 .blogpostlist__read-more {
@@ -263,19 +264,22 @@ footer.post-list-footer {
 }
 .item-image {
     height: 350px;
-    a.image-link {
-        height: 100%;
-        margin-bottom: 40px;
-        background-color: transparent;
-        img.image {
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            min-height: 100%;
-            width: auto;
-        }
-    }
 }
+.menu .item-image .image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    line-height: 1px;
+    width: 100%;
+}
+
+.menu .item-image .image {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .menu-subsection,
 .menu-section {
     margin-bottom: 30px;
