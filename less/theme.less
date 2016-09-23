@@ -450,8 +450,8 @@ select span {
 input[type="radio"],
 input[type="checkbox"] {
     -webkit-appearance: none!important;
-    width: 20px!important;
-    height: 20px!important;
+    width: 15px!important;
+    height: 15px!important;
     margin-right: 20px;
     position: absolute;
     border: 2px solid @color__primary!important;
@@ -463,14 +463,14 @@ input[type="radio"] {
 
 input[type="radio"]:checked,
 input[type="checkbox"]:checked {
-  background-color: @color__primary;
-	transition: background 0.25s linear;
-	-webkit-transition: background 0.25s
+    background-color: @color__primary;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s; 
         &:before {
-            border: 1px solid white;
-            width: 15px;
-            height: 15px;
-            }
+        border: 1px solid white;
+        width: 12px;
+        height: 12px;
+    }
 }
 
 .label--radio, label--checkbox {
