@@ -641,7 +641,7 @@ h3.feature__strapline {
     margin-bottom: 40px;
 }
 
-.responsiveslideshow__list {
+.slides-list{
     padding:0px;
 }
 // Slideshow Images
@@ -747,7 +747,7 @@ h3.feature__strapline {
     display: inline-block;
 }
 
-.responsiveslideshow__button {
+responsiveslideshow__pagination-item .button{
     background-color: transparent;
     border: 1px solid @color__primary;
     border-radius: 50%;
@@ -755,10 +755,12 @@ h3.feature__strapline {
     height: 8px!important;
     margin: 0 4px;
     cursor: pointer;
-    padding: 0px;
+    padding: 0px!important;
+    color:transparent;
     .selected {
         background-color: @color__primary;
         border: none;
+        padding: 0px!important;
     }
 }
 
