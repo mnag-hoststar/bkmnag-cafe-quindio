@@ -297,6 +297,7 @@ input#search-term{
     &:focus {
         border-bottom: 1px solid @color__primary;
         box-shadow: 0 1px 0 0 @color__primary;
+        background-color: transparent;
     }
 }
 
@@ -382,6 +383,9 @@ select:hover {
   box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
     background-color:transparent!important;
 }
+select:focus {
+    background-color:transparent!important;
+}
 option {
     background-color: #fff;
     margin: 0;
@@ -442,6 +446,9 @@ select span {
         @media @mobile {
             max-width: 100%;
         }
+        select:focus {
+            background-color:transparent;
+        }
     }
 }
 
@@ -472,7 +479,7 @@ input[type="checkbox"]:checked {
     box-shadow: 0px 0px 0px 2px @color__primary;
 }
 
-.label--checkbox, label--radio {
+.label--checkbox, .label--radio {
     left: 25px;
     position:relative;
     bottom: 5px;
