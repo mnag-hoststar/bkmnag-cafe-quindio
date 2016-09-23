@@ -8,10 +8,11 @@
 // -----------------------------
 
 
-// 1. #TYPOGRAPHY
-// 2. #CUSTOM PAGE
-// 3. #HEADER
-// 4. #FOOTER
+// 1. #HEADER, PROFILE HEADER & FOOTER
+// 2. #TYPOGRAPHY
+// 3. #FORMS
+// 4. #BUTTONS
+// 5. #IMAGES
 
 
 
@@ -164,52 +165,37 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 // 4. #FOOTER
 // -----------------------------
 .bk-footer {
-    color: @color__p--text;
     border-top: 1px solid lighten(@color__p--text, 40%);
-    padding: 0px;
     @media @mobile {
         padding: 0px;
     }
-    .widget__profile {
-        margin: 20px 0px;
-        @media @mobile {
-            margin: 10px 0px;
-        }
-        .socialicons.profile__socialicons ul.social-list {
-            margin: 20px 0px;
-        }
-        li.social-item {
-            display: inline-block;
-            &:hover {
-                box-shadow:0 0px 0 @color__primary;
-            }
-            .social-link {
-                background-size: 32px;
-                background-color: transparent;
-                margin: 0 5px;
-                width: 35px;
-                height: 35px;
-                &:hover {
-                    background-color: transparent;
-                    font-weight: 300;
-                }
-                @media @mobile {
-                    margin: 0 2px;
-                }
-                span.social-name {
-                    display: none;
-                }
-                .icon {
-                    &:before {
-                        font-size: 20px;
-                    }
-                }
-            }
-        }
+}
+
+.socialicons__social-item {
+    display: inline-block;
+    &:hover {
+        box-shadow: 0 0px 0 @color__primary;
     }
 }
 
+.social-social-link {
+    margin: 0 5px;
+    &:hover {
+        background-color: transparent;
+        font-weight: 300;
+    }
+    @media @mobile {
+        margin: 0 2px;
+    }
+}
 
+.icon:before {
+    font-size:18px!important;
+}
+
+.socialicons__social-name {
+    display: none;
+}
 .footerright, .footerleft {
 	display: inline-block;
 	vertical-align: middle;
@@ -295,8 +281,9 @@ input[type=search],
 input[type=text],
 input[type=email],
 textarea,select,
-.widget.profile form fieldset input,
-.signupform fieldset input,
+.contactform__input,
+.signupform__input,
+.blogsearch__input,
 input#search-term{
     background-color: transparent;
     border: none;
@@ -334,7 +321,9 @@ textarea {
 input[type=search],
 input[type=text],
 input[type=email],
-.signupform fieldset input {
+.contactform__input,
+.signupform__input,
+.blogsearch__input {
     width: 100%;
     min-height: 38px;
     font-size: 0.9em;
@@ -343,7 +332,9 @@ input.js-email.email {
     width:100%;
 }
 
-.blogsearch input.blog-search-input {
+.contactform__input,
+.signupform__input,
+.blogsearch__input {
     -webkit-appearance: none;
     height: 42px;
     width: 100%;

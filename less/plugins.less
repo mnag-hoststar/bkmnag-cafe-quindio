@@ -10,26 +10,7 @@
 
 
 // -----------------------------
-// 1. #BLOG SEARCH
-// -----------------------------
-
-.blogsearch__fieldset {
-    margin: 0px auto 10px;
-    display: table;
-    width: 100%;
-    text-align: center;
-}
-
-.blogsearch__form-body {
-    margin: 10px 0px 20px;
-}
-
-.blogsearch__label {
-    display: none;
-}
-
-// -----------------------------
-// 2. Blog Post List
+// 1. Blog Post List
 // -----------------------------
 .widget__blogpostlist {
     width: 104%;
@@ -60,34 +41,29 @@
         }
     }
 }
-.blogpostlist__post-content {
-    margin: 20px 0;
-}
-.blogpostlist__post-header {
-    a.title-link {
-        letter-spacing: 0px;
-        &:hover {
-            font-weight: 400;
-        }
+
+//Post Content
+.blogpostlist__title-link {
+    letter-spacing: 0px;
+    &:hover {
+        font-weight: 400;
     }
 }
-.blogpostlist__post-excerpt {
-    a.read-more {
-        font-family: @font-swatch4-font-family;
-        font-size: 12px;
-        color: @color__primary;
-        text-transform: uppercase;
-        padding: 12px;
-        border-bottom: 1px solid @color__primary;
-        &:hover {
-            letter-spacing: 1px!important;
-            box-shadow: 0 1.5px 0 @color__primary;
-            cursor: pointer;
-            .transition (all, 0.2s, ease);
-        }
+.blogpostlist__read-more {
+    font-family: @font-swatch4-font-family;
+    font-size: 12px;
+    color: @color__primary;
+    text-transform: uppercase;
+    padding: 12px;
+    border-bottom: 1px solid @color__primary;
+    &:hover {
+        letter-spacing: 1px!important;
+        box-shadow: 0 1.5px 0 @color__primary;
+        cursor: pointer;
+        .transition (all, 0.2s, ease);
     }
 }
-        
+//Blog List Footer
 .blogpostlist__post-footer {
     font-size: 0.9em!important;
     time.timestamp {
@@ -98,7 +74,7 @@
         font-size: 0.9em;
     }
 }
-    
+//Footer Pagination Items
 footer.post-list-footer {
     width: 96%;
     nav.post-pagination {
@@ -106,6 +82,8 @@ footer.post-list-footer {
         text-align: center;
     }
 }
+
+//Post List Footer older/newer Toggle
 .blogpostlist__pagination-item {
     display: inline-block;
     a.button.button--pagination.button--previous,
@@ -200,7 +178,7 @@ footer.post-list-footer {
             color: @color__primary;
             font-size: 0px;
             &:before {
-                font-size: 15px;
+                font-size: 16px!important;
             }
             &:hover {
                 box-shadow: 0 1.5px 0 @color__primary;
@@ -216,6 +194,26 @@ footer.post-list-footer {
     }
 }
     
+
+// -----------------------------
+// 1. #BLOG SEARCH
+// -----------------------------
+
+.blogsearch__fieldset {
+    margin: 0px auto 10px;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.blogsearch__form-body {
+    margin: 10px 0px 20px;
+}
+
+.blogsearch__label {
+    display: none;
+}
+
 // -----------------------------
 // 2. #MENU
 // -----------------------------
