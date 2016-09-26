@@ -669,8 +669,17 @@ h3.feature__strapline {
     .responsivecolumns .columns-two-left,
     .responsivecolumns .columns-two-right {
         .responsiveslideshow .contain .figure {
-            min-height: 240px;
+            min-height: 240px!important;
             border: 1px solid red;
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+.responsivecolumns .columns-two-left,
+    .responsivecolumns .columns-two-right {
+        .responsiveslideshow .contain .figure {
+            min-height: 300px!important;
+            border: 1px solid blue;
         }
     }
 }
@@ -680,11 +689,11 @@ h3.feature__strapline {
 .responsivecolumns .columns-two-right {
     .responsiveslideshow .contain .figure {
         min-height: 400px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-            min-height: 300px;
-        }
+        border: 1px solid yellow;
+        
         @media @mobile {
             min-height: 180px;
+            border: 1px solid green;
         }
     }
     .responsiveslideshow__slide-navigation {
