@@ -670,7 +670,6 @@ h3.feature__strapline {
     .responsivecolumns .columns-two-right {
         .responsiveslideshow .contain .figure {
             min-height: 240px!important;
-            border: 1px solid red!important;
             .caption {
                 padding: 3px 20px;
             }
@@ -691,7 +690,6 @@ h3.feature__strapline {
     .responsivecolumns .columns-two-right {
         .responsiveslideshow .contain .figure {
             min-height: 300px!important;
-            border: 1px solid blue!important;
         }
         .responsiveslideshow__slide-navigation {
             top: 27%!important;
@@ -704,7 +702,6 @@ h3.feature__strapline {
     .responsivecolumns .columns-two-right {
         .responsiveslideshow .contain .figure {
             min-height: 180px!important;
-            border: 1px solid yellow!important;
             .caption {
                 padding: 3px 20px;
             }
@@ -734,7 +731,6 @@ h3.feature__strapline {
 .responsivecolumns .columns-two-right {
     .responsiveslideshow .contain .figure {
         min-height: 400px;
-        border: 1px solid orange;
     }
     .responsiveslideshow__slide-navigation {
         position: absolute;
@@ -804,8 +800,15 @@ h3.feature__strapline {
     position: absolute;
     top: 39%;
     width: 100%;
+    @media @tablet {
+        top: 32%;
+    }
+    @media @mobile {
+        top: 28%;
+    }
 }
-
+.responsiveslideshow__pause-toggle,
+.responsiveslideshow__play-toggle.button,
 .responsiveslideshow__previous-button,
 .responsiveslideshow__next-button {
     width: 64px;
@@ -815,9 +818,6 @@ h3.feature__strapline {
     color: @color__slideshow-title--text;
     &:hover {
         opacity: 0.7;
-    }
-    @media @mobile {
-        width: 32px;
     }
 }
 
@@ -839,9 +839,6 @@ h3.feature__strapline {
 
 .responsiveslideshow__pause-toggle,
 .responsiveslideshow__play-toggle.button {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 64px;
-    height: 64px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -859,6 +856,45 @@ h3.feature__strapline {
         opacity: 0.7;
     }
 }
+@media @mobile {
+    .responsiveslideshow__caption {
+        padding: 3px 20px;
+        .image-title,
+        .image-description {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .responsiveslideshow__previous-button,
+    .responsiveslideshow__next-button,
+    .responsiveslideshow__pause-toggle,
+    .responsiveslideshow__play-toggle.button {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        font-size: 12px!important;
+    }
+    .icon--previous:before {
+        left: 10px;
+        position: absolute;
+        bottom: -1px;
+        font-size: 12px!important;
+    }
+    .icon--next:after {
+        left: 8px;
+        position: absolute;
+        bottom: -1px;
+        font-size: 12px!important;
+    }
+    .icon--play:before,
+    .icon--pause.pause:before {
+        position: absolute;
+        left: 12px;
+        bottom: 0px;
+        font-size: 12px!important;
+    }
+}
+
 
 // Slideshow Pagination Bullets
 // ----------------------------
