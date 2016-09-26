@@ -74,11 +74,11 @@ blockquote {
 	padding: 30px;
     &:before: {
         content: open-quote;
-        left:-10px;
-        position:relative;
-        font-family: georgia;
+        left:-10px!important;
+        position:relative!important;
+        font-family: georgia, serif;
         font-size:3.05em;
-        top:.19em;
+        top:20px!important;
     }
 }
 pre {
@@ -174,11 +174,12 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .socialicons__social-item {
     display: inline-block;
     &:hover {
-        box-shadow: 0 0px 0 @color__primary;
+        box-shadow: 0 2px 0 @color__primary;
     }
 }
 
 .social-social-link {
+    color: @color__primary;
     margin: 0 5px;
     &:hover {
         background-color: transparent;
@@ -226,7 +227,6 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 .widget__content {
     padding: 0;
     overflow: hidden;
-    margin-bottom: 40px;
 }
 
 span.expand.button.button--expand {

@@ -690,6 +690,16 @@ h3.feature__strapline {
     top: 39%;
     width: 100%;
 }
+//Layout with 2 Columns
+.responsivecolumns .columns-two-left,
+.responsivecolumns .columns-two-right {
+    .responsiveslideshow__slide-navigation {
+        position: absolute;
+        top: 32%;
+        width: 100%;
+    }
+}
+
 .responsiveslideshow__previous-button,
 .responsiveslideshow__next-button {
     width: 64px;
@@ -786,7 +796,8 @@ h3.feature__strapline {
 a.basket-summary-empty-cta.btn,
 button.ecombasket-remove-button.js-remove,
 .button.button--submit.blogsearch__button,
-.button--submit.ecomproductslist__button {
+.button--submit.ecomproductslist__button,
+.continue-shopping.button {
     background-color: transparent!important;
     display: inline-block;
     color: @color__primary;
@@ -930,6 +941,7 @@ button.ecombasket-remove-button.js-remove,
     }
 }
 a.socialicons__social-link {
+    color: @color__primary;
     background-size: 32px;
     background-color: transparent;
     margin: 0 5px;
@@ -951,8 +963,10 @@ a.socialicons__social-link {
 }
 .widget__companyphone {
     a.phone-number-link {
-        padding-bottom:10px &:hover {
+        padding-bottom:10px;
+        &:hover {
             border-bottom: 2px solid @color__primary;
+            letter-spacing: 1px;
         }
     }
 }
