@@ -664,7 +664,14 @@ h3.feature__strapline {
         min-height: 200px;
     }
 }
-
+//2 Columns Layout Responsive
+.responsivecolumns .columns-two-left,
+.responsivecolumns .columns-two-right {
+    .responsiveslideshow .contain .figure {
+        min-height: 400px;
+    }
+}
+//Tablet Portrait
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .responsivecolumns .columns-two-left,
     .responsivecolumns .columns-two-right {
@@ -684,7 +691,7 @@ h3.feature__strapline {
         }
     }
 }
-
+//Tablet Landscape
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .responsivecolumns .columns-two-left,
     .responsivecolumns .columns-two-right {
@@ -696,7 +703,7 @@ h3.feature__strapline {
         }
     }
 }
-
+//Mobile Portrait
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .responsivecolumns .columns-two-left,
     .responsivecolumns .columns-two-right {
@@ -715,55 +722,12 @@ h3.feature__strapline {
         }
     }
 }
-
+//Mobile Landscape
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
     .responsivecolumns .columns-two-left,
     .responsivecolumns .columns-two-right {
         .responsiveslideshow .contain .figure {
             min-height: 200px!important;
-            border: 1px solid pink!important;
-        }
-    }
-}
-
-// Two Columns Slider
-.responsivecolumns .columns-two-left,
-.responsivecolumns .columns-two-right {
-    .responsiveslideshow .contain .figure {
-        min-height: 400px;
-    }
-    .responsiveslideshow__slide-navigation {
-        position: absolute;
-        top: 32%;
-        @media @tablet {
-            .responsiveslideshow__previous-button,
-            .responsiveslideshow__next-button,
-            .responsiveslideshow__pause-toggle,
-            .responsiveslideshow__play-toggle.button {
-                width: 32px;
-                height: 32px;
-                position: absolute;
-                font-size: 12px!important;
-            }
-            .icon--previous:before {
-                left: 10px;
-                position: absolute;
-                bottom: -1px;
-                font-size: 12px!important;
-            }
-            .icon--next:after {
-                left: 8px;
-                position: absolute;
-                bottom: -1px;
-                font-size: 12px!important;
-            }
-            .icon--play:before, 
-            .icon--pause.pause:before {
-                position: absolute;
-                left: 12px;
-                bottom: 0px;
-                font-size: 12px!important;
-            }
         }
     }
 }
@@ -792,6 +756,16 @@ h3.feature__strapline {
 
 .responsiveslideshow__image-description {
     color: @color__slideshow-title--text;
+}
+@media @mobile {
+    .responsiveslideshow__caption {
+        padding: 3px 20px;
+        .image-title,
+        .image-description {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
 }
 
 // Slideshow Control Navigation Icons
@@ -856,15 +830,46 @@ h3.feature__strapline {
         opacity: 0.7;
     }
 }
-@media @mobile {
-    .responsiveslideshow__caption {
-        padding: 3px 20px;
-        .image-title,
-        .image-description {
-            font-size: 12px;
-            line-height: 18px;
+//Slide Navigation 2 Responsive Columns
+.responsivecolumns .columns-two-left,
+.responsivecolums .columns-two-right {
+    .responsiveslideshow__slide-navigation {
+        position: absolute;
+        top: 32%;
+        @media @tablet {
+            .responsiveslideshow__previous-button,
+            .responsiveslideshow__next-button,
+            .responsiveslideshow__pause-toggle,
+            .responsiveslideshow__play-toggle.button {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                font-size: 12px!important;
+            }
+            .icon--previous:before {
+                left: 10px;
+                position: absolute;
+                bottom: -1px;
+                font-size: 12px!important;
+            }
+            .icon--next:after {
+                left: 8px;
+                position: absolute;
+                bottom: -1px;
+                font-size: 12px!important;
+            }
+            .icon--play:before,
+            .icon--pause.pause:before {
+                position: absolute;
+                left: 12px;
+                bottom: 0px;
+                font-size: 12px!important;
+            }
         }
     }
+}
+
+@media @mobile {
     .responsiveslideshow__previous-button,
     .responsiveslideshow__next-button,
     .responsiveslideshow__pause-toggle,
