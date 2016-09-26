@@ -663,10 +663,13 @@ h3.feature__strapline {
     min-height: 650px;
     padding: 0px;
     @media @tablet {
-        min-height:400px;
+        min-height: 400px;
     }
-        @media @tablet {
-        min-height:300px;
+    @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        min-height: 450px;
+    }
+    @media @mobile {
+        min-height: 300px;
     }
 }
 
@@ -724,7 +727,7 @@ h3.feature__strapline {
     .responsiveslideshow__slide-navigation {
         @media @tablet {
             position: absolute;
-            top: 28%;
+            top: 30%;
             width: 100%;
         }
         @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
