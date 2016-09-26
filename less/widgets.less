@@ -857,7 +857,7 @@ button.ecombasket-remove-button.js-remove,
         border-bottom: 1px solid @color__primary;
         text-transform: uppercase;
         font-weight: 700;
-        letter-spacing: 1.15px;
+        letter-spacing: 1.15px!important;
         &:before {
             font-size: 1.25em;
         }
@@ -895,7 +895,13 @@ button.ecombasket-remove-button.js-remove,
 .blogsearch__legend {
     text-transform: uppercase;
     font-weight: 700;
-    text-align:left;
+    text-align: left;
+    @media @tablet {
+        font-size: 0.9em!important;
+    }
+    @media @mobile {
+        font-size: 0.8em!important;
+    }
 }
 
 .contactform__label,
@@ -909,6 +915,12 @@ button.ecombasket-remove-button.js-remove,
     letter-spacing: @font__p--letter-spacing;
     margin-bottom: .4em;
     padding: 0;
+    @media @tablet {
+        font-size: 0.9em!important;
+    }
+    @media @mobile {
+        font-size: 0.8em!important;
+    }
 }
 
 .contactform__button,
@@ -965,8 +977,10 @@ a.socialicons__social-link {
 .widget__companyphone {
     a.phone-number-link {
         padding-bottom:10px;
+        letter-spacing: 1.15px!important;
+        color: @color__primary;
         &:hover {
-            border-bottom: 2px solid @color__primary;
+            box-shadow: 0 1.5px 0 @color__primary;
             letter-spacing: 1px;
         }
     }
