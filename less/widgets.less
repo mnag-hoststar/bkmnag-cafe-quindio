@@ -665,14 +665,19 @@ h3.feature__strapline {
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .responsivecolumns .columns-two-left,
+    .responsivecolumns .columns-two-right > .responsiveslideshow .contain .figure {
+        min-height: 240px;
+        border:1px solid red;
+    }
+}
+
 // Two Columns Slider
 .responsivecolumns .columns-two-left,
 .responsivecolumns .columns-two-right {
     .responsiveslideshow .contain .figure {
         min-height: 400px;
-        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-            min-height: 240px;
-        }
         @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
             min-height: 300px;
         }
