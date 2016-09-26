@@ -21,6 +21,7 @@
 }
 .blogpostlist .post-article {
     display: inline-block;
+    vertical-align:top;
     width: 46%;
     margin-right: 3%;
     margin-bottom: 30px;
@@ -395,9 +396,11 @@ header.section.header {
 
 .product-item-title {
     margin-bottom: 5px;
-    letter-spacing: 1px;
-    &:hover {
-        letter-spacing: 1px;
+    a {
+        letter-spacing: 0px;
+        &:hover {
+            letter-spacing: 0px;
+        }
     }
 }
 
@@ -436,6 +439,16 @@ header.section.header {
     }
 }
 
+.ecomproductslist__button--clear {
+    background-color: transparent;
+    color: @color__primary;
+    text-transform: uppercase;
+    border-bottom: 1px solid @color__primary;
+    &:hover {
+        box-shadow: 0 1.5px 0 @color__primary;
+        .transition (all, 0.1s, ease);
+    }
+}
 .ecomproductslist__pagination-item {
     font-family: @font__button--font-family;
     color: @color__button--text;
@@ -579,10 +592,14 @@ ECOM - BASKET BUTTON
 // Basket Summary Content
 .basket-summary__summary-title {
     margin-bottom:20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .basket-summary__summary-section {
-    text-align: center;
+    text-align: left;
 }
 
 .basket-summary__summary-form {
@@ -604,12 +621,17 @@ ECOM - BASKET BUTTON
 
 .ecombasketsummary__summary-table {
     margin: 20px 0;
+    border:none;
 }
 
 .ecombasketsummary__quantity-field {
-    margin-top: 5px;
+    margin: 20px;
 }
 
+.summary-table .table-row {
+    border-left:none;
+    border-right:none;
+}
 .ecombasketsummary__cell {
     @media @tablet {
         text-align: center;
@@ -618,10 +640,21 @@ ECOM - BASKET BUTTON
 
 .summary-table .cell {
     padding: 25px 12px;
+    text-align:center;
+    border-left:none;
+    border-right:none;
     @media @mobile {
         padding: 8px 12px;
         display: block;
     }
+}
+
+.summary-table .cell--header {
+    background-color:transparent;
+}
+
+.summary-table .cell--title {
+    text-align:left!important;
 }
 
 .summary-table .cell--quantity {
@@ -676,14 +709,29 @@ ECOM - BASKET BUTTON
 }
 
 .ecombasketsummary__quantity-wrap {
-    background-color: @color-swatch1;
+    display:block!important;
+    background-color: transparent;
+    width: 50%;
     @media @mobile {
         margin: 10px auto;
     }
 }
-
-th {
-    background-color: @color-swatch1;
+button.ecombasketsummary__quantity-minus,
+button.ecombasketsummary__quantity-plus {
+    font-weight: 300;
+    background-color: transparent;
+    margin: 0;
+    padding: 2px 6px 3px;
+    width: 30px;
+    height: 32px;
+    font-size: 2em;
+    line-height: normal;
+    color: @color__p--text;
+    border-bottom: 1px solid @color__primary;
+    &:hover {
+        font-weight: 700;
+        border-bottom: 2px solid @color__primary;
+    }
 }
 
 .ecombasketsummary__order-total {
