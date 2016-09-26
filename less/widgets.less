@@ -59,13 +59,8 @@
 }
 
 a.company-link {
-    font-style: normal;
-    position: relative;
     display: inline-block;
     padding: 0.65em 0 0.8em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     letter-spacing: 1px;
     @media @mobile {
         padding: 20px 0px;
@@ -106,10 +101,7 @@ a.company-link {
 
 // Navigation Link
 .extendednavigation__item-name {
-    padding: 5px 15px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    padding: 14px;
     &:hover {
         color: @color__navigation--text--hover!important;
         text-decoration: none;
@@ -145,11 +137,8 @@ a.company-link {
     .extendednavigation__navigation-toggle {
         margin: 0 auto;
         display: block;
-        overflow: hidden;
         width: 50px;
         height: 45px;
-        text-indent: 1000px;
-        line-height: 0;
         background-color: transparent;
         &:before {
             content: '';
@@ -315,9 +304,6 @@ h3.feature__strapline {
         text-align: left;
         text-transform: uppercase;
         font-weight: 700;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
         &:hover {
             color: lighten(@color__h2--text, 10%);
         }
