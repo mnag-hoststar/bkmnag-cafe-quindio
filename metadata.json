@@ -221,21 +221,22 @@
             "font__navigation--letter-spacing": "1px",
             "color__navigation--text": "#413a31",
             "color__navigation--text--hover": "#8f8272",
-            "color__navigation--text--selected": "#413a31"
+            "color__navigation--text--selected": "#413a31",
+            "color__navigation-list--background":"#f3f0eb"
         },
         "form": {
             "color__form--background" : "#ffffff",
             "color__form--border" : "#aea293",
-            "color__form-legend--text" : "#aea293",
+            "color__form-legend--text" : "#413a31",
             "color__form-legend--background" : "#ffffff",
             "color__form-label--text" : "#413a31"
         },
         "button": {
-            "color__button--background":"#8f8272",
-            "color__button--background--hover":"#8f8272",
+            "color__button--background":"transparent",
+            "color__button--background--hover":"transparent",
             "font__button--font-family" : "@font-swatch7-font-family",
-            "color__button--text" : "#ffffff",
-            "color__button--text--hover" : "#ffffff",
+            "color__button--text" : "@color__primary",
+            "color__button--text--hover" : "@color__secondary",
             "font__button--font-size" : "14px",
             "font__button--font-weight" : "700",
             "font__button--line-height" : "32px",
@@ -258,7 +259,7 @@
         },
         "socialicons": {
             "color__socialicons--icon": "@color__primary",
-            "color__socialicons--icon--hover": "@color-swatch1",
+            "color__socialicons--icon--hover": "darken(@color__primary, 10%)",
             "color__socialicons--icon--background": "transparent"
         },
         "feature": {
@@ -275,7 +276,13 @@
             "font__feature-strapline--font-weight" : "600",
             "font__feature-strapline--line-height" : "30px",
             "font__feature-strapline--letter-spacing" : "2px",
-            "color__feature-strapline--text" : "#ffffff"
+            "color__feature-strapline--text" : "#ffffff",
+            "color__feature-button--text" : "#ffffff"
+        },
+        "image": {
+            "color__image-title--text" : "#413a31",
+            "color__image-description--text" : "#413a31",
+            "color__image-caption--background" : "transparent"
         },
         "menu": {
             "color__menusections--background" : "#ffffff",

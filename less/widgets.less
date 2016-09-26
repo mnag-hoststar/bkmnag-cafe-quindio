@@ -115,7 +115,7 @@ a.company-link {
 }
 
 .navigation-item.folder .navigation-item--child a {
-    color: @color__h4--text;
+    color: @color__navigation--text;
 }
 
 .extendednavigation__navigation-item.folder.selected .selected {
@@ -175,10 +175,10 @@ a.company-link {
     // Toggle Button Open State
     .extendednavigation__navigation-list.open {
         display: block;
-        background-color: @color__body--background;
+        background-color: @color__navigation-list--background;
         &:before {
             margin-top: 21px;
-            background: @color__body--background;
+            background: @color__navigation-list--background;
             box-shadow: none;
             .transition( all, 0.5s, ease);
         }
@@ -202,7 +202,7 @@ a.company-link {
         color: @color__navigation--text;
     }
     .navigation-item.folder .navigation-item--child a {
-        color: @color__h4--text;
+        color: @color__navigation--text;
     }
 }
 
@@ -252,7 +252,7 @@ h2.feature__headline {
 }
 
 h3.feature__strapline {
-    color: @color__feature-headline--text;
+    color: @color__feature-strapline--text;
     text-transform: uppercase;
     text-shadow: 1px 1px 10px #000000;
     word-break: break-word;
@@ -276,12 +276,12 @@ h3.feature__strapline {
 .feature__button {
     padding: 15px 25px;
     background-color: transparent;
-    border-bottom: 1px solid @color__feature-headline--text;
+    border-bottom: 1px solid @color__feature-button--text;
     text-transform: uppercase;
     line-height: 21px;
     &:hover {
         background-color: transparent;
-        box-shadow: 0 2px 0 @color__feature-headline--text;
+        box-shadow: 0 2px 0 @color__feature-button--text;
         font-size: 1.05em;
         transition: all 0.1s ease-out;
         @media @mobile {
@@ -300,21 +300,21 @@ h3.feature__strapline {
     margin-bottom: 40px;
     .image-title {
         margin: 10px 0 0;
-        color: @color__h2--text;
+        color: @color__image-title--text;
         text-align: left;
         text-transform: uppercase;
         font-weight: 700;
         &:hover {
-            color: lighten(@color__h2--text, 10%);
+            color: lighten(@color__image-title--text, 10%);
         }
     }
     .image-description {
         margin: 0 0 10px;
-        color: @color__p--text;
+        color: @color__image-description--text;
         text-align: left;
         letter-spacing: 0px;
         &:hover {
-            color: lighten(@color__p--text, 10%);
+            color: lighten(@color__image-description--text, 10%);
             letter-spacing: 0px;
         }
     }
@@ -747,7 +747,7 @@ h3.feature__strapline {
 }
 
 .responsiveslideshow__image-description {
-    color: @color__slideshow-title--text;
+    color: @color__slideshow-description--text;
 }
 
 @media @mobile {
@@ -945,9 +945,9 @@ button.ecombasket-remove-button.js-remove,
 .button.button--submit.blogsearch__button,
 .button--submit.ecomproductslist__button,
 .continue-shopping.button {
-    background-color: transparent!important;
+    background-color: @color__button--background!important;
     display: inline-block;
-    color: @color__primary;
+    color: @color__button--text;
     position: relative;
     padding: 1em 3em;
     -webkit-transition: 0.3s ease;
@@ -960,8 +960,8 @@ button.ecombasket-remove-button.js-remove,
         display: block;
         height: 1em;
         width: 1em;
-        border-bottom: 2px solid @color__primary;
-        border-left: 2px solid @color__primary;
+        border-bottom: 2px solid @color__button--text;
+        border-left: 2px solid @color__button--text;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -976,8 +976,8 @@ button.ecombasket-remove-button.js-remove,
         display: block;
         height: 1em;
         width: 1em;
-        border-top: 2px solid @color__primary;
-        border-right: 2px solid @color__primary;
+        border-top: 2px solid @color__button--text;
+        border-right: 2px solid @color__button--text;
         position: absolute;
         right: 0;
         top: 0;
@@ -998,10 +998,10 @@ button.ecombasket-remove-button.js-remove,
     a.button.tweet__button,
     button.dropbox__button,
     .phone-number-link {
-        background-color: transparent;
-        color: @color__primary;
+        background-color: @color__button--background!important;
+        color: @color__button--text;
         padding: 12px 30px;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__button--text;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 1.15px!important;
@@ -1009,7 +1009,7 @@ button.ecombasket-remove-button.js-remove,
             font-size: 1.25em;
         }
         &:hover {
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__button--text;
             -webkit-transition: all 0.2s ease;
             -moz-transition: all 0.2s ease;
             -ms-transition: all 0.2s ease;
@@ -1062,7 +1062,7 @@ button.ecombasket-remove-button.js-remove,
     font-size: @font__p--font-size;
     font-weight: @font__p--font-weight;
     line-height: @font__p--line-height;
-    color: @color__p--text;
+    color: @color__form-label--text;
     letter-spacing: @font__p--letter-spacing;
     margin-bottom: .4em;
     padding: 0;
@@ -1101,13 +1101,13 @@ button.ecombasket-remove-button.js-remove,
     padding-bottom: 10px;
     &:hover {
         background-color: transparent;
-        box-shadow: 0 2px 0 @color__primary;
+        box-shadow: 0 2px 0 @color__socialicons--icon;
         .transition (all, 0.2s, ease);
     }
 }
 
 a.socialicons__social-link {
-    color: @color__primary;
+    color: @color__socialicons--icon;
     background-size: 32px;
     background-color: transparent;
     margin: 0 5px;

@@ -18,6 +18,7 @@
 @color__primary: @color__secondary;
 @button-color: @color__button--background;
 @spare-color: #ffffff;
+
 // Font Swatches
 // -------------
 // font1:  Heading 1
@@ -155,12 +156,12 @@ body.edit .widget.extendednavigation {
 .socialicons__social-item {
     display: inline-block;
     &:hover {
-        box-shadow: 0 2px 0 @color__primary;
+        box-shadow: 0 2px 0 @color__socialicons--icon;
     }
 }
 
 .social-social-link {
-    color: @color__primary;
+    color: @color__socialicons--icon;
     margin: 0 5px;
     &:hover {
         background-color: transparent;
@@ -224,15 +225,15 @@ span.expand.button.button--expand {
 .expand .less {
     font-family: @font-swatch4-font-family;
     font-size: 12px;
-    color: @color__primary;
+    color: @color__button--text;
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px;
-    border-bottom: 1px solid @color__primary;
+    border-bottom: 1px solid @color__button--text;
     letter-spacing: 1px;
     &:hover {
         letter-spacing: 1px!important;
-        border-bottom: 2px solid @color__primary;
+        border-bottom: 2px solid @color__button--text;
         cursor: pointer;
         background-color: transparent;
         .transition (all, 0.2s, ease);
