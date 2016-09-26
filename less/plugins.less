@@ -614,9 +614,12 @@ ECOM - BASKET BUTTON
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
 }
 
+.summary-table .cell {
+    vertical-align:middle!important;
+}
 .basket-summary__summary-section {
     text-align: left;
 }
@@ -681,6 +684,7 @@ ECOM - BASKET BUTTON
     }
     @media @mobile {
         width: 100%;
+        height: 70px;
         text-align: center;
     }
 }
@@ -691,16 +695,23 @@ ECOM - BASKET BUTTON
 
 .summary-table .cell--title {
     text-align:left!important;
+    @media @mobile {
+        text-align:center!important;
+    }
 }
 .summary-item-title {
-    a.summary-item-link {
+    .summary-item-link {
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 600;
         font-size: 16px;
+        letter-spacing: 1px;
         @media @mobile {
             text-align:center;
             font-size:18px;
+        }
+        &:hover {
+            letter-spacing: 1px;
         }
     }
 }
@@ -710,12 +721,15 @@ ECOM - BASKET BUTTON
 
 .summary-table .cell--quantity {
     width: 17%;
+    
     @media @tablet {
         width: 25%;
     }
     @media @mobile {
         width: 100%!important;
         text-align:center;
+        font-weight:600;
+        text-transform:uppercase;
         border-top: 1px solid @color__primary;
     }
 }
@@ -767,7 +781,7 @@ ECOM - BASKET BUTTON
 .ecombasketsummary__quantity-wrap {
     display:block!important;
     background-color: transparent;
-    width: 50%;
+    width: 100%;
     @media @tablet {
         min-width: 100%!important;
     }
@@ -779,7 +793,7 @@ ECOM - BASKET BUTTON
 button.ecombasketsummary__quantity-minus,
 button.ecombasketsummary__quantity-plus {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 22px!important;
     background-color: transparent;
     margin: 0;
     padding: 2px 6px 3px;
@@ -808,7 +822,7 @@ button.ecombasketsummary__quantity-plus {
 }
 
 .ecombasketsummary__summary-section {
-    text-align: center;
+    text-align: left!important;
 }
 
 .ecomproduct__message {
