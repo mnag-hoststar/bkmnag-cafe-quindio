@@ -667,9 +667,11 @@ h3.feature__strapline {
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .responsivecolumns .columns-two-left,
-    .responsivecolumns .columns-two-right > .responsiveslideshow .contain .figure {
-        min-height: 240px;
-        border:1px solid red;
+    .responsivecolumns .columns-two-right {
+        .responsiveslideshow .contain .figure {
+            min-height: 240px;
+            border: 1px solid red;
+        }
     }
 }
 
