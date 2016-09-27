@@ -245,7 +245,7 @@
         "gallery": {
             "color__gallery-title--text" : "#ffffff",
             "color__gallery-description--text" : "#ffffff",
-            "color__gallery-caption--background" : "fade(#000000, 10%)",
+            "color__gallery-caption--background" : "fade(#000000, 10%)"
         },
         "slideshow": {
             "color__slideshow-caption--background" : "fade(#000000, 10%)",
