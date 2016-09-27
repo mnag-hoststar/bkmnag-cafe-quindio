@@ -245,10 +245,10 @@
         "gallery": {
             "color__gallery-title--text" : "#ffffff",
             "color__gallery-description--text" : "#ffffff",
-            "color__gallery-caption--background" : "fade(#000000, 10%)"
+            "color__gallery-caption--background" : "fade(#000000, 40%)"
         },
         "slideshow": {
-            "color__slideshow-caption--background" : "fade(#000000, 10%)",
+            "color__slideshow-caption--background" : "fade(#000000, 40%)",
             "color__slideshow-title--text" : "#ffffff",
             "color__slideshow-description--text" : "#ffffff",
             "color__slideshow-pagination-item--background" : "#ffffff",
