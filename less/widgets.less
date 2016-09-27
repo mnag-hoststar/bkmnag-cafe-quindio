@@ -62,12 +62,13 @@ a.company-link {
     display: inline-block;
     padding: 0.65em 0 0.8em;
     letter-spacing: 1px;
+    color: @color__link--text;
     @media @mobile {
         padding: 20px 0px;
         font-size: 24px;
     }
     &:hover {
-        color: @color__secondary;
+        color: darken(@color__link--text, 10%);
         font-weight: 400;
         letter-spacing: 1px;
     }
@@ -451,7 +452,7 @@ h3.feature__strapline {
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: @color__gallery-caption--background;
     overflow: scroll;
 }
 
@@ -945,7 +946,7 @@ button.ecombasket-remove-button.js-remove,
 .button.button--submit.blogsearch__button,
 .button--submit.ecomproductslist__button,
 .continue-shopping.button {
-    background-color: @color__button--background!important;
+    background-color: transparent!important;
     display: inline-block;
     color: @color__button--text;
     position: relative;
@@ -998,7 +999,7 @@ button.ecombasket-remove-button.js-remove,
     a.button.tweet__button,
     button.dropbox__button,
     .phone-number-link {
-        background-color: @color__button--background!important;
+        background-color: transparent!important;
         color: @color__button--text;
         padding: 12px 30px;
         border-bottom: 1px solid @color__button--text;
@@ -1132,9 +1133,9 @@ a.socialicons__social-link {
     .phone-number-link {
         padding-bottom: 10px;
         letter-spacing: 1.15px!important;
-        color: @color__primary;
+        color: @color__link--text;
         &:hover {
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__link--text;
             letter-spacing: 1px;
         }
     }
@@ -1303,15 +1304,15 @@ hr.rule {
     a.review-link {
         font-family: @font-swatch4-font-family;
         font-size: 12px;
-        color: @color__primary;
+        color: @color__link--text;
         text-transform: uppercase;
         text-decoration: none;
         padding: 12px 0px;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__link--text;
         letter-spacing: 1px;
         &:hover {
             letter-spacing: 1px!important;
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__link--text;
             cursor: pointer;
             .transition (all, 0.2s, ease);
         }

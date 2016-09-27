@@ -55,13 +55,13 @@
 .blogpostlist__read-more {
     font-family: @font-swatch4-font-family;
     font-size: 12px;
-    color: @color__primary;
+    color: @color__link--text;
     text-transform: uppercase;
     padding: 12px;
-    border-bottom: 1px solid @color__primary;
+    border-bottom: 1px solid @color__link--text;
     &:hover {
         letter-spacing: 1px!important;
-        box-shadow: 0 1.5px 0 @color__primary;
+        box-shadow: 0 1.5px 0 @color__link--text;
         cursor: pointer;
         .transition (all, 0.2s, ease);
     }
@@ -94,9 +94,9 @@ footer.post-list-footer {
     a.button.button--pagination.button--previous,
     a.button.button--pagination.button--next {
         margin: 0 1em;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__link--text;
         text-transform: uppercase;
-        color: @color__primary;
+        color: @color__link--text;
         background-color: transparent;
         font-weight: 400;
         width: 96%;
@@ -108,7 +108,7 @@ footer.post-list-footer {
             display: none;
         }
         &:hover {
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__link--text;
             letter-spacing: 1px;
             font-weight: 700;
         }
@@ -164,10 +164,11 @@ footer.post-list-footer {
     box-sizing: border-box;
     font-size: 0.9em!important;
     margin: 0px 5px;
+    color: @color__link--text;
     &:hover {
         font-weight: 700;
         text-decoration: none;
-        color: darken(@color__primary, 15%);
+        color: darken(@color__link--text, 15%);
         letter-spacing: 1px;
     }
 }
@@ -185,18 +186,18 @@ footer.post-list-footer {
             width: 35px;
             height: 35px;
             background-color: transparent;
-            color: @color__primary;
+            color: @color__socialicons--icon;
             font-size: 0px;
             &:before {
                 font-size: 16px!important;
             }
             &:hover {
-                box-shadow: 0 1.5px 0 @color__primary;
+                box-shadow: 0 1.5px 0 @color__socialicons--icon;
                 .transition (all, 0.1s, ease);
                 outline: none;
             }
             &:active {
-                box-shadow: 0 1.5px 0 @color__primary;
+                box-shadow: 0 1.5px 0 @color__socialicons--icon;
                 .transition (all, 0.1s, ease);
                 outline: none;
             }
@@ -234,7 +235,7 @@ footer.post-list-footer {
 .menusections-item {
     a.menu-item-name {
         margin: 0 1em;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__link--text;
         padding: 10px 20px;
         text-transform: uppercase;
         color: @color__primary;
@@ -247,11 +248,11 @@ footer.post-list-footer {
             display: none;
         }
         &:hover {
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__link--text;
             letter-spacing: 1px;
             font-weight: 700;
             text-decoration: none;
-            color: @color__primary;
+            color: darken(@color__link--text,15%);
             background-color: transparent;
             .transition (all, 0.2s, ease);
         }
@@ -349,7 +350,7 @@ header.section.header {
         font-size: 0.9em !important;
         margin: 0px 5px;
         font-weight: 400;
-        color: @color__primary;
+        color: @color__link--text;
         letter-spacing: 1px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -460,11 +461,11 @@ header.section.header {
 
 .ecomproductslist__button--clear {
     background-color: transparent;
-    color: @color__primary;
+    color: @color__button--text;
     text-transform: uppercase;
-    border-bottom: 1px solid @color__primary;
+    border-bottom: 1px solid @color__button--text;
     &:hover {
-        box-shadow: 0 1.5px 0 @color__primary;
+        box-shadow: 0 1.5px 0 @color__button--text;
         background-color: transparent;
         .transition (all, 0.1s, ease);
     }
@@ -481,11 +482,11 @@ header.section.header {
     padding: 8px;
     text-decoration: none;
     &:hover {
-        border: 1px solid @color__primary;
+        border: 1px solid @color__button--text--hover;
     }
     a.button {
         background-color: transparent;
-        color: @color__primary;
+        color: @color__button--text;
     }
 }
 
@@ -544,19 +545,19 @@ header.section.header {
     a.button.icon.icon--basket {
         padding: 12px 35px;
         margin: 0 0 10px;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__button--text;
         font-family: @font__button--font-family;
         font-size: @font__button--font-size;
         font-weight: @font__button--font-weight;
         background-color: transparent!important;
-        color: @color__primary!important;
+        color: @color__button--text!important;
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
         &:hover {
-            background-color: @color__button--background--hover;
+            background-color: transparent!important;
             cursor: pointer;
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__button--text;
         }
         &:before,
         &:after {
@@ -577,7 +578,7 @@ header.section.header {
         &:hover {
             font-weight: 700;
             text-decoration: none;
-            color: darken(@color__primary, 15%);
+            color: darken(@color__link--text, 15%);
             letter-spacing: 1px;
         }
     }
@@ -602,19 +603,19 @@ ECOM - BASKET BUTTON
     button.basket-toggle {
         padding: 12px 35px;
         margin: 0 0 10px;
-        border-bottom: 1px solid @color__primary;
+        border-bottom: 1px solid @color__button--text;
         font-family: @font__button--font-family;
         font-size: @font__button--font-size;
         font-weight: @font__button--font-weight;
         background-color: transparent!important;
-        color: @color__primary!important;
+        color: @color__button--text!important;
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
         &:hover {
-            background-color: @color__button--background--hover;
+            background-color: transparent!important;
             cursor: pointer;
-            box-shadow: 0 1.5px 0 @color__primary;
+            box-shadow: 0 1.5px 0 @color__button--text;
         }
         &:before,
         &:after {
@@ -751,7 +752,7 @@ ECOM - BASKET BUTTON
         text-align: center;
         font-weight: 600;
         text-transform: uppercase;
-        border-top: 1px solid @color__primary;
+        border-top: 1px solid @color__link--text;
     }
 }
 
@@ -823,12 +824,12 @@ button.ecombasketsummary__quantity-plus {
     height: 32px;
     font-size: 2em;
     line-height: normal;
-    color: @color__p--text;
-    border-bottom: 1px solid @color__primary;
+    color: @color__button--text;
+    border-bottom: 1px solid @color__button--text;
     &:hover {
         background-color: transparent;
         font-weight: 700;
-        box-shadow: 0 1px 0 @color__primary;
+        box-shadow: 0 1px 0 @color__button--text;
     }
 }
 

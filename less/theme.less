@@ -225,15 +225,15 @@ span.expand.button.button--expand {
 .expand .less {
     font-family: @font-swatch4-font-family;
     font-size: 12px;
-    color: @color__button--text;
+    color: @color__link--text;
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px;
-    border-bottom: 1px solid @color__button--text;
+    border-bottom: 1px solid @color__link--text;
     letter-spacing: 1px;
     &:hover {
         letter-spacing: 1px!important;
-        border-bottom: 2px solid @color__button--text;
+        border-bottom: 2px solid @color__link--text;
         cursor: pointer;
         background-color: transparent;
         .transition (all, 0.2s, ease);
@@ -276,15 +276,15 @@ input#search-term {
     transition: all 0.3s;
     font-size: 0.9em;
     &:focus {
-        border-bottom: 1px solid @color__primary;
-        box-shadow: 0 1px 0 0 @color__primary;
+        border-bottom: 1px solid @color__form--border;
+        box-shadow: 0 1px 0 0 @color__form--border;
         background-color: transparent;
     }
 }
 
 input:active + label,
 input:focus + label {
-    color: @color__primary;
+    color: @color__form-legend-text;
     display: block;
     content: "";
     position: absolute;
@@ -449,7 +449,7 @@ input[type="checkbox"] {
     margin-right: 20px;
     position: absolute;
     outline: none;
-    border: 2px solid @color__primary!important;
+    border: 2px solid @color__button--text!important;
 }
 
 input[type="radio"],
@@ -462,9 +462,9 @@ input[type="checkbox"]:checked {
     width: 13px!important;
     height: 13px!important;
     outline: none;
-    background: @color__primary;
+    background: @color__button--text;
     border: 2.5px solid #ffffff!important;
-    box-shadow: 0px 0px 0px 2px @color__primary;
+    box-shadow: 0px 0px 0px 2px @color__button--text;
 }
 
 .form-group > .label {
