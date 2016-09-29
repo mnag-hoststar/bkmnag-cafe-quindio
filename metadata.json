@@ -221,7 +221,6 @@
             "font__navigation--letter-spacing": "1px",
             "color__navigation--text": "#413a31",
             "color__navigation--text--hover": "#8f8272",
-            "color__navigation--text--selected": "#413a31",
             "color__navigation-list--background":"#f3f0eb"
         },
         "form": {
@@ -259,9 +258,8 @@
             "color__twitter-account-name--text" : "#413a31"
         },
         "socialicons": {
-            "color__socialicons--icon": "@color__primary",
-            "color__socialicons--icon--hover": "darken(@color__primary, 10%)",
-            "color__socialicons--icon--background": "transparent"
+            "color__socialicons--icon": "@color__link--text",
+            "color__socialicons--icon--hover": "darken(@color__link--text, 10%)"        
         },
         "feature": {
             "color__feature-content--background": "#ffffff",
