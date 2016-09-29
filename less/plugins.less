@@ -188,7 +188,8 @@ footer.post-list-footer {
             height: 35px;
             background-color: transparent;
             color: @color__socialicons--icon;
-            font-size: 10px;
+            font-size: 12px;
+            background-color: transparent;
             &:before {
                 font-size: 16px!important;
             }
@@ -201,6 +202,42 @@ footer.post-list-footer {
                 box-shadow: 0 1.5px 0 @color__socialicons--icon;
                 .transition (all, 0.1s, ease);
                 outline: none;
+            }
+        }
+    }
+}
+
+@media @tablet {
+    .blogpost__sharing-links {
+        float: left;
+        position: relative;
+        top: 0px;
+        width:100%;
+        padding:0px;
+        //Social Sharing Blog Post Icons
+        .network-item {
+            button.button.icon.icon--facebook,
+            button.button.icon.icon--twitter,
+            button.button.icon.icon--googleplus {
+                width: auto;
+                display: block;
+                height: 35px;
+                text-transform: uppercase;
+                background-color: transparent;
+                color: @color__socialicons--icon;
+                &:before {
+                    font-size: 16px!important;
+                }
+                &:hover {
+                    box-shadow: 0 1.5px 0 @color__socialicons--icon;
+                    .transition (all, 0.1s, ease);
+                    outline: none;
+                }
+                &:active {
+                    box-shadow: 0 1.5px 0 @color__socialicons--icon;
+                    .transition (all, 0.1s, ease);
+                    outline: none;
+                }
             }
         }
     }
