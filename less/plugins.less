@@ -190,6 +190,7 @@ footer.post-list-footer {
             color: @color__socialicons--icon;
             font-size: 12px;
             background-color: transparent;
+            text-transform:uppercase;
             &:before {
                 font-size: 16px!important;
             }
@@ -207,10 +208,11 @@ footer.post-list-footer {
     }
 }
 
-@media @tablet {
+@media @tablet, @media @mobile {
     .blogpost__sharing-links {
         float: left;
         position: relative;
+        text-align:center;
         top: 0px;
         width:100%;
         padding:0px;
@@ -221,6 +223,8 @@ footer.post-list-footer {
             button.button.icon.icon--googleplus {
                 width: auto;
                 display: block;
+                text-align:center;
+                margin:0 auto;
                 height: 35px;
                 text-transform: uppercase;
                 background-color: transparent;
