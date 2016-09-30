@@ -371,6 +371,7 @@ h3.feature__strapline {
             letter-spacing: 1px;
             margin-bottom: 15px;
             word-break: break-word;
+            color: @color__gallery-title-text;
             &:hover {
                 letter-spacing: 1px;
             }
@@ -405,6 +406,7 @@ h3.feature__strapline {
             letter-spacing: @font-swatch5-letter-spacing;
             word-break: break-word;
             text-transform: uppercase;
+            color: @color__gallery-description--text;
             &:after {
                 content: '';
                 display: block;
@@ -739,7 +741,7 @@ h3.feature__strapline {
     width: 100%;
     margin: 0;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: @color__slideshow-background-color;
     overflow: scroll;
 }
 
@@ -784,7 +786,7 @@ h3.feature__strapline {
 .responsiveslideshow__next-button {
     width: 64px;
     height: 64px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: @color__slideshow-caption--background;
     position: absolute;
     color: @color__slideshow-title--text;
     &:hover {
@@ -911,8 +913,8 @@ h3.feature__strapline {
 }
 
 .responsiveslideshow__pagination-item .button {
-    background-color: transparent;
-    border: 1px solid @color__primary;
+    background-color: @color__slideshow-pagination-item--background;
+    border: 1px solid @color__slideshow-pagination-item--background-selected;
     border-radius: 50%;
     width: 8px!important;
     height: 8px!important;
@@ -920,8 +922,9 @@ h3.feature__strapline {
     cursor: pointer;
     padding: 0px!important;
     color: transparent;
+    
     .selected {
-        background-color: @color__primary;
+        background-color: @color__slideshow-pagination-item--background-selected;
         border: none;
         padding: 0px!important;
     }
