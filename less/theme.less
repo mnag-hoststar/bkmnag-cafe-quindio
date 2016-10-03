@@ -450,6 +450,7 @@ input[type="checkbox"] {
     margin-right: 20px;
     outline: none;
     border: 2px solid @color__primary!important;
+    position:absolute;
 }
 
 input[type="radio"],
@@ -479,8 +480,14 @@ input[type="checkbox"]:checked {
     font-weight: 300;
     bottom: 5px;
     vertical-align:middle;
+    position:relative;
 }
 
+input[type="radio"]:checked > .label--checkbox,
+input[type="checkbox"]:checked > .label--radio {
+    vertical-align:middle!important;
+    position:relative;
+}
 .option-item--radio,
 .option-item--checkbox {
     display: block;
