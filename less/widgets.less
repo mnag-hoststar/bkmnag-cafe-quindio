@@ -27,6 +27,12 @@
 // 16.   #MAP
 // 17.   #YOUTUBE
 // 18.   #YELP, SOUNDCLOUD ...
+
+
+//--------------------------------------------------------------------------------------------//
+//   HEADER
+//--------------------------------------------------------------------------------------------//
+
 // -----------------------------
 // 1.  #LOGO
 // -----------------------------
@@ -35,21 +41,21 @@
     text-align: center;
 }
 
-.logo-link {
+.logo__logo-link {
     @media @tablet {
         margin: 0px auto;
         display: table;
     }
 }
 
-.logo-image {
+.logo__logo-image {
     margin: 0px auto;
 }
 
 // -----------------------------
 // 2.  #COMPANY NAME
 // -----------------------------
-.companyname {
+.widget__companyname {
     width: 100%;
     text-align: center;
     margin: 20px 0px;
@@ -58,7 +64,7 @@
     }
 }
 
-a.company-link {
+a.companyname__company-link {
     display: inline-block;
     padding: 0.65em 0 0.8em;
     letter-spacing: 1px;
@@ -1173,17 +1179,17 @@ a.socialicons__social-link {
     }
 }
 
-.tweet-wrap {
-    a:hover {
-        text-decoration: none;
-    }
-    .twitter__tweet-content {
-        padding: 0;
-    }
-    time.timestamp,
-    span.via {
-        font-size: 0.8em;
-    }
+.tweet-wrap a:hover {
+    text-decoration: none;
+}
+
+.twitter__timestamp,
+.twitter-feed__via {
+    font-size: 0.8em;
+}
+
+.twitter__tweet-content {
+    padding: 0;
 }
 
 .twitter__account-link {
@@ -1208,25 +1214,6 @@ a.socialicons__social-link {
     }
 }
 
-.widget__profile {
-    .profile__twitter {
-        .tweet-item {
-            padding: 30px;
-            margin-bottom: 1em;
-            border: 1px solid @color__primary;
-            img.avatar-image {
-                max-width: 80px;
-                float: left;
-                margin-right: 20px;
-                @media @mobile {
-                    display: none;
-                }
-            }
-            .tweet-wrap {}
-        }
-    }
-}
-
 // -----------------------------
 // 14. #DIVIDER - LINE WIDGET
 // -----------------------------
@@ -1244,33 +1231,7 @@ hr.rule {
 // -----------------------------
 // 15. #PROFILE
 // -----------------------------
-.widget.profile {
-    form {
-        fieldset {
-            input {
-                width: 100%;
-                height: 52px;
-                @media @tablet {
-                    width: 78%!important;
-                }
-                @media @mobile {
-                    width: 100%!important;
-                    margin-bottom: 12px;
-                }
-            }
-            button {
-                float: right;
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
-    }
-}
 
-.bk-profile-address p:after {
-    margin-left: 0;
-}
 
 // -----------------------------
 // 16. #MAP
@@ -1300,33 +1261,38 @@ hr.rule {
 .widget__yelpreview {
     border: 1px solid @color__primary;
     padding: 15px;
-    ul.review-list {
-        padding-left: 15px;
+}
+
+ul.yelpreview__review-list {
+    padding-left: 15px;
+}
+
+.yelpreview__yelp-title {
+    padding: 15px 0px 0px 15px;
+}
+
+a.yelpreview__review-link {
+    font-family: @font-swatch4-font-family;
+    font-size: 12px;
+    color: @color__link--text;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 0px;
+    border-bottom: 1px solid @color__link--text;
+    letter-spacing: 1px;
+    &:hover {
+        letter-spacing: 1px!important;
+        box-shadow: 0 1.5px 0 @color__link--text;
+        cursor: pointer;
+        .transition (all, 0.2s, ease);
     }
-    h2.yelp-title {
-        padding: 15px 0px 0px 15px;
-    }
-    a.review-link {
-        font-family: @font-swatch4-font-family;
-        font-size: 12px;
-        color: @color__link--text;
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 12px 0px;
-        border-bottom: 1px solid @color__link--text;
-        letter-spacing: 1px;
-        &:hover {
-            letter-spacing: 1px!important;
-            box-shadow: 0 1.5px 0 @color__link--text;
-            cursor: pointer;
-            .transition (all, 0.2s, ease);
-        }
-    }
-    .review-footer {
-        padding-top: 20px;
-        .timestamp {
-            font-style: italic;
-            font-size: 0.8em;
-        }
-    }
+}
+
+.yelpreview__review-footer {
+    padding-top: 20px;
+}
+
+.yelpreview__timestamp {
+    font-style: italic;
+    font-size: 0.8em;
 }
