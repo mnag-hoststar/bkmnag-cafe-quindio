@@ -451,6 +451,18 @@ input[type="checkbox"]:checked + label {
     box-shadow: 0px 0px 0px 2px @color__primary!important;
 }
 
+input[type="button" i]:focus,
+input[type="checkbox" i]:focus,
+input[type="file" i]:focus,
+input[type="hidden" i]:focus,
+input[type="image" i]:focus,
+input[type="radio" i]:focus,
+input[type="reset" i]:focus,
+input[type="submit" i]:focus,
+input[type="file" i]:focus::-webkit-file-upload-button {
+    outline-offset: -2px!important;
+    outline: -webkit-focus-ring-color auto 0px!important;
+}
 // Signup Form
 // ------------
 .signupform__label {
