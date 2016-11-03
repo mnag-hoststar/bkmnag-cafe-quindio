@@ -27,9 +27,8 @@
 // 16.   #MAP
 // 17.   #YOUTUBE
 // 18.   #YELP, SOUNDCLOUD ...
-//--------------------------------------------------------------------------------------------//
-//   HEADER
-//--------------------------------------------------------------------------------------------//
+
+
 // -----------------------------
 // 1.  #LOGO
 // -----------------------------
@@ -37,18 +36,18 @@
     width: 100%;
     text-align: center;
 }
-
+    
 .logo__logo-link {
     @media @tablet {
         margin: 0px auto;
         display: table;
     }
 }
-
+    
 .logo__logo-image {
     margin: 0px auto;
 }
-
+    
 // -----------------------------
 // 2.  #COMPANY NAME
 // -----------------------------
@@ -60,7 +59,7 @@
         margin: 0px 0px 10px 0px!important;
     }
 }
-
+    
 a.companyname__company-link {
     display: inline-block;
     padding: 0.65em 0 0.8em;
@@ -89,12 +88,12 @@ a.companyname__company-link {
     min-width: 220px;
     margin: 0;
 }
-
+    
 // Default Page
 .default-page .navigation-list--children {
     background-color: @color__primary;
 }
-
+    
 // Navigation Item
 // ---------------
 .extendednavigation__navigation-item {
@@ -102,7 +101,7 @@ a.companyname__company-link {
         width: 100%;
     }
 }
-
+    
 // Navigation Link
 .extendednavigation__item-name {
     padding: 14px;
@@ -121,12 +120,12 @@ a.companyname__company-link {
 .navigation-item.folder .navigation-item--child a {
     color: @color__navigation--text;
 }
-
+    
 .extendednavigation__navigation-item.folder.selected .selected {
     color: @color__navigation--text;
     text-decoration: none;
 }
-
+    
 // Burger Icon
 // -------------
 .extendednavigation__navigation-toggle {
@@ -177,7 +176,7 @@ a.companyname__company-link {
             background-color: transparent;
         }
     }
-    // Toggle Button Open State
+// Toggle Button Open State
     .extendednavigation__navigation-list.open {
         display: block;
         background-color: @color__navigation-list--background;
@@ -210,14 +209,14 @@ a.companyname__company-link {
         color: @color__navigation--text;
     }
 }
-
+    
 // -----------------------------
 // 4.  #FEATURE
 // -----------------------------
 .feature__background-image {
     background-repeat: no-repeat;
     background-position: center top;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover;        
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -228,7 +227,7 @@ a.companyname__company-link {
         height: 350px;
     }
 }
-
+    
 // Feature Content Wrap
 // --------------------
 .feature__content-wrap {
@@ -237,7 +236,7 @@ a.companyname__company-link {
     display: table-cell;
     vertical-align: middle;
 }
-
+    
 // Feature Content
 // ---------------
 h2.feature__headline {
@@ -275,7 +274,7 @@ h3.feature__strapline {
         word-break: break-word;
     }
 }
-
+    
 // Feature Button
 // ---------------
 .feature__button {
@@ -298,7 +297,7 @@ h3.feature__strapline {
         outline: none;
     }
 }
-
+    
 // -----------------------------
 // 5. #IMAGE WIDGET
 // -----------------------------
@@ -325,11 +324,10 @@ h3.feature__strapline {
         }
     }
 }
-
+    
 // 5.  #Gallery
 // -----------------------------
-// The following styles give you a three column gallery layout with a
-// coloured overlay
+
 // Gallery Layout
 // --------------
 // Gallery List
@@ -349,7 +347,7 @@ h3.feature__strapline {
     justify-content: space-between;
     padding: 15px 0;
 }
-
+    
 // Gallery Item
 // For screen size larger than 920px. Media queries below.
 .gallery {
@@ -433,7 +431,7 @@ h3.feature__strapline {
         }
     }
 }
-
+    
 // Gallery Images
 // --------------
 // Use Background-image Method
@@ -451,7 +449,6 @@ h3.feature__strapline {
         display: none;
     }
 }
-
 // Gallery Image Captions
 // ----------------------
 // Hide Caption
@@ -462,7 +459,6 @@ h3.feature__strapline {
     background-color: @color__gallery-caption--background;
     overflow: scroll;
 }
-
 // Show Caption
 .gallery__figure:hover .gallery__caption {
     text-align: center;
@@ -511,7 +507,7 @@ h3.feature__strapline {
         opacity: 1;
     }
 }
-
+    
 // Line below title
 .gallery__image-title:after {
     display: block;
@@ -525,8 +521,8 @@ h3.feature__strapline {
 
 .gallery__figure:hover .gallery__caption .image-title:after {
     width: 70px;
-}
-
+    }
+    
 // Media queries for Image Gallery
 // -------------------------------
 // Screen size between 769px and 920px
@@ -566,7 +562,7 @@ h3.feature__strapline {
         }
     }
 }
-
+    
 //Tablet
 @media @tablet {
     .gallery-item {
@@ -576,7 +572,7 @@ h3.feature__strapline {
         display: none;
     }
 }
-
+    
 // Screen size smaller than 600px
 @media only screen and (max-width: 600px) {
     .gallery__gallery-item {
@@ -584,7 +580,7 @@ h3.feature__strapline {
         margin: 0 auto 20px;
     }
 }
-
+    
 .gallery__caption {
     border: 1px solid @color__gallery-title--text;
     padding: 10px;
@@ -608,7 +604,6 @@ h3.feature__strapline {
         text-decoration: none;
     }
 }
-
 .responsivecolumns .gallery__caption-link {
     display: none;
 }
@@ -623,14 +618,13 @@ h3.feature__strapline {
     background-color: transparent;
     border: 0;
 }
-
+    
 // -----------------------------
 // 7.  #SLIDESHOW
 // -----------------------------
 .widget__responsiveslideshow {
     margin-bottom: 40px;
 }
-
 .slides-list {
     padding: 0px;
 }
@@ -654,6 +648,9 @@ h3.feature__strapline {
     @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
         min-height: 450px!important;
     }
+    @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+        min-height: 280px!important;
+    }
     @media @mobile {
         min-height: 200px!important;
     }
@@ -671,7 +668,7 @@ h3.feature__strapline {
 .columns-two-left .responsiveslideshow .figure,
 .columns-two-right .responsiveslideshow .figure {
     @media @tablet {
-        min-height: 280px!important;
+        min-height: 250px!important;
     }
 }
 
@@ -708,7 +705,6 @@ h3.feature__strapline {
         }
     }
 }
-
 //Mobile Landscape
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
     .responsivecolumns .columns-two-left,
@@ -718,7 +714,6 @@ h3.feature__strapline {
         }
     }
 }
-
 //Mobile Portrait
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     .responsivecolumns .columns-two-left,
@@ -739,11 +734,9 @@ h3.feature__strapline {
         }
     }
 }
-
 .responsiveslideshow .image {
     display: none!important;
 }
-
 // Slideshow Image Captions
 // ------------------------
 .responsiveslideshow__caption {
@@ -776,7 +769,6 @@ h3.feature__strapline {
         }
     }
 }
-
 // Slideshow Control Navigation Icons
 // ----------------------------------
 .responsiveslideshow__slide-navigation {
@@ -840,7 +832,6 @@ h3.feature__strapline {
         opacity: 0.7;
     }
 }
-
 //Slide Navigation 2 Responsive Columns
 .responsivecolumns .columns-two-left,
 .responsivecolums .columns-two-right {
@@ -910,7 +901,6 @@ h3.feature__strapline {
         font-size: 12px!important;
     }
 }
-
 // Slideshow Pagination Bullets
 // ----------------------------
 .responsiveslideshow__slide-pagination,
@@ -1035,7 +1025,6 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 }
-
 // --------------------------------------------
 // 9.-11.  #CONTACT & #SIGNUP & BLOGSEARCH FORM
 // --------------------------------------------
@@ -1167,7 +1156,6 @@ a.socialicons__social-link {
         }
     }
 }
-
 // -----------------------------
 // 13. #TWITER FEED
 // -----------------------------
@@ -1229,7 +1217,6 @@ a.socialicons__social-link {
         text-decoration: none!important;
     }
 }
-
 // -----------------------------
 // 14. #DIVIDER - LINE WIDGET
 // -----------------------------
