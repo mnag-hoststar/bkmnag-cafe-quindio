@@ -18,7 +18,6 @@
 @color__primary: @color__secondary;
 @button-color: @color__button--background;
 @spare-color: #ffffff;
-
 // Font Swatches
 // -------------
 // font1:  Heading 1
@@ -41,7 +40,12 @@ body {
     letter-spacing: .04em;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     padding-bottom: 7px;
 }
 
@@ -50,7 +54,8 @@ p {
     line-height: 20px;
 }
 
-ul,ol {
+ul,
+ol {
     padding: 0 0 .5em 2em;
 }
 
@@ -266,17 +271,6 @@ input#search-term {
     }
 }
 
-/*input:active + label,
-input:focus + label {
-    color: @color__form-legend-text;
-    display: block;
-    content: "";
-    position: absolute;
-    top: -0.8rem;
-    opacity: 1;
-    transition: .2s opacity ease-out, .2s color ease-out;
-}*/
-
 textarea {
     resize: vertical;
     min-height: 150px;
@@ -393,7 +387,6 @@ select span {
     font-size: 10px;
 }
 
-
 // Advanced Contact Form
 // ---------------------
 .advancedcontactform {
@@ -424,58 +417,7 @@ select span {
 .advancedcontactform__option-list {
     padding: 0px;
 }
-/*
-input[type="radio"],
-input[type="checkbox"] {
-    display:none;
-}
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
-    width: 15px!important;
-    height: 15px!important;
-    border: 1px solid @color__primary!important;
-}
-
-input[type="radio"] + label,
-input[type="radio"]:checked + label {
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked + label,
-input[type="checkbox"]:checked + label {
-    width: 13px!important;
-    height: 13px!important;
-    outline: none;
-    background-color: @color__primary!important;
-    border: 2.5px solid #ffffff!important;
-    box-shadow: 0px 0px 0px 2px @color__primary!important;
-}
-
-input[type="button" i]:focus,
-input[type="checkbox" i]:focus,
-input[type="file" i]:focus,
-input[type="hidden" i]:focus,
-input[type="image" i]:focus,
-input[type="radio" i]:focus,
-input[type="reset" i]:focus,
-input[type="submit" i]:focus,
-input[type="button"]:focus,
-input[type="checkbox"]:focus,
-input[type="file"]:focus,
-input[type="hidden"]:focus,
-input[type="image"]:focus,
-input[type="radio"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-input[type="file" i]:focus::-webkit-file-upload-button {
-    outline-offset: -2px!important;
-    outline: -webkit-focus-ring-color auto 0px!important;
-}
-label:focus {
-    outline: -webkit-focus-ring-color auto 0px!important;
-}
-*/
 input[type="radio"],
 input[type="checkbox"] {
     -webkit-appearance: none!important;
@@ -520,6 +462,7 @@ input[type="checkbox"]:checked {
 .option-item--checkbox {
     display: block;
 }
+
 // Signup Form
 // ------------
 .signupform__label {
