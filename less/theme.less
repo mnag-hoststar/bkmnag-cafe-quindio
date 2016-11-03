@@ -424,6 +424,7 @@ select span {
 .advancedcontactform__option-list {
     padding: 0px;
 }
+/*
 input[type="radio"],
 input[type="checkbox"] {
     display:none;
@@ -474,7 +475,51 @@ input[type="file" i]:focus::-webkit-file-upload-button {
 label:focus {
     outline: -webkit-focus-ring-color auto 0px!important;
 }
+*/
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none!important;
+    width: 15px!important;
+    height: 15px!important;
+    margin-right: 20px;
+    position: absolute;
+    outline: none;
+    border: 2px solid @color__primary!important;
+}
 
+input[type="radio"],
+input[type="radio"]:checked {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    width: 13px!important;
+    height: 13px!important;
+    outline: none;
+    background: @color__primary;
+    border: 2.5px solid #ffffff!important;
+    box-shadow: 0px 0px 0px 2px @color__primary;
+}
+
+.form-group > .label {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.option-item > .label--checkbox,
+.option-item > .label--radio {
+    left: 25px;
+    text-transform: none;
+    font-weight: 300;
+    position: relative;
+    bottom: 5px;
+}
+
+.option-item--radio,
+.option-item--checkbox {
+    display: block;
+}
 // Signup Form
 // ------------
 .signupform__label {
