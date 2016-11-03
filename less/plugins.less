@@ -91,10 +91,12 @@ footer.post-list-footer nav.post-pagination {
     letter-spacing: 1px;
     text-align: center;
 }
+
 //Post List Footer older/newer Toggle
 .blogpostlist__pagination-item {
     display: inline-block;
 }
+
 a.button.button--pagination.button--previous,
 a.button.button--pagination.button--next {
     margin: 0 1em;
@@ -122,6 +124,7 @@ a.button.button--pagination.button--next {
 .blogpost__post-image {
     height: 450px;
 }
+
 .blogpost__post-image a.image-link {
     height: 100%;
     background-size: cover;
@@ -182,6 +185,7 @@ a.button.button--pagination.button--next {
     position: relative;
     top: -28px;
 }
+
 //Social Sharing Blog Post Icons
 .blogpost__network-item {
     button.button.icon.icon--facebook,
@@ -210,6 +214,7 @@ a.button.button--pagination.button--next {
         }
     }
 }
+
 @media @tablet {
     .blogpost__sharing-links {
         float: left;
@@ -275,6 +280,7 @@ a.button.button--pagination.button--next {
     text-align: center;
     margin: 0 0 40px;
 }
+
 a.menu-item-name {
     margin: 0 1em;
     border-bottom: 1px solid @color__link--text;
@@ -420,17 +426,32 @@ header.section.header {
     margin-left: 0;
     margin-bottom: 40px;
 }
-.fieldset--filters{
+
+.fieldset--filters {
     .form-group {
-        width:31.333%;
+        width: 31.333%;
         select {
             background-size: 8.5%!important;
         }
     }
 }
-.label--search.ecomproductslist__label {
-    display:none;
+
+.columns-two-left,
+.columns-two-right {
+    .fieldset--filters {
+        .form-group {
+            width: 46.333%;
+            select {
+                background-size: 8.5%!important;
+            }
+        }
+    }
 }
+
+.label--search.ecomproductslist__label {
+    display: none;
+}
+
 .ecomproductlist__product-list,
 .ecomfeaturedproducts__product-list {
     padding: 0px;
@@ -471,7 +492,7 @@ header.section.header {
         }
         &:hover {
             letter-spacing: 0px;
-            font-weight:300;
+            font-weight: 300;
         }
     }
 }
@@ -587,6 +608,12 @@ header.section.header {
     }
 }
 
+.columns-two-left,
+.columns-two-right {
+    .ecomproduct__product-content {
+        width: 100%;
+    }
+}
 .ecomproduct__product-header {}
 
 .ecomproduct__product-body {}
@@ -772,6 +799,7 @@ ECOM - BASKET BUTTON
         text-align: center!important;
     }
 }
+
 .ecombasketsummary__summary-item-link {
     text-transform: uppercase;
     font-weight: 600;
