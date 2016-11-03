@@ -32,15 +32,17 @@
 
 .blogpostlist__post-image {
     height: 450px;
-    a.image-link {
-        height: 100%;
-        background-size: cover;
-        background-position: center center;
-        background-color: transparent;
-        img.image {
-            display: none;
-        }
-    }
+}
+
+.blogpostlist__post-image a.image-link {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-color: transparent;
+}
+
+.blogpostlist__post-image a.image-link img.image {
+    display: none;
 }
 
 //Post Content
@@ -70,63 +72,64 @@
 //Blog List Footer
 .blogpostlist__post-footer {
     font-size: 0.9em!important;
-    time.timestamp {
-        font-style: italic;
-        float: right;
-        padding: 14px 0px;
-        letter-spacing: 0px;
-        font-size: 0.9em;
-    }
+}
+
+.blogpostlist__post-footer time.timestamp {
+    font-style: italic;
+    float: right;
+    padding: 14px 0px;
+    letter-spacing: 0px;
+    font-size: 0.9em;
 }
 
 //Footer Pagination Items
 footer.post-list-footer {
     width: 96%;
-    nav.post-pagination {
-        letter-spacing: 1px;
-        text-align: center;
-    }
 }
 
+footer.post-list-footer nav.post-pagination {
+    letter-spacing: 1px;
+    text-align: center;
+}
 //Post List Footer older/newer Toggle
 .blogpostlist__pagination-item {
     display: inline-block;
-    a.button.button--pagination.button--previous,
-    a.button.button--pagination.button--next {
-        margin: 0 1em;
-        border-bottom: 1px solid @color__link--text;
-        text-transform: uppercase;
-        color: @color__link--text;
-        background-color: transparent;
-        font-weight: 400;
-        width: 96%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        &:before,
-        &:after {
-            display: none;
-        }
-        &:hover {
-            box-shadow: 0 1.5px 0 @color__link--text;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
+}
+a.button.button--pagination.button--previous,
+a.button.button--pagination.button--next {
+    margin: 0 1em;
+    border-bottom: 1px solid @color__link--text;
+    text-transform: uppercase;
+    color: @color__link--text;
+    background-color: transparent;
+    font-weight: 400;
+    width: 96%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        display: none;
+    }
+    &:hover {
+        box-shadow: 0 1.5px 0 @color__link--text;
+        letter-spacing: 1px;
+        font-weight: 700;
     }
 }
 
 //Blog Post Single
 .blogpost__post-image {
     height: 450px;
-    a.image-link {
-        height: 100%;
-        background-size: cover;
-        background-position: center center;
-        margin-bottom: 40px;
-        background-color: transparent;
-        img.image {
-            display: none;
-        }
+}
+.blogpost__post-image a.image-link {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 40px;
+    background-color: transparent;
+    img.image {
+        display: none;
     }
 }
 
@@ -178,19 +181,57 @@ footer.post-list-footer {
     float: right;
     position: relative;
     top: -28px;
+}
+//Social Sharing Blog Post Icons
+.blogpost__network-item {
+    button.button.icon.icon--facebook,
+    button.button.icon.icon--twitter,
+    button.button.icon.icon--googleplus {
+        width: auto;
+        display: inline-block;
+        height: 35px;
+        background-color: transparent;
+        color: @color__socialicons--icon;
+        font-size: 12px;
+        background-color: transparent;
+        text-transform: uppercase;
+        &:before {
+            font-size: 16px!important;
+        }
+        &:hover {
+            box-shadow: 0 1.5px 0 @color__socialicons--icon;
+            .transition (all, 0.1s, ease);
+            outline: none;
+        }
+        &:active {
+            box-shadow: 0 1.5px 0 @color__socialicons--icon;
+            .transition (all, 0.1s, ease);
+            outline: none;
+        }
+    }
+}
+@media @tablet {
+    .blogpost__sharing-links {
+        float: left;
+        position: relative;
+        text-align: center;
+        top: 0px;
+        width: 100%;
+        padding: 0px;
+    }
     //Social Sharing Blog Post Icons
-    .network-item {
+    .blogpost__network-item {
         button.button.icon.icon--facebook,
         button.button.icon.icon--twitter,
         button.button.icon.icon--googleplus {
             width: auto;
-            display:inline-block;
+            display: block;
+            text-align: center;
+            margin: 0 auto;
             height: 35px;
+            text-transform: uppercase;
             background-color: transparent;
             color: @color__socialicons--icon;
-            font-size: 12px;
-            background-color: transparent;
-            text-transform:uppercase;
             &:before {
                 font-size: 16px!important;
             }
@@ -203,45 +244,6 @@ footer.post-list-footer {
                 box-shadow: 0 1.5px 0 @color__socialicons--icon;
                 .transition (all, 0.1s, ease);
                 outline: none;
-            }
-        }
-    }
-}
-
-@media @tablet {
-    .blogpost__sharing-links {
-        float: left;
-        position: relative;
-        text-align:center;
-        top: 0px;
-        width:100%;
-        padding:0px;
-        //Social Sharing Blog Post Icons
-        .network-item {
-            button.button.icon.icon--facebook,
-            button.button.icon.icon--twitter,
-            button.button.icon.icon--googleplus {
-                width: auto;
-                display: block;
-                text-align:center;
-                margin:0 auto;
-                height: 35px;
-                text-transform: uppercase;
-                background-color: transparent;
-                color: @color__socialicons--icon;
-                &:before {
-                    font-size: 16px!important;
-                }
-                &:hover {
-                    box-shadow: 0 1.5px 0 @color__socialicons--icon;
-                    .transition (all, 0.1s, ease);
-                    outline: none;
-                }
-                &:active {
-                    box-shadow: 0 1.5px 0 @color__socialicons--icon;
-                    .transition (all, 0.1s, ease);
-                    outline: none;
-                }
             }
         }
     }
@@ -273,31 +275,28 @@ footer.post-list-footer {
     text-align: center;
     margin: 0 0 40px;
 }
-
-.menusections-item {
-    a.menu-item-name {
-        margin: 0 1em;
-        border-bottom: 1px solid @color__link--text;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        color: @color__primary;
+a.menu-item-name {
+    margin: 0 1em;
+    border-bottom: 1px solid @color__link--text;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: @color__primary;
+    background-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &:before,
+    &:after {
+        display: none;
+    }
+    &:hover {
+        box-shadow: 0 1.5px 0 @color__link--text;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-decoration: none;
+        color: darken(@color__link--text, 15%);
         background-color: transparent;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        &:before,
-        &:after {
-            display: none;
-        }
-        &:hover {
-            box-shadow: 0 1.5px 0 @color__link--text;
-            letter-spacing: 1px;
-            font-weight: 700;
-            text-decoration: none;
-            color: darken(@color__link--text,15%);
-            background-color: transparent;
-            .transition (all, 0.2s, ease);
-        }
+        .transition (all, 0.2s, ease);
     }
 }
 
@@ -772,21 +771,16 @@ ECOM - BASKET BUTTON
         text-align: center!important;
     }
 }
-
-.summary-item-title {
-    .summary-item-link {
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 16px;
+.ecombasketsummary__summary-item-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    @media @mobile {
+        text-align: center;
+        font-size: 18px;
+    }
+    &:hover {
         letter-spacing: 1px;
-        @media @mobile {
-            text-align: center;
-            font-size: 18px;
-        }
-        &:hover {
-            letter-spacing: 1px;
-        }
     }
 }
 
@@ -808,26 +802,11 @@ ECOM - BASKET BUTTON
     }
 }
 
-.ecombasketsummary__summary-form,
-.ecomproductslist__form,
-.ecomproduct__form {
-    border: 0;
-    position: relative;
-    padding: 0;
-    background-color: transparent;
-}
-
+//Proceed to checkout Button
 .ecombasketsummary__summary-form {
     text-align: right;
     @media @tablet {
         text-align: center;
-    }
-}
-
-.ecomproductslist__form {
-    width: 100%;
-    &:before {
-        display: none;
     }
 }
 
@@ -842,7 +821,6 @@ ECOM - BASKET BUTTON
 }
 
 .quantity-wrap .button--quantity {
-    font-size: 13px;
     padding-left: 1px;
     width: 30px;
     height: 30px;
@@ -869,14 +847,6 @@ button.ecombasketsummary__quantity-minus,
 button.ecombasketsummary__quantity-plus {
     font-weight: 300;
     font-size: 22px!important;
-    background-color: transparent;
-    margin: 0;
-    padding: 2px 6px 3px;
-    width: 30px;
-    height: 32px;
-    font-size: 2em;
-    line-height: normal;
-    color: @color__button--text;
     border-bottom: 1px solid @color__button--text;
     &:hover {
         background-color: transparent;
@@ -890,28 +860,4 @@ button.ecombasketsummary__quantity-plus {
     @media @mobile {
         text-align: center;
     }
-}
-
-.ecombasketsummary__message {
-    margin: 20px 0;
-}
-
-.ecombasketsummary__summary-section {
-    text-align: left!important;
-}
-
-.ecomproduct__message {
-    margin: 10px 0;
-    p {
-        display: inline-block;
-        margin-left: 5px;
-    }
-}
-
-.message {
-    padding-left: 0;
-}
-
-.message:before {
-    position: relative;
 }
