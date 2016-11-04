@@ -200,8 +200,7 @@
             "color__p--text": "#413a31"
         },
         "header": {
-            "color__header--background" : "#ffffff",
-            "color__header--border" : "#ffffff"
+            "color__header--background" : "#ffffff"
         },
         "footer": {
             "color__footer--background" : "#ffffff",
