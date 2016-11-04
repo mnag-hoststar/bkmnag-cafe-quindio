@@ -96,6 +96,7 @@ legend {
 
 a {
     letter-spacing: 1px;
+    color: @color__link--text;
     &:hover {
         font-weight: 700;
         letter-spacing: 0.615px;
@@ -124,6 +125,8 @@ body.edit .widget.extendednavigation {
 .bk-header {
     padding: 50px 0px;
     text-align: center;
+    background-color: @color__header--background;
+    border: 0px solid @color__header--border;
     @media @mobile {
         padding: 20px 0;
     }
@@ -136,7 +139,8 @@ body.edit .widget.extendednavigation {
 // 4. #FOOTER
 // -----------------------------
 .bk-footer {
-    border-top: 1px solid lighten(@color__p--text, 40%);
+    border-top: 1px solid @color__footer--border;
+    background-color: @color__footer--background;
     @media @mobile {
         padding: 0px;
     }

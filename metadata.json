@@ -208,11 +208,6 @@
             "color__footer--border" : "#aca192"
             
         },
-        "sidebar": {
-            "color__sidebar--background" : "#ffffff",
-            "color__sidebar--border" : "#aca192"
-            
-        },
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "17px",
