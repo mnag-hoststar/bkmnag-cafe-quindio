@@ -1,4 +1,4 @@
 Café Quindio
 =============
 
-Standard Basekit Template by Hoststar
+Standard V8 Basekit Template by Hoststar.
