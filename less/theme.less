@@ -135,6 +135,167 @@ body.edit .widget.extendednavigation {
 	}
 }
 
+// Language Selector
+// -----------------
+
+@language-padding: 5px;
+@language-border: 2px;
+
+.language-selector.language-selector--dropdown,
+.language-selector.language-selector--horizontal {
+    box-sizing: content-box;
+    margin: 0 auto;
+    max-width: 1500px;
+    text-align: center;
+}
+
+// Language Selector Light
+.language-selector.language-selector--light {
+    background-color: @color__header--background;
+}
+
+// Language Selector Dark
+.language-selector.language-selector--dark {
+    background-color: @color__body--background;
+}
+
+// General styles inside the Language Selector
+.language-selector {
+    .language-selector__inner {
+        box-sizing: content-box;
+        padding: 14px 10px;
+    }
+    
+    .language-selector__link {
+        box-sizing: border-box;
+        padding: @language-padding @language-padding*3;
+        min-height: @font__p--line-height;
+        border: none;
+    }
+
+    .language-selector__name,
+    .language-selector__localised-name {
+        font-family: @font__p--font-family;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+        letter-spacing: @font__p--letter-spacing;
+        color: @color__p--text;
+    }
+}
+
+// Language Selector Dropdown
+.language-selector.language-selector--dropdown {
+    height: auto;
+    text-align: left;
+    
+    .language-selector__inner {
+        padding-right: 0;
+        height: @font__p--line-height+@language-padding*2+@language-border*2;
+        
+        @media only screen and (max-width: 1500px) {
+            padding-right: 14px;
+        }
+        
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+    .language-selector__list {
+        box-sizing: border-box;
+        margin: 14px 0 14px 10px;
+        min-width: auto;
+        
+        @media only screen and (max-width: 1500px) {
+            margin-right: 14px;
+        }
+        
+        @media @mobile {
+            position: relative;
+            margin: 0;
+        }
+    }
+
+    .language-selector__item {
+        &--current {
+            &:after {
+                content: '';
+    	        background: image('/images/arrow-small-down.svg') no-repeat center right;
+                color: transparent;
+                min-width: 30px;
+                height: 100%;
+                top: 0;
+                right: 2px;
+            }
+        }
+    }
+    
+    .language-selector__link {
+        padding-right: 40px;
+    }
+
+    .language-selector__name,
+    .language-selector__localised-name {
+        @media only screen and (max-width: 300px) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150px;
+            display: block;
+        }
+    }
+}
+
+// Language Selector Single Item
+.language-selector__item {
+    .language-selector.language-selector--light & {
+        border: none;
+        background-color: transparent;
+        
+        .language-selector__link {
+            border: @language-border solid @color__header--background;
+            background-color: @color__header--background;
+        }
+        
+        .language-selector__link:hover {
+            border: @language-border solid darken(@color__header--background, 10%);
+            background-color: darken(@color__header--background, 10%);
+        }
+    }
+    
+    .language-selector--light .language-selector__item--current& {
+        .language-selector__link,
+        .language-selector__link:hover {
+            border: @language-border solid @color__button--text--hover;
+            background-color: @color__header--background;
+        }
+    }
+    
+    .language-selector.language-selector--dark & {
+        border: none;
+        background-color: transparent;
+        
+        .language-selector__link {
+            border: @language-border solid @color__body--background;
+            background-color: @color__body--background;
+        }
+        
+        .language-selector__link:hover {
+            border: @language-border solid darken(@color__body--background, 10%);
+            background-color: darken(@color__body--background, 10%);
+        }
+    }
+        
+    .language-selector--dark .language-selector__item--current& {
+        .language-selector__link,
+        .language-selector__link:hover {
+            border: 2px solid darken(@color__body--background, 20%);
+            background-color: darken(@color__body--background, 10%);
+        }
+    }
+}
+
 // -----------------------------
 // 4. #FOOTER
 // -----------------------------
