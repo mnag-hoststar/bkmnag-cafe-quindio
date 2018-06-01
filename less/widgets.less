@@ -37,7 +37,7 @@
     width: 100%;
     text-align: center;
 }
-    
+
 .logo__logo-link {
     @media @tablet {
         margin: 0px auto;
@@ -60,7 +60,7 @@
         margin: 0px 0px 10px 0px!important;
     }
 }
-    
+
 a.companyname__company-link {
     display: inline-block;
     padding: 0.65em 0 0.8em;
@@ -239,7 +239,7 @@ a.companyname__company-link {
 
 // Language Selector Light
 .language-selector.language-selector--light {
-    background-color: @color__header--background;
+    background-color: @color__container--background;
 }
 
 // Language Selector Dark
@@ -299,13 +299,6 @@ a.companyname__company-link {
 
 // Language Selector Horizontal
 .language-selector.language-selector--horizontal {
-    .language-selector__list {
-        margin: @language-padding*2;
-        
-        .language-selector--dark& {
-            margin: 0;
-        }
-    }
     
     &.language-selector--light {
         .language-selector__item {
@@ -314,12 +307,12 @@ a.companyname__company-link {
             
             .language-selector__link {
                 border: none;
-                background-color: @color__header--background;
+                background-color: @color__container--background;
             }
             
             .language-selector__link:hover {
                 border: none;
-                background-color: fade(@color__button--text, 20%);
+                background-color: darken(@color__container--background, 5%);
             }
         }
     
@@ -327,7 +320,7 @@ a.companyname__company-link {
             .language-selector__link,
             .language-selector__link:hover {
                 border: none;
-                background-color: fade(@color__button--text, 20%);
+                background-color: darken(@color__container--background, 5%);
             }
         }
     }
@@ -344,7 +337,7 @@ a.companyname__company-link {
             
             .language-selector__link:hover {
                 border: none;
-                background-color: darken(@color__body--background, 10%);
+                background-color: darken(@color__body--background, 5%);
             }
         }
         
@@ -352,7 +345,7 @@ a.companyname__company-link {
             .language-selector__link,
             .language-selector__link:hover {
                 border: none;
-                background-color: darken(@color__body--background, 10%);
+                background-color: darken(@color__body--background, 5%);
             }
         }
     }
@@ -432,20 +425,20 @@ a.companyname__company-link {
             
             .language-selector__link {
                 border: none;
-                background-color: fade(@color__button--text, 10%);
+                background-color: darken(@color__container--background, 5%);
             }
             
             .language-selector__link:hover {
                 border: none;
-                background-color: fade(@color__button--text, 20%);
+                background-color: darken(@color__container--background, 10%);
             }
         }
     
         .language-selector__item--current {
             .language-selector__link,
             .language-selector__link:hover {
-                border: @language-border solid @color__button--text;
-                background-color: fade(@color__button--text, 20%);
+                border: @language-border solid darken(@color__container--background, 10%);
+                background-color: darken(@color__container--background, 5%);
             }
         }
     }
@@ -462,7 +455,7 @@ a.companyname__company-link {
             
             .language-selector__link:hover {
                 border: none;
-                background-color: darken(@color__body--background, 10%);
+                background-color: darken(@color__body--background, 5%);
             }
         }
         
@@ -470,7 +463,7 @@ a.companyname__company-link {
             .language-selector__link,
             .language-selector__link:hover {
                 border: @language-border solid darken(@color__body--background, 20%);
-                background-color: darken(@color__body--background, 10%);
+                background-color: darken(@color__body--background, 5%);
             }
         }
     }
