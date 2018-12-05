@@ -424,11 +424,17 @@ input[type="checkbox"]:checked {
 }
 
 .option-item>.label--checkbox,
-.option-item>.label--radio {
+.option-item>.label--radio,
+.widget .form label[for*="input--terms"] span a.form__link {
+	label;
 	left: 25px;
 	text-transform: none;
 	font-weight: 300;
 	position: relative;
+}
+
+.option-item>.label--checkbox,
+.option-item>.label--radio {
 	bottom: 5px;
 }
 
@@ -447,6 +453,7 @@ input[type="checkbox"]:checked {
 	display: inline-block;
 	float: left;
 	vertical-align: top;
+	
 	.button--submit {
 		display: inline-block;
 		float: right;
