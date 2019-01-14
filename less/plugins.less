@@ -4,12 +4,14 @@
 // -----------------------------
 // #Table of Contents
 // -----------------------------
-//  1.   #BLOG
-//  2.   #MENU
-//  3.   #E-COMMERCE
+//  1. #BLOG
+// 	2. #E-COMMERCE
 // -----------------------------
-// 1. Blog Post List
+
 // -----------------------------
+//  1. #BLOG
+// -----------------------------
+
 .widget__blogpostlist {
 	width: 104%;
 	margin-bottom: 40px;
@@ -45,7 +47,8 @@
 	display: none;
 }
 
-//Post Content
+// Post Content
+
 .blogpostlist__title-link {
 	letter-spacing: 0px;
 	&:hover {
@@ -69,7 +72,8 @@
 	}
 }
 
-//Blog List Footer
+// Blog List Footer
+
 .blogpostlist__post-footer {
 	font-size: 0.9em!important;
 }
@@ -82,7 +86,8 @@
 	font-size: 0.9em;
 }
 
-//Footer Pagination Items
+// Footer Pagination Items
+
 footer.post-list-footer {
 	width: 96%;
 }
@@ -92,7 +97,8 @@ footer.post-list-footer nav.post-pagination {
 	text-align: center;
 }
 
-//Post List Footer older/newer Toggle
+// Post List Footer older/newer Toggle
+
 .blogpostlist__pagination-item {
 	display: inline-block;
 }
@@ -120,7 +126,8 @@ a.button.button--pagination.button--next {
 	}
 }
 
-//Blog Post Single
+// Blog Post Single
+
 .blogpost__post-image {
 	height: 450px;
 }
@@ -179,14 +186,16 @@ a.button.button--pagination.button--next {
 	}
 }
 
-//Social Sharing Icon Group
+// Social Sharing Icon Group
+
 .blogpost__sharing-links {
 	float: right;
 	position: relative;
 	top: -28px;
 }
 
-//Social Sharing Blog Post Icons
+// Social Sharing Blog Post Icons
+
 .blogpost__network-item {
 	button.button.icon.icon--facebook,
 	button.button.icon.icon--twitter,
@@ -224,7 +233,9 @@ a.button.button--pagination.button--next {
 		width: 100%;
 		padding: 0px;
 	}
+	
 	//Social Sharing Blog Post Icons
+	
 	.blogpost__network-item {
 		button.button.icon.icon--facebook,
 		button.button.icon.icon--twitter,
@@ -254,9 +265,8 @@ a.button.button--pagination.button--next {
 	}
 }
 
-// -----------------------------
-// 1. #BLOG SEARCH
-// -----------------------------
+// Blog Search
+
 .blogsearch__fieldset {
 	margin: 0px auto 10px;
 	display: table;
@@ -273,148 +283,11 @@ a.button.button--pagination.button--next {
 }
 
 // -----------------------------
-// 2. #MENU
+// 	2. #E-COMMERCE
 // -----------------------------
-//Menusection Toggle (Categories)
-.menusections-body {
-	text-align: center;
-	margin: 0 0 40px;
-}
 
-a.menu-item-name {
-	margin: 0 1em;
-	border-bottom: 1px solid @color__link--text;
-	padding: 10px 20px;
-	text-transform: uppercase;
-	color: @color__primary;
-	background-color: transparent;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	&:before,
-	&:after {
-		display: none;
-	}
-	&:hover {
-		box-shadow: 0 1.5px 0 @color__link--text;
-		letter-spacing: 1px;
-		font-weight: 700;
-		text-decoration: none;
-		color: darken(@color__link--text, 15%);
-		background-color: transparent;
-		.transition (all, 0.2s, ease);
-	}
-}
-
-//Menu Widget
-.widget__menu {
-	margin-bottom: 40px;
-}
-
-.menu-section .menu-items {
-	text-align: center;
-}
-
-.menu-item {
-	padding: 30px;
-}
-
-.item-image {
-	height: 350px;
-}
-
-.menu .item-image .image-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-	line-height: 1px;
-	width: 100%;
-}
-
-.menu .item-image .image {
-	flex-shrink: 0;
-	min-width: 100%;
-	min-height: 100%;
-}
-
-.menu-subsection,
-.menu-section {
-	margin-bottom: 30px;
-	padding: 30px;
-	background-color: transparent;
-	text-align: center;
-	margin: 1.5em 0;
-}
-
-footer.section-footer {
-	text-align: center;
-}
-
-//Featured Menu- Sections
-section.menu-section--featured {
-	border: 1px solid @color__primary;
-}
-
-.menu-item--featured,
-.menu-section--featured {
-	padding: 30px;
-	background-color: transparent!important;
-	border: 1px solid @color__primary;
-}
-
-//Section Header
-header.section.header {
-	text-align: center;
-	padding-bottom: 2em;
-}
-
-.section-subtitle {
-	font-family: @font-swatch5-font-family;
-	font-size: @font-swatch5-font-size;
-}
-
-//Item Footer 
-.item-footer {
-	.item-price p {
-		color: @color__p--text;
-		font-family: @font-swatch4-font-family;
-		font-size: @font__button--font-size;
-	}
-	.item-subtitle {
-		text-transform: uppercase;
-		padding: 15px 0px 0px 0px;
-	}
-	.item-subtitle,
-	.item-details {
-		font-size: 12px;
-	}
-	.dietary-list {
-		margin-top: 10px;
-	}
-	.dietary-item {
-		text-transform: uppercase;
-		font-size: 0.9em !important;
-		margin: 0px 5px;
-		font-weight: 400;
-		color: @color__link--text;
-		letter-spacing: 1px;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		&:hover {
-			font-weight: 700;
-			text-decoration: none;
-			letter-spacing: 1px;
-		}
-	}
-}
-
-// -----------------------------
-// 3. #E-COMMERCE
-// -----------------------------
 // Products List
-// -------------
+
 .widget__ecomproductslist,
 .widget__ecomfeaturedproducts {
 	max-width: none;
@@ -508,8 +381,6 @@ header.section.header {
 	}
 }
 
-.product-item-price {}
-
 .product-item-image {
 	display: block;
 	height: 100%;
@@ -574,8 +445,8 @@ header.section.header {
 	}
 }
 
-// ECOM PRODUCT ITEM
-// -----------------
+// Product Item
+
 .ecomproduct__product-images {
 	width: 50%;
 	float: left;
@@ -625,10 +496,6 @@ header.section.header {
 		width: 100%!important;
 	}
 }
-
-.ecomproduct__product-header {}
-
-.ecomproduct__product-body {}
 
 .ecomproduct__product-actions {
 	display: inline;
@@ -685,40 +552,204 @@ header.section.header {
 	}
 }
 
+// Basket
 
-/* ===============================
-ECOM - BASKET BUTTON
-================================== */
+.ecombasket {
+	text-align: right;
+	margin-bottom: 20px;
+}
 
-.widget__ecombasket {
-	button.basket-toggle {
-		padding: 12px 35px;
-		margin: 0 0 10px;
-		border-bottom: 1px solid @color__button--text;
+.ecombasket__basket-toggle {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	color: @color__button--text;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 0;
+	font-size: 0;
+	.box-shadow(none);
+		
+	&:hover {
+		cursor: pointer;
+		background-color: transparent !important;
+		box-shadow: 0 1.5px 0 @color__button--text;
+	}
+		
+	.item-count {
 		font-family: @font__button--font-family;
 		font-size: @font__button--font-size;
 		font-weight: @font__button--font-weight;
-		background-color: transparent!important;
-		color: @color__button--text!important;
-		text-decoration: none;
-		text-transform: uppercase;
-		display: inline-block;
-		&:hover {
-			background-color: transparent!important;
-			cursor: pointer;
-			box-shadow: 0 1.5px 0 @color__button--text;
-		}
-		&:before,
-		&:after {
-			display: none;
-		}
+		line-height: @font__button--line-height;
+	}
+	
+	&:hover .item-count {
+		background: @color__button--background;
+		color: @color__button--text;
+	}
+	
+	&:before {
+		display: block !important;
+		float: right;
+    	margin: 0;
+		padding-right: 0.5em;
+		font-size: @font__button--font-size;
+		line-height: @font__button--line-height;
 	}
 }
 
-// -------------------------------
-// 4. #Basket Summary
-// -------------------------------
-// Basket Summary Content
+
+.ecombasket__item-count {
+    display: inline-block;
+	padding: 0 0.5em;
+	.transition();
+	background-color: @color-text--lightest;
+	font-size: @font__p--font-size;
+	line-height: @font__p--line-height;
+}
+
+// Basket Dropdown
+
+.show-content {
+	.ecombasket {
+		.basket-body {
+			display: table;
+			padding-top: 1em;
+			width: 100%;
+		}
+		
+		// The whole list of the basket.
+		
+		.basket-list {
+			border-top: 1px solid #e4e4e4;
+			border-bottom: 1px solid #e4e4e4;
+			padding: 0;
+		}
+		
+		// A single item on the list.
+
+		.basket-item {
+			position: relative;
+			margin: 0;
+    		padding: 0;
+
+			> * {
+				display: table-cell;
+				padding: 25px 12px;
+				vertical-align: middle;
+				border-bottom: 1px solid #e4e4e4;
+			}
+				
+			&:last-child > * {
+				border-bottom: none;
+			}
+		}
+		
+		// The item image.
+		
+		.basket-item-image {
+			padding: 25px 12px;
+		}
+		
+		// Item details.
+		
+		.basket-item-details {
+			width: 100%;
+			padding-right: 3em;
+		}
+		
+		.basket-item-name {
+    		display: block;
+			text-align: left;
+			text-transform: uppercase;
+			letter-spacing: 0.615px;
+			line-height: 1.5em;
+			font-weight: 600;
+		}
+		
+		.item-quantity,
+		.basket-item-price {
+			padding: 0;
+			text-align: left;
+			font-size: @font__p--font-size*0.9;
+			line-height: 1.2em;
+
+			.make-font-a-little-smaller(@font__p--font-size*0.8);
+			.make-font-smaller(@font__p--font-size*0.8);
+			.make-font-a-lot-smaller(@font__p--font-size*0.8);
+		}
+		
+		.basket-item-price {
+			.item-price;
+			margin: 0;
+			text-align: left;
+		}
+		
+		// Item remove button.
+		
+		.item-remove {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: unit(@font__p--line-height*0.1, em)/-2;
+			width: unit(@font__p--line-height*0.1, em);
+			height: unit(@font__p--line-height*0.1, em);
+			min-height: inherit;
+			padding: 0 !important;
+			border: none;
+			font-size: @font__p--font-size;
+			line-height: unit(@font__p--line-height*0.1, em);
+	
+			.make-font-a-little-smaller(@font__p--font-size);
+			.make-font-smaller(@font__p--font-size);
+			.make-font-a-lot-smaller(@font__p--font-size);
+
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin-right: 0;
+				font-size: @font__p--font-size;
+				line-height: unit(@font__p--line-height*0.1, em)+0.1;
+				width: unit(@font__p--line-height*0.1, em)+0.1;
+	
+				.make-font-a-little-smaller(@font__p--font-size);
+				.make-font-smaller(@font__p--font-size);
+				.make-font-a-lot-smaller(@font__p--font-size);
+			}
+		}
+		
+		.remove-text {
+			display: none;
+		}
+		
+		// Basket Footer.
+		
+		.basket-footer {
+			margin-top: 0;
+			padding-top: 0;
+			padding-bottom: 2em;
+			text-align: right;
+		}
+		
+		.basket-total {
+    		margin-bottom: 1em;
+			padding: 25px 12px;
+			border-bottom: 1px solid #e4e4e4;
+        	background-color: @color-text--lightest;
+        	text-align: right;
+			
+			@media @basketsummary-medium {
+				text-align: right;
+			}
+    	}
+	}
+}
+
+// Basket Summary
+
 .summary-table .cell--header {
 	margin-bottom: 20px;
 	text-decoration: none;
@@ -816,10 +847,12 @@ ECOM - BASKET BUTTON
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 16px;
+	
 	@media @mobile {
 		text-align: center;
 		font-size: 18px;
 	}
+	
 	&:hover {
 		letter-spacing: 1px;
 	}
@@ -843,7 +876,8 @@ ECOM - BASKET BUTTON
 	}
 }
 
-//Proceed to checkout Button
+// Proceed to checkout Button
+
 .ecombasketsummary__summary-form {
 	text-align: right;
 	@media @tablet {
@@ -900,5 +934,149 @@ button.ecombasketsummary__quantity-plus {
 	text-align: right;
 	@media @mobile {
 		text-align: center;
+	}
+}
+
+// -----------------------------
+// 3. #MENU
+// -----------------------------
+
+//Menusection Toggle
+
+.menusections-body {
+	text-align: center;
+	margin: 0 0 40px;
+}
+
+a.menu-item-name {
+	margin: 0 1em;
+	border-bottom: 1px solid @color__link--text;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	color: @color__primary;
+	background-color: transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		display: none;
+	}
+	&:hover {
+		box-shadow: 0 1.5px 0 @color__link--text;
+		letter-spacing: 1px;
+		font-weight: 700;
+		text-decoration: none;
+		color: darken(@color__link--text, 15%);
+		background-color: transparent;
+		.transition (all, 0.2s, ease);
+	}
+}
+
+//Menu Widget
+
+.widget__menu {
+	margin-bottom: 40px;
+}
+
+.menu-section .menu-items {
+	text-align: center;
+}
+
+.menu-item {
+	padding: 30px;
+}
+
+.item-image {
+	height: 350px;
+}
+
+.menu .item-image .image-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	line-height: 1px;
+	width: 100%;
+}
+
+.menu .item-image .image {
+	flex-shrink: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.menu-subsection,
+.menu-section {
+	margin-bottom: 30px;
+	padding: 30px;
+	background-color: transparent;
+	text-align: center;
+	margin: 1.5em 0;
+}
+
+footer.section-footer {
+	text-align: center;
+}
+
+// Featured Menu- Sections
+
+section.menu-section--featured {
+	border: 1px solid @color__primary;
+}
+
+.menu-item--featured,
+.menu-section--featured {
+	padding: 30px;
+	background-color: transparent!important;
+	border: 1px solid @color__primary;
+}
+
+// Section Header
+
+header.section.header {
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.section-subtitle {
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+}
+
+// Item Footer
+
+.item-footer {
+	.item-price p {
+		color: @color__p--text;
+		font-family: @font-swatch4-font-family;
+		font-size: @font__button--font-size;
+	}
+	.item-subtitle {
+		text-transform: uppercase;
+		padding: 15px 0px 0px 0px;
+	}
+	.item-subtitle,
+	.item-details {
+		font-size: 12px;
+	}
+	.dietary-list {
+		margin-top: 10px;
+	}
+	.dietary-item {
+		text-transform: uppercase;
+		font-size: 0.9em !important;
+		margin: 0px 5px;
+		font-weight: 400;
+		color: @color__link--text;
+		letter-spacing: 1px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		&:hover {
+			font-weight: 700;
+			text-decoration: none;
+			letter-spacing: 1px;
+		}
 	}
 }

@@ -4,23 +4,27 @@
 // -----------------------------
 // #Table of Contents
 // -----------------------------
-// 1. #HEADER, PROFILE HEADER & FOOTER
-// 2. #TYPOGRAPHY
-// 3. #FORMS
-// 4. #BUTTONS
-// 5. #IMAGES
+// 1. #TYPOGRAPHY
+// 2. #CUSTOM PAGE
+// 3. #HEADER & #BK-NAV
+// 4. #FOOTER
+// 5. #CONTENT
+// 6. #GENERAL FORMS
 // -----------------------------
+
 // -----------------------------
 // 1. #TYPOGRAPHY
 // -----------------------------
+
 // Colour Variables
-// ----------------
+
 @bg-color: @color__body--background;
 @color__primary: @color__secondary;
 @button-color: @color__button--background;
 @spare-color: #ffffff;
+
 // Font Swatches
-// -------------
+
 // font1:  Heading 1
 // font2:  Heading 2
 // font3:  Heading 3
@@ -31,6 +35,7 @@
 // font8:  Feature Headline
 // font9:  Feature Strapline
 // font10: Company Name (Logo)
+
 body {
 	font-smooth: always;
 	font-smoothing: antialiased;
@@ -109,13 +114,14 @@ a {
 // -----------------------------
 // 2. #CUSTOM PAGE
 // -----------------------------
+
 body.edit .widget.navigation,
 body.edit .widget.extendednavigation {
 	overflow: visible;
 }
 
 // Default Page Style
-// ------------------
+
 .bk-pt-default .bk-header {
 	border-bottom: 1px solid @color__primary;
 }
@@ -123,6 +129,7 @@ body.edit .widget.extendednavigation {
 // -----------------------------
 // 3. #HEADER & #BK-NAV
 // -----------------------------
+
 .bk-header {
 	padding: 50px 0px;
 	text-align: center;
@@ -138,6 +145,7 @@ body.edit .widget.extendednavigation {
 // -----------------------------
 // 4. #FOOTER
 // -----------------------------
+
 .bk-footer {
 	border-top: 1px solid @color__footer--border;
 	background-color: @color__footer--background;
@@ -199,6 +207,7 @@ body.edit .widget.extendednavigation {
 // -----------------------------
 // 5. #CONTENT
 // -----------------------------
+
 .widget__content {
 	padding: 0;
 	overflow: hidden;
@@ -236,6 +245,7 @@ span.expand.button.button--expand {
 // -----------------------------
 // 6. #GENERAL FORMS
 // -----------------------------
+
 .form-group,
 .form-group .advancedcontactform {
 	box-sizing: border-box;
@@ -362,7 +372,7 @@ select {
 }
 
 // Advanced Contact Form
-// ---------------------
+
 .advancedcontactform {
 	text-align: left;
 	width: 100%;
@@ -444,7 +454,7 @@ input[type="checkbox"]:checked {
 }
 
 // Signup Form
-// ------------
+
 .signupform__label {
 	padding: 30px 0 10px;
 }
@@ -464,7 +474,7 @@ input[type="checkbox"]:checked {
 }
 
 // Clearfix
-// --------
+
 .clearfix:before,
 .clearfix:after {
 	content: " ";
