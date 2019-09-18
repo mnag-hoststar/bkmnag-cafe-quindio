@@ -136,16 +136,24 @@ a.companyname__company-link {
 
 .navigation-item {
     position: relative;
-}
-.navigation-item.folder .item-name {
-    padding-right: 1em;
-}
-.navigation-item.folder .item-name:after {
-    position: absolute;
-}
+	
+	&.folder {
+		.navigation-item--child {
+			background-color: @color__navigation-list--background;
 
-.navigation-item.folder .navigation-item--child a {
-    color: @color__navigation--text;
+			a {
+				color: @color__navigation--text;
+			}
+		}
+		
+		.item-name {
+			padding-right: 1em;
+
+			&:after {
+				position: absolute;
+			}
+		}
+	}
 }
     
 .extendednavigation__navigation-item.folder.selected .selected {
@@ -208,10 +216,8 @@ a.companyname__company-link {
 	
     .extendednavigation__navigation-list.open {
         display: block;
-        background-color: @color__navigation-list--background;
         &:before {
             margin-top: 21px;
-            background: @color__navigation-list--background;
             box-shadow: none;
             .transition( all, 0.5s, ease);
         }
@@ -232,9 +238,6 @@ a.companyname__company-link {
     }
     .extendednavigation li.selected > a {
         text-decoration: none;
-        color: @color__navigation--text;
-    }
-    .navigation-item.folder .navigation-item--child a {
         color: @color__navigation--text;
     }
 }
