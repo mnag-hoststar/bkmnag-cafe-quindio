@@ -90,6 +90,7 @@ a.companyname__company-link {
     text-transform: uppercase;
     min-width: 220px;
     margin: 0;
+    background-color: @color__navigation-list--background;
 }
     
 // Default Page
@@ -101,6 +102,10 @@ a.companyname__company-link {
 // Navigation Item
 
 .extendednavigation__navigation-item {
+    .navigation-list {
+        background-color: @color__navigation-item--background;
+    }
+    
     @media @tablet {
         width: 100%;
     }
@@ -136,24 +141,16 @@ a.companyname__company-link {
 
 .navigation-item {
     position: relative;
-	
-	&.folder {
-		.navigation-item--child {
-			background-color: @color__navigation-list--background;
+}
+.navigation-item.folder .item-name {
+    padding-right: 1em;
+}
+.navigation-item.folder .item-name:after {
+    position: absolute;
+}
 
-			a {
-				color: @color__navigation--text;
-			}
-		}
-		
-		.item-name {
-			padding-right: 1em;
-
-			&:after {
-				position: absolute;
-			}
-		}
-	}
+.navigation-item.folder .navigation-item--child a {
+    color: @color__navigation--text;
 }
     
 .extendednavigation__navigation-item.folder.selected .selected {
@@ -216,28 +213,36 @@ a.companyname__company-link {
 	
     .extendednavigation__navigation-list.open {
         display: block;
+        
         &:before {
             margin-top: 21px;
+            background: @color__navigation-list--background;
             box-shadow: none;
             .transition( all, 0.5s, ease);
         }
+        
         &:after {
             content: '';
             position: absolute;
             box-shadow: 0 6px 0 @color__navigation--text;
         }
+        
         .navigation-body {
             display: none;
             .open & {
                 display: block;
             }
         }
+        
         .navigation-item {
             width: 100%;
         }
     }
     .extendednavigation li.selected > a {
         text-decoration: none;
+        color: @color__navigation--text;
+    }
+    .navigation-item.folder .navigation-item--child a {
         color: @color__navigation--text;
     }
 }

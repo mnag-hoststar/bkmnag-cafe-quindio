@@ -215,7 +215,8 @@
             "font__navigation--letter-spacing": "1px",
             "color__navigation--text": "#413a31",
             "color__navigation--text--hover": "#8f8272",
-            "color__navigation-list--background":"#f3f0eb"
+            "color__navigation-list--background":"#ffffff",
+            "color__navigation-item--background":"#f3f0eb"
         },
         "form": {
             "color__form--background" : "#ffffff",
