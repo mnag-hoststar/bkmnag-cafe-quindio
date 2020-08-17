@@ -44,6 +44,18 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
 	letter-spacing: .04em;
+
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
 }
 
 h1,
@@ -53,6 +65,39 @@ h4,
 h5,
 h6 {
 	padding-bottom: 7px;
+
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
+}
+
+p, 
+ul, 
+li, 
+ol, 
+code, 
+pre, 
+label,
+.contentgroup__body {
+	.style--light & {
+	    color: fade(@contrast--light, 80%);
+	}
+
+	.style--accent & {
+	    color: fade(@contrast--accent, 80%);
+	}
+
+	.style--dark & {
+	    color: fade(@contrast--dark, 80%);
+	}
 }
 
 p {
@@ -93,6 +138,18 @@ code {
 legend {
 	text-transform: uppercase;
 	font-weight: 700;
+
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
 }
 
 .content .bk-content-text ol {
@@ -102,6 +159,19 @@ legend {
 a {
 	letter-spacing: 1px;
 	color: @color__link--text;
+
+	.style--light & {
+	    color: @color--accent;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @color--accent;
+	}
+
 	&:hover {
 		font-weight: 700;
 		letter-spacing: 0.615px;
@@ -239,7 +309,25 @@ span.expand.button.button--expand {
 		background-color: transparent;
 		.transition (all, 0.2s, ease);
 	}
+
+	.style--light & {
+		border-color: @contrast--light;
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @contrast--dark;
+		color: @contrast--dark;
+	}
 }
+
+
+
 
 // -----------------------------
 // 6. #GENERAL FORMS
@@ -287,6 +375,30 @@ input#search-term {
 		border-bottom: 2px solid @color__form--border;
 		box-shadow: none;
 		background-color: fade(@color__form--background, 20%);
+	}
+
+	.style--light & {
+		background-color: @color--light;
+		border-color: @contrast--light;
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		background-color: @color--accent;
+		border-color: @contrast--accent;
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		background-color: @color--dark;
+		border-color: @contrast--dark;
+		color: @contrast--dark;
+	}
+
+	.style--background-image & {
+		background-color: transparent;
+		border-color: @contrast--dark;
+		color: @contrast--dark;
 	}
 }
 
@@ -374,6 +486,36 @@ select {
 		top: 16px;
 		font-size: 10px;
 	}
+
+	.style--light & {
+		border-color: @contrast--light;
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+		color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @contrast--dark;
+		color: @contrast--dark;
+	}
+}
+
+.widget [class*="form"] label[for*="input--terms"] .form__link {
+	.style--light & {
+		color: @contrast--light;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+	}
+
+	.style--dark &,
+	.style--background-image & {
+		color: @contrast--dark;
+	}
 }
 
 // Advanced Contact Form
@@ -408,7 +550,7 @@ select {
 }
 
 input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"]:not(.js-terms-input) {
 	-webkit-appearance: none!important;
 	width: 15px!important;
 	height: 15px!important;
@@ -416,6 +558,18 @@ input[type="checkbox"] {
 	position: absolute;
 	outline: none;
 	border: 2px solid @color__primary!important;
+
+	.style--light & {
+		border-color: @contrast--light!important;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent!important;
+	}
+
+	.style--dark & {
+		border-color: @contrast--dark!important;
+	}
 }
 
 input[type="radio"],
@@ -431,6 +585,24 @@ input[type="checkbox"]:checked {
 	background: @color__primary;
 	border: 2.5px solid #ffffff!important;
 	box-shadow: 0px 0px 0px 2px @color__primary;
+
+	.style--light & {
+		background: @contrast--light;
+		border-color: @color--light!important;
+		box-shadow: 0px 0px 0px 2px @contrast--light;
+	}
+
+	.style--accent & {
+		background: @contrast--accent;
+		border-color: @color--accent!important;
+		box-shadow: 0px 0px 0px 2px @contrast--accent;
+	}
+
+	.style--dark & {
+		background: @contrast--dark;
+		border-color: @color--dark!important;
+		box-shadow: 0px 0px 0px 2px @contrast--dark;
+	}
 }
 
 .form-group>.label {
@@ -439,8 +611,7 @@ input[type="checkbox"]:checked {
 }
 
 .option-item>.label--checkbox,
-.option-item>.label--radio,
-.widget .form label[for*="input--terms"] span a.form__link {
+.option-item>.label--radio {
 	label;
 	left: 25px;
 	text-transform: none;
@@ -492,4 +663,87 @@ input[type="checkbox"]:checked {
 
 .clearfix {
 	*zoom: 1;
+}
+
+::-webkit-input-placeholder {
+   color: @color-text--light;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+   .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: @color-text--light;
+
+   .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+   .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @color-text--light;
+
+   .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+   .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+:-ms-input-placeholder {
+   color: @color-text--light;
+
+   .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+   .style--dark & {
+        color: @contrast--dark;
+    }
+}
+
+input:hover,
+input:focus {
+    &::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &:-moz-placeholder {
+        color: transparent;
+    }
+
+    &::-moz-placeholder {
+        color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
 }
