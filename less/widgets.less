@@ -680,6 +680,11 @@ h3.feature__strapline {
 
 .widget__imagewidget {
     margin-bottom: 40px;
+
+    [data-name="row"] & {
+        margin-bottom: 0;
+    }
+
     .image-title {
         margin: 10px 0 0;
         color: @color__image-title--text;
@@ -688,6 +693,18 @@ h3.feature__strapline {
         font-weight: 700;
         &:hover {
             color: lighten(@color__image-title--text, 10%);
+        }
+
+        .style--light & {
+            color: @contrast--light;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
         }
     }
     .image-description {
@@ -698,6 +715,18 @@ h3.feature__strapline {
         &:hover {
             color: lighten(@color__image-description--text, 10%);
             letter-spacing: 0px;
+        }
+
+        .style--light & {
+            color: contrast(@color--light, lighten(@color--dark, 10%), lighten(@color--accent, 10%));
+        }
+
+        .style--accent & {
+            color: contrast(@color--accent, lighten(@color--dark, 10%), lighten(@color--light, 10%));
+        }
+
+        .style--dark & {
+            color: contrast(@color--dark, lighten(@color--accent, 10%), lighten(@color--light, 10%));
         }
     }
 }
@@ -751,6 +780,7 @@ h3.feature__strapline {
             margin-bottom: 15px;
             word-break: break-word;
             color: @color__gallery-title-text;
+
             &:hover {
                 letter-spacing: 1px;
             }
@@ -970,6 +1000,19 @@ h3.feature__strapline {
     padding: 10px;
     margin: 0;
     overflow: scroll;
+
+    .style--light & {
+        border-color: @color--light;
+    }
+
+    .style--accent & {
+        border-color: @color--accent;
+    }
+
+    .style--dark & {
+        border-color: @color--dark;
+    }
+
     .image-title,
     .image-description {
         color: @color__gallery-title--text;
@@ -1319,6 +1362,21 @@ h3.feature__strapline {
     }
 }
 
+.responsiveslideshow__pagination-item.selected .button {
+
+    .style--light & {
+        background-color: @color--accent;
+    }
+
+    .style--accent & {
+        background-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        background-color: @contrast--dark;
+    }
+} 
+
 // -----------------------------
 // 9. #BUTTONS
 // -----------------------------
@@ -1341,7 +1399,8 @@ a.basket-summary-empty-cta.btn,
 button.ecombasket-remove-button.js-remove,
 .button.button--submit.blogsearch__button,
 .button--submit.ecomproductslist__button,
-.continue-shopping.button {
+.continue-shopping.button,
+.contentgroup__link {
     background-color: transparent!important;
     display: inline-block;
     color: @color__button--text;
@@ -1352,6 +1411,24 @@ button.ecombasket-remove-button.js-remove,
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+
+    .style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark &,
+    .style--background-image & {
+        color: @contrast--dark;
+    }
+
+    .responsivecolumns & {
+        padding: 0.5em 1.5em;
+    }
+
     &:before {
         content: '';
         display: block;
@@ -1364,6 +1441,19 @@ button.ecombasket-remove-button.js-remove,
         bottom: 0;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
+
+        .style--light & {
+            border-color: @color--accent;
+        }
+
+        .style--accent & {
+            border-color: @contrast--accent;
+        }
+
+        .style--dark &,
+        .style--background-image & {
+            border-color: @contrast--dark;
+        }
     }
     &:focus {
         outline: none;
@@ -1380,6 +1470,18 @@ button.ecombasket-remove-button.js-remove,
         top: 0;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
+
+        .style--light & {
+            border-color: @color--accent;
+        }
+
+        .style--accent & {
+            border-color: @contrast--accent;
+        }
+
+        .style--dark & {
+            border-color: @contrast--dark;
+        }
     }
     &:hover:before,
     &:hover:after {
@@ -1389,30 +1491,55 @@ button.ecombasket-remove-button.js-remove,
 }
 
 .widget__paypal,
-.widget__tweet,
-.widget__dropbox,
-.widget__clicktocall {
-    a.button.tweet__button,
-    button.dropbox__button,
-    .phone-number-link {
-        background-color: transparent!important;
-        color: @color__button--text;
-        padding: 12px 30px;
-        border-bottom: 1px solid @color__button--text;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 1.15px!important;
-        &:before {
-            font-size: 1.25em;
+.widget__tweet a.button.tweet__button,
+.widget__dropbox button.dropbox__button,
+.widget__clicktocall .phone-number-link,
+[data-name="filedownload"] .button {
+    background-color: transparent!important;
+    color: @color__button--text;
+    padding: 12px 30px;
+    border-bottom: 1px solid @color__button--text;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.15px!important;
+
+    .style--light & {
+        border-color: @color--accent;
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+        color: @contrast--dark;
+    }
+
+    &:before {
+        font-size: 1.25em;
+    }
+    &:hover {
+        box-shadow: 0 1.5px 0 @color__button--text;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        letter-spacing: 1px;
+
+        .style--light & {
+            box-shadow: 0 1.5px 0 @contrast--light;
         }
-        &:hover {
-            box-shadow: 0 1.5px 0 @color__button--text;
-            -webkit-transition: all 0.2s ease;
-            -moz-transition: all 0.2s ease;
-            -ms-transition: all 0.2s ease;
-            -o-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-            letter-spacing: 1px;
+
+        .style--accent & {
+            box-shadow: 0 1.5px 0 @contrast--accent;
+        }
+
+        .style--dark & {
+            box-shadow: 0 1.5px 0 @contrast--dark;
         }
     }
 }
@@ -1426,11 +1553,11 @@ button.ecombasket-remove-button.js-remove,
     padding: 0px;
 }
 
+
 .fieldset--search,
 .signupform__fieldset,
-.signupform__fieldset,
 .blogsearch__fieldset {
-    margin: 40px 0px!important;
+    margin: 40px 0px;
 }
 
 .widget__contactform,
@@ -1468,6 +1595,19 @@ button.ecombasket-remove-button.js-remove,
     letter-spacing: @font__p--letter-spacing;
     margin-bottom: .4em;
     padding: 0;
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
+
     @media @tablet {
         font-size: 0.9em!important;
     }
@@ -1491,7 +1631,7 @@ button.ecombasket-remove-button.js-remove,
 }
 
 .contactform__form-group {
-    margin-top: 0px!important;
+    margin-top: 0px;
 }
 
 // -----------------------------
@@ -1514,6 +1654,18 @@ button.ecombasket-remove-button.js-remove,
         background-color: transparent;
         box-shadow: 0 2px 0 @color__socialicons--icon;
         .transition (all, 0.2s, ease);
+
+        .style--light & {
+            box-shadow: 0 2px 0 @contast--light;
+        }
+
+        .style--accent & {
+            box-shadow: 0 2px 0 @contast--accent;
+        }
+
+        .style--dark & {
+            box-shadow: 0 2px 0 @contast--dark;
+        }
     }
 }
 
@@ -1533,6 +1685,18 @@ a.socialicons__social-link {
     @media @mobile {
         margin: 0 2px;
     }
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 .socialicons__social-name {
@@ -1547,6 +1711,30 @@ a.socialicons__social-link {
         &:hover {
             box-shadow: 0 1.5px 0 @color__link--text;
             letter-spacing: 1px;
+
+            .style--light & {
+                box-shadow: 0 1.5px 0 @contrast--light;
+            }
+
+            .style--accent & {
+                box-shadow: 0 1.5px 0 @contrast--accent;
+            }
+
+            .style--dark & {
+                box-shadow: 0 1.5px 0 @contrast--dark;
+            }
+        }
+
+        .style--light & {
+            color: @contrast--light;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
         }
     }
 }
@@ -1568,6 +1756,18 @@ a.socialicons__social-link {
     padding: 30px;
     margin-bottom: 1em;
     border: 1px solid @color__primary;
+
+    .style--light & {
+        border-color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+    }
 }
 
 .twitter__avatar-image {
@@ -1601,6 +1801,18 @@ a.socialicons__social-link {
         text-decoration: none;
         .transition (all, 0.1s, ease);
     }
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 .twitter__account-name {
@@ -1626,6 +1838,18 @@ hr.rule {
     background-color: @color__primary;
     margin: 0;
     height: 1px;
+
+    .style--light & {
+        background-color: @contrast--light;
+    }
+
+    .style--accent & {
+        background-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        background-color: @contrast--dark;
+    }
 }
 
 // -----------------------------
@@ -1639,6 +1863,18 @@ hr.rule {
 .widget.map {
     border: 1px solid @color__primary;
     margin-bottom: 40px;
+
+    .style--light & {
+        border-color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+    }
 }
 
 // -----------------------------
@@ -1663,6 +1899,18 @@ hr.rule {
 .widget__yelpreview {
     border: 1px solid @color__primary;
     padding: 15px;
+
+    .style--light & {
+        border-color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+    }
 }
 
 ul.yelpreview__review-list {
@@ -1687,6 +1935,18 @@ a.yelpreview__review-link {
         box-shadow: 0 1.5px 0 @color__link--text;
         cursor: pointer;
         .transition (all, 0.2s, ease);
+    }
+
+    .style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
     }
 }
 
