@@ -15,6 +15,9 @@
 // -----------------------------
 // 1. #TYPOGRAPHY
 // -----------------------------
+// Variables
+
+@tablet-horizontal: ~"only screen and (max-width: 1024px)";
 
 // Colour Variables
 
@@ -58,12 +61,12 @@ body {
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .contentgroup__h1,
+h2, .contentgroup__h2,
+h3, .contentgroup__h3,
+h4, .contentgroup__h4,
+h5, .contentgroup__h5,
+h6, .contentgroup__h6 {
 	padding-bottom: 7px;
 
 	.style--light & {
@@ -86,6 +89,7 @@ ol,
 code, 
 pre, 
 label,
+blockquote,
 .contentgroup__body {
 	.style--light & {
 	    color: fade(@contrast--light, 80%);
@@ -343,8 +347,8 @@ span.expand.button.button--expand {
 }
 
 label {
-	font-size: 13px!important;
-	letter-spacing: 0px!important;
+	font-size: @font__p--font-size !important;
+    letter-spacing: @font__p--letter-spacing !important;
 }
 
 .form-text--spacing() when not (@color__form--background = @color__container--background) {
@@ -549,84 +553,143 @@ select {
 	padding: 0px;
 }
 
-input[type="radio"],
-input[type="checkbox"]:not(.js-terms-input) {
-	-webkit-appearance: none!important;
-	width: 15px!important;
-	height: 15px!important;
-	margin-right: 20px;
-	position: absolute;
-	outline: none;
-	border: 2px solid @color__primary!important;
+.widget .advancedcontactform,
+.widget .contactform,
+.widget .signupform,
+& {
 
-	.style--light & {
-		border-color: @contrast--light!important;
+	input[type="radio"],
+    input[type="checkbox"] {
+        display: none;
+    }
+
+	input[type="radio"] + label,
+    input[type="checkbox"] + label,
+    .form-group[class$="form-group--terms"] label {
+        display: block;
+        position: relative;
+        margin-left: 2em;
+    }
+
+	input[type="radio"] + label:before,
+    input[type="checkbox"] + label:before,
+    .form-group[class$="form-group--terms"] input[type="radio"] + label:before,
+    .form-group[class$="form-group--terms"] input[type="checkbox"] + label:before {
+        content: "";
+        margin-top: -8px;
+        width: 15px !important;
+        height: 15px !important;
+        min-height: 15px;
+        min-width: 15px;
+        position: absolute;
+        outline: none;
+        border-radius: 0;
+        border: 2px solid @primary-color;
+        top: @font__p--line-height/2;
+        left: -2em;
+        box-sizing: border-box;
+
+        .style--light & {
+			border-color: @contrast--light!important;
+		}
+
+		.style--accent & {
+			border-color: @contrast--accent!important;
+		}
+
+		.style--dark & {
+			border-color: @contrast--dark!important;
+		}
+    }
+
+	input[type="radio"] + label:before,
+    input[type="radio"]:checked + label:before,
+    .form-group[class$="form-group--terms"] input[type="radio"] + label:before,
+    .form-group[class$="form-group--terms"] input[type="radio"]:checked + label:before {
+        border-radius: 50%;
+    }
+
+	input[type="radio"]:checked + label:before,
+    input[type="checkbox"]:checked + label:before,
+    .form-group[class$="form-group--terms"] input[type="radio"]:checked + label:before,
+    .form-group[class$="form-group--terms"] input[type="checkbox"]:checked + label:before {
+        width: 13px !important;
+        height: 13px !important;
+        outline: none;
+        background: @color__primary;
+        border: 2.5px solid #ffffff !important;
+        box-shadow: 0px 0px 0px 2px @color__primary;
+
+        .style--light & {
+			background: @contrast--light;
+			border-color: @color--light!important;
+			box-shadow: 0px 0px 0px 2px @contrast--light;
+		}
+
+		.style--accent & {
+			background: @contrast--accent;
+			border-color: @color--accent!important;
+			box-shadow: 0px 0px 0px 2px @contrast--accent;
+		}
+
+		.style--dark & {
+			background: @contrast--dark;
+			border-color: @color--dark!important;
+			box-shadow: 0px 0px 0px 2px @contrast--dark;
+		}
+    }
+
+	input[type="radio"]:checked + label:after,
+    input[type="checkbox"]:checked + label:after,
+    .form-group[class$="form-group--terms"] input[type="radio"]:checked + label:after,
+    .form-group[class$="form-group--terms"] input[type="checkbox"]:checked + label:after {
+        display: none;
+    }
+
+	.form-group>.label {
+		text-transform: uppercase;
+		font-weight: 700;
 	}
 
-	.style--accent & {
-		border-color: @contrast--accent!important;
+	.form-group[class$="form-group--terms"] {
+        margin-top: 3em;
+    }
+
+
+	.option-item>.label--checkbox,
+	.option-item>.label--radio,
+	.form-group[class$="form-group--terms"] label[for*="input--terms"] span a.form__link {
+        display: block;
+        position: relative;
+        font-family: @font__p--font-family;
+        line-height: @font__p--line-height;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        letter-spacing: @font__p--letter-spacing;
+        color: @color__p--text;
+        text-transform: none;
 	}
 
-	.style--dark & {
-		border-color: @contrast--dark!important;
-	}
-}
-
-input[type="radio"],
-input[type="radio"]:checked {
-	border-radius: 50%;
-}
-
-input[type="radio"]:checked,
-input[type="checkbox"]:checked {
-	width: 13px!important;
-	height: 13px!important;
-	outline: none;
-	background: @color__primary;
-	border: 2.5px solid #ffffff!important;
-	box-shadow: 0px 0px 0px 2px @color__primary;
-
-	.style--light & {
-		background: @contrast--light;
-		border-color: @color--light!important;
-		box-shadow: 0px 0px 0px 2px @contrast--light;
+	.option-item>.label--checkbox,
+	.option-item>.label--radio {
+		bottom: 5px;
 	}
 
-	.style--accent & {
-		background: @contrast--accent;
-		border-color: @color--accent!important;
-		box-shadow: 0px 0px 0px 2px @contrast--accent;
+	.option-item--radio,
+	.option-item--checkbox {
+		display: block;
 	}
 
-	.style--dark & {
-		background: @contrast--dark;
-		border-color: @color--dark!important;
-		box-shadow: 0px 0px 0px 2px @contrast--dark;
-	}
+	.widget .form label[for*="input--terms"] span a.form__link {
+        left: 0;
+    }
 }
 
-.form-group>.label {
-	text-transform: uppercase;
-	font-weight: 700;
-}
 
-.option-item>.label--checkbox,
-.option-item>.label--radio {
-	label;
-	left: 25px;
-	text-transform: none;
-	font-weight: 300;
-	position: relative;
-}
+.widget .advancedcontactform,
+.widget .contactform,
+.widget .signupform {
 
-.option-item>.label--checkbox,
-.option-item>.label--radio {
-	bottom: 5px;
-}
-
-.option-item--radio,
-.option-item--checkbox {
-	display: block;
 }
 
 // Signup Form
