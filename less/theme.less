@@ -478,24 +478,23 @@ select {
     	font-weight: 700;
     }
     
-    .form-group.advancedcontactform__form-group--terms,
-    .form-group.contactform__form-group--terms,
-    .form-group.signupform__form-group--terms {
+    .form-group[class$="form-group--terms"]  {
         margin-top: 3em;
     }
     
     
     .option-item>.label--checkbox,
     .option-item>.label--radio,
-    .widget .form label[for*="input--terms"] span a.form__link {
+    .form-group[class$="form-group--terms"] label[for*="input--terms"] span a.form__link {
+    	display: block;
+    	position: relative;
         font-family: @font__p--font-family;
         line-height: @font__p--line-height;
-    	font-size: @font__p--line-height;
+    	font-size: @font__p--font-size;
     	font-weight: @font__p--font-weight;
     	letter-spacing: @font__p--letter-spacing;
     	color: @color__p--text;
     	text-transform: none;
-    	position: relative;
     }
     
     .option-item>.label--checkbox,
