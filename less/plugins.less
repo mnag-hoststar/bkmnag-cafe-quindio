@@ -64,11 +64,39 @@
 	text-transform: uppercase;
 	padding: 12px;
 	border-bottom: 1px solid @color__link--text;
+
+	.style--light & {
+        border-color: @color--accent;
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+        color: @contrast--dark;
+    }
+
 	&:hover {
 		letter-spacing: 1px!important;
 		box-shadow: 0 1.5px 0 @color__link--text;
 		cursor: pointer;
 		.transition (all, 0.2s, ease);
+
+		.style--light & {
+	    	box-shadow: 0 1.5px 0 @color--accent;
+	    }
+
+	    .style--accent & {
+	    	box-shadow: 0 1.5px 0 @contrast--accent;
+	    }
+
+	    .style--dark & {
+	    	box-shadow: 0 1.5px 0 @contrast--dark;
+	    }
 	}
 }
 
@@ -84,6 +112,18 @@
 	padding: 14px 0px;
 	letter-spacing: 0px;
 	font-size: 0.9em;
+
+	.style--light & {
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 }
 
 // Footer Pagination Items
@@ -115,6 +155,22 @@ a.button.button--pagination.button--next {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	.style--light & {
+        border-bottom: @color--accent;
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-bottom: @contrast--accent;
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-bottom: @contrast--dark;
+        color: @contrast--dark;
+    }
+
 	&:before,
 	&:after {
 		display: none;
@@ -123,6 +179,18 @@ a.button.button--pagination.button--next {
 		box-shadow: 0 1.5px 0 @color__link--text;
 		letter-spacing: 1px;
 		font-weight: 700;
+
+		.style--light & {
+	        box-shadow: 0 1.5px 0 @color--accent;
+	    }
+
+	    .style--accent & {
+	        box-shadow: 0 1.5px 0 @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        box-shadow: 0 1.5px 0 @contrast--dark;
+	    }
 	}
 }
 
@@ -146,6 +214,32 @@ a.button.button--pagination.button--next {
 .blogpost__post-content {
 	border-bottom: 1px solid @color__primary;
 	padding-bottom: 25px;
+
+	.style--light & {
+        border-bottom: @color--accent;
+    }
+
+    .style--accent & {
+        border-bottom: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-bottom: @contrast--dark;
+    }
+}
+
+.blogpost__body {
+	.style--light & {
+        color: fade(@contrast--light);
+    }
+
+    .style--accent & {
+        color: fade(@contrast--accent);
+    }
+
+    .style--dark & {
+        color: fade(@contrast--dark);
+    }
 }
 
 .blogpost__post-footer {
@@ -155,6 +249,18 @@ a.button.button--pagination.button--next {
 		border-right: 1px solid @color__primary;
 		padding-right: 20px;
 		margin: 5px 0;
+
+		.style--light & {
+	        border-color: @color--accent;
+	    }
+
+	    .style--accent & {
+	        border-color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        border-color: @contrast--dark;
+	    }
 	}
 }
 
@@ -168,6 +274,18 @@ a.button.button--pagination.button--next {
 	border-right: 1px solid @color__primary;
 	padding: 0px 20px;
 	text-transform: uppercase;
+
+	.style--light & {
+        border-color: @color--accent;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+    }
 }
 
 .blogpost__tag-link,
@@ -178,11 +296,35 @@ a.button.button--pagination.button--next {
 	font-size: 0.9em!important;
 	margin: 0px 5px;
 	color: @color__link--text;
+
+	.style--light & {
+        color: @color--accent;
+    }
+
+    .style--accent & {
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        color: @contrast--dark;
+    }
 	&:hover {
 		font-weight: 700;
 		text-decoration: none;
 		color: darken(@color__link--text, 15%);
 		letter-spacing: 1px;
+
+		.style--light & {
+	        border-color: darken(@color--accent, 15%);
+	    }
+
+	    .style--accent & {
+	        border-color: lighten(@contrast--accent, 15%);
+	    }
+
+	    .style--dark & {
+	        border-color: lighten(@contrast--dark, 15%);
+	    }
 	}
 }
 
@@ -347,9 +489,9 @@ a.button.button--pagination.button--next {
 	display: none;
 }
 
-.ecomproductlist__product-list,
+.ecomproductslist__product-list,
 .ecomfeaturedproducts__product-list {
-	padding: 0px;
+	padding: 0;
 }
 
 .ecomproductslist__product-item,
@@ -367,6 +509,7 @@ a.button.button--pagination.button--next {
 	}
 	@media @mobile {
 		width: 100%;
+		margin-left: 0;
 		margin-right: 0;
 		padding: 0px
 	}
@@ -410,6 +553,18 @@ a.button.button--pagination.button--next {
 	border-top: 1px solid @color__body--background;
 	text-align: center;
 	padding-bottom: 25px;
+
+	.style--light & {
+        border-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        border-color: lighten(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        border-color: lighten(@color--dark, 10%);
+    }
 }
 
 .ecomproductslist__pagination-list {
@@ -419,9 +574,37 @@ a.button.button--pagination.button--next {
 	padding-top: 1em;
 	margin-top: 3em;
 	margin-bottom: 5em;
+
+	.style--light & {
+        border-color: darken(@color--light, 10%);
+    }
+
+    .style--accent & {
+        border-color: lighten(@color--accent, 10%);
+    }
+
+    .style--dark & {
+        border-color: lighten(@color--dark, 10%);
+    }
+
 	.current {
 		color: @color__primary;
 		border: 1px solid @color__primary;
+
+		.style--light & {
+	        border-color: darken(@color--light, 25%);
+	        color: @contrast--light;
+	    }
+
+	    .style--accent & {
+	        border-color: lighten(@color--accent, 25%);
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        border-color: lighten(@color--dark, 25%);
+	        color: @contrast--dark;
+	    }
 	}
 }
 
@@ -447,12 +630,52 @@ a.button.button--pagination.button--next {
 	margin: 5px 10px 0 0;
 	padding: 8px;
 	text-decoration: none;
+
+	.style--light & {
+        border-color: darken(@color--light, 10%);
+        color: @contrast--light;
+    }
+
+    .style--accent & {
+        border-color: lighten(@color--accent, 10%);
+        color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: lighten(@color--dark, 10%);
+        color: @contrast--dark;
+    }
+
 	&:hover {
 		border: 1px solid @color__button--text--hover;
+
+		.style--light & {
+	        border-color: darken(@color--light, 25%);
+	    }
+
+	    .style--accent & {
+	        border-color: lighten(@color--accent, 25%);
+	    }
+
+	    .style--dark & {
+	        border-color: lighten(@color--dark, 25%);
+	    }
 	}
 	a.button {
 		background-color: transparent;
 		color: @color__button--text;
+
+		.style--light & {
+	        color: @contrast--light;
+	    }
+
+	    .style--accent & {
+	        color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        color: @contrast--dark;
+	    }
 	}
 }
 
@@ -523,10 +746,38 @@ a.button.button--pagination.button--next {
 		text-decoration: none;
 		text-transform: uppercase;
 		display: inline-block;
+
+		.style--light & {
+			border-color: @color--accent;
+	        color: @contrast--light!important;
+	    }
+
+	    .style--accent & {
+	    	border-color: @contrast--accent;
+	        color: @contrast--accent!important;
+	    }
+
+	    .style--dark & {
+	    	border-color: @contrast--dark;
+	        color: @contrast--dark!important;
+	    }
+
 		&:hover {
 			background-color: transparent!important;
 			cursor: pointer;
 			box-shadow: 0 1.5px 0 @color__button--text;
+
+			.style--light & {
+				box-shadow: 0 1.5px 0 @color--accent;
+		    }
+
+		    .style--accent & {
+		    	box-shadow: 0 1.5px 0 @contrast--accent;
+		    }
+
+		    .style--dark & {
+		    	box-shadow: 0 1.5px 0 @contrast--dark;
+		    }
 		}
 		&:before,
 		&:after {
@@ -779,7 +1030,7 @@ a.button.button--pagination.button--next {
 
 .basket-summary__summary-form {
 	border: 0;
-	padding: 0;
+	padding: 0;§
 }
 
 .ecombasketsummary__summary-table,
@@ -884,6 +1135,18 @@ a.button.button--pagination.button--next {
 		font-weight: 600;
 		text-transform: uppercase;
 		border-top: 1px solid @color__link--text;
+
+		.style--light & {
+	        border-color: @color--accent;
+	    }
+
+	    .style--accent & {
+	        border-color: @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        border-color: @contrast--dark;
+	    }
 	}
 }
 
@@ -934,10 +1197,35 @@ button.ecombasketsummary__quantity-plus {
 	font-weight: 300;
 	font-size: 22px!important;
 	border-bottom: 1px solid @color__button--text;
+
+	.style--light & {
+        border-color: @color--accent;
+    }
+
+    .style--accent & {
+        border-color: @contrast--accent;
+    }
+
+    .style--dark & {
+        border-color: @contrast--dark;
+    }
+
 	&:hover {
 		background-color: transparent;
 		font-weight: 700;
 		box-shadow: 0 1px 0 @color__button--text;
+
+		.style--light & {
+	        box-shadow: 0 1px 0 @color--accent;
+	    }
+
+	    .style--accent & {
+	        box-shadow: 0 1px 0 @contrast--accent;
+	    }
+
+	    .style--dark & {
+	        box-shadow: 0 1px 0 @contrast--dark;
+	    }
 	}
 }
 
