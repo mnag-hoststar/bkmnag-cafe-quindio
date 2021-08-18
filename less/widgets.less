@@ -74,6 +74,7 @@ a.companyname__company-link {
         padding: 20px 0px;
         font-size: 24px;
     }
+
     &:hover {
         color: darken(@color__companyname--text, 10%);
         font-weight: 400;
@@ -113,7 +114,6 @@ a.companyname__company-link {
     }
     
     .item-name--parent:after {
-        display: inline-block;
         float: right;
         content: '';
         background: image('/images/arrow-small-down.svg') no-repeat center center;
@@ -980,9 +980,6 @@ h3.feature__strapline {
 // Tablet
 
 @media @tablet {
-    .gallery-item {
-        .image-description {}
-    }
     .gallery__figure:hover .gallery__caption .image-title:after {
         display: none;
     }
