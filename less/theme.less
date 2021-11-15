@@ -1,20 +1,7 @@
-// ------------------------------------
-// BaseKit Standard Theme: LESS > Theme
-// ------------------------------------
-// -----------------------------
-// #Table of Contents
-// -----------------------------
-// 1. #TYPOGRAPHY
-// 2. #CUSTOM PAGE
-// 3. #HEADER & #BK-NAV
-// 4. #FOOTER
-// 5. #CONTENT
-// 6. #GENERAL FORMS
-// -----------------------------
+// BaseKit Standard Theme: Theme
 
-// -----------------------------
-// 1. #TYPOGRAPHY
-// -----------------------------
+// TYPOGRAPHY
+
 // Variables
 
 @tablet-horizontal: ~"only screen and (max-width: 1024px)";
@@ -27,17 +14,6 @@
 @spare-color: #ffffff;
 
 // Font Swatches
-
-// font1:  Heading 1
-// font2:  Heading 2
-// font3:  Heading 3
-// font4:  Heading 4
-// font5:  Paragraph
-// font6:  Navigation Link
-// font7:  Buttons
-// font8:  Feature Headline
-// font9:  Feature Strapline
-// font10: Company Name (Logo)
 
 body {
 	font-smooth: always;
@@ -185,9 +161,7 @@ a {
 	}
 }
 
-// -----------------------------
-// 2. #CUSTOM PAGE
-// -----------------------------
+// CUSTOM PAGE
 
 body.edit .widget.navigation,
 body.edit .widget.extendednavigation {
@@ -200,25 +174,23 @@ body.edit .widget.extendednavigation {
 	border-bottom: 1px solid @color__primary;
 }
 
-// -----------------------------
-// 3. #HEADER & #BK-NAV
-// -----------------------------
+// HEADER & #BK-NAV
 
 .bk-header {
 	padding: 50px 0px;
 	text-align: center;
 	background-color: @color__header--background;
+
 	@media @mobile {
 		padding: 20px 0;
 	}
+
 	@media @tablet {
 		padding: 30px 0;
 	}
 }
 
-// -----------------------------
-// 4. #FOOTER
-// -----------------------------
+// FOOTER
 
 .bk-footer {
 	border-top: 1px solid @color__footer--border;
@@ -230,6 +202,7 @@ body.edit .widget.extendednavigation {
 
 .socialicons__social-item {
 	display: inline-block;
+
 	&:hover {
 		box-shadow: 0 2px 0 @color__socialicons--icon;
 	}
@@ -238,10 +211,12 @@ body.edit .widget.extendednavigation {
 .social-social-link {
 	color: @color__socialicons--icon;
 	margin: 0 5px;
+
 	&:hover {
 		background-color: transparent;
 		font-weight: 300;
 	}
+
 	@media @mobile {
 		margin: 0 2px;
 	}
@@ -260,6 +235,7 @@ body.edit .widget.extendednavigation {
 	display: inline-block;
 	vertical-align: middle;
 	width: 49.5%;
+
 	@media @mobile {
 		width: 100%;
 		text-align: center !important;
@@ -278,9 +254,7 @@ body.edit .widget.extendednavigation {
 	padding-bottom: 1em;
 }
 
-// -----------------------------
-// 5. #CONTENT
-// -----------------------------
+// CONTENT
 
 .widget__content {
 	padding: 0;
@@ -307,6 +281,7 @@ span.expand.button.button--expand {
 	padding: 12px;
 	border-bottom: 1px solid @color__link--text;
 	letter-spacing: 1px;
+
 	&:hover {
 		letter-spacing: 1px!important;
 		border-bottom: 2px solid @color__link--text;
@@ -331,12 +306,7 @@ span.expand.button.button--expand {
 	}
 }
 
-
-
-
-// -----------------------------
-// 6. #GENERAL FORMS
-// -----------------------------
+// GENERAL FORMS
 
 .form-group,
 .form-group .advancedcontactform {
@@ -446,6 +416,7 @@ input.js-email.email {
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
 	label {
 		margin-bottom: 10px;
 	}
@@ -477,13 +448,16 @@ select {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
 	&:hover {
 		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 		background-color: transparent!important;
 	}
+
 	&:focus {
 		background-color: transparent!important;
 	}
+
 	& span {
 		color: initial;
 		position: absolute;
@@ -528,22 +502,28 @@ select {
 .advancedcontactform {
 	text-align: left;
 	width: 100%;
+
 	.legend {
 		margin-bottom: 20px;
 	}
+
 	.form {
 		text-align: left;
 		width: 100%;
 	}
+
 	.select-wrap {
 		width: 100%;
 		margin: 0px auto;
+
 		&:hover {
 			background-color: transparent;
 		}
+
 		@media @mobile {
 			max-width: 100%;
 		}
+
 		select:focus {
 			background-color: transparent;
 		}
