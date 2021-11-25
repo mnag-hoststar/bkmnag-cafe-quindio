@@ -1,41 +1,23 @@
 
-// -------------------------------------------
-//  Migration Styles -
-//
-//  These changes allow rows to work with
-//  existing templates in BK10
-// -------------------------------------------
-
-
+//  Migration Styles
 
 // Template styling resets
-// ------------------------------------
-    
     
 #migrated {
-    
-    // Remove the site container / main padding
     .container,
     .main {
         padding: 0;
     }
     
-    // Remove spacing from last or only widget inside a row
     [data-name="row"] .column .widget,
     [data-name="row"] .widget:only-child {
         margin-bottom: 0;
     }
 }
 
-
-
 // Re-add the reset styles
-// ------------------------------------
-
 
 #migrated {
-    
-    // Applies the container value to widgets
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
@@ -45,8 +27,8 @@
     .bk-section,
     .bk-footer {
         margin-left: auto;
-        margin-right: auto;         // Centers the contained widgets
-        width: 94%;                 // Container padding
+        margin-right: auto;
+        width: 94%;
     }
 
     // Replaces main padding by moving this to the first widget in the zone
