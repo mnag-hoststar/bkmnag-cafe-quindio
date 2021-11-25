@@ -195,6 +195,25 @@ body.edit .widget.extendednavigation {
 .bk-footer {
 	border-top: 1px solid @color__footer--border;
 	background-color: @color__footer--background;
+
+	.widget__profile {
+		label {
+			display: none;
+		}
+
+        form fieldset input {
+            width: 100%;
+        }
+
+        form button {
+            word-break: break-word;
+            height: auto;
+            width: auto;
+            margin: 10px 0;
+            line-height: 1.25em;
+        }
+	}
+
 	@media @mobile {
 		padding: 0px;
 	}
