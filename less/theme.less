@@ -1,10 +1,17 @@
 // Theme
 
-// TYPOGRAPHY
-
 // Variables
 
-@tablet-horizontal: ~"only screen and (max-width: 1024px)";
+@desktop-large: ~"only screen and (max-width: 1550px)";
+@desktop-medium: ~"only screen and (max-width: 1024px)";
+@tablet-to-desktop: ~"only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)";
+@tablet-to-desktop-small: ~"only screen and (max-width: 920px) and (min-width: 769px)";
+@mobile-small-to-mobile: ~"only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape)";
+@mobile-small-to-mobile-portrait: ~"only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait)";
+@desktop-medium: ~"only screen and (max-width: 1024px)";
+@tablet-large: ~"only screen and (max-width: 850px)";
+@tablet-small: ~"only screen and (max-width: 600px)";
+@mobile-small: ~"only screen and (max-width: 380px)";
 
 // Colour Variables
 
@@ -719,6 +726,8 @@ select {
 .clearfix {
 	*zoom: 1;
 }
+
+// Placeholder
 
 ::-webkit-input-placeholder {
    color: @color-text--light;
