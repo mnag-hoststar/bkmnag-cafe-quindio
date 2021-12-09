@@ -1,23 +1,27 @@
-
 //  Migration Styles
+
+//  These changes allow rows to work with
+//  existing templates in BK10
 
 // Template styling resets
     
 #migrated {
+
+    // Remove the site container / main padding
     .container,
     .main {
         padding: 0;
     }
-    
+
+    // Remove spacing from last or only widget inside a row
     [data-name="row"] .column .widget,
     [data-name="row"] .widget:only-child {
         margin-bottom: 0;
     }
-}
 
-// Re-add the reset styles
+    // Re-add the reset styles
 
-#migrated {
+    // Applies the container value to widgets
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
@@ -27,8 +31,8 @@
     .bk-section,
     .bk-footer {
         margin-left: auto;
-        margin-right: auto;
-        width: 94%;
+        margin-right: auto; // Centers the contained widgets
+        width: 94%; // Container padding
 
         .widget.profile {
             form fieldset input {
@@ -48,17 +52,17 @@
     // Replaces main padding by moving this to the first widget in the zone
     &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
     #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 40px;           // Main padding top
+        margin-top: 40px; // Main padding top
     }
 
     // Replaces main padding by moving this to the last widget in the zone
     #page-zones__main > .widget:not([data-name="row"]):last-child {
-        margin-bottom: 40px;        // Main padding bottom
+        margin-bottom: 40px; // Main padding bottom
     }
 
     // Add spacing to the top of a widget when it follows a row
     #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]) {
-        margin-top: 20px;           // Widget margin bottom
+        margin-top: 20px; // Widget margin bottom
     }
 
     // Readd widget spacing inside of rows
