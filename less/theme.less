@@ -67,6 +67,28 @@ h6, .contentgroup__h6 {
 	}
 }
 
+// Normal Text
+
+.widget {
+	p, span, small, pre, code,
+	table, th, td,
+	&.content {
+		color: @font-swatch5-color;
+	
+		.style--light & {
+			color: @contrast--light;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
+	}
+}
+
 p, 
 ul, 
 li, 
@@ -98,9 +120,82 @@ ol {
 	padding: 0 0 .5em 2em;
 }
 
+.content .bk-content-text ol {
+	list-style-position: inherit;
+}
+
+a {
+	letter-spacing: 1px;
+	color: @color__link--text;
+
+	.style--light & {
+	    color: @color--accent;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @color--accent;
+	}
+
+	&:hover {
+		font-weight: 700;
+		letter-spacing: 0.615px;
+		.transition (all, 0.1s, ease);
+		text-decoration: none;
+	}
+}
+
+// Preformatted and Code Text
+
+pre, code {
+	display: block;
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	border: none;
+	.border-radius(0);
+	background-color: darken(@color-swatch1, 10%);
+	overflow: auto;
+	.paragraph;
+	font-family: monospace;
+
+	.style--light & {
+		background-color: darken(@color--light, 10%);
+	}
+
+	.style--accent & {
+		background-color: lighten(@color--accent, 10%);
+	}
+
+	.style--dark & {
+		background-color: lighten(@color--dark, 10%);
+	}
+}
+
+code {
+	border-left: 1px solid @color-swatch5;
+
+	.style--light & {
+		border-color: @color--accent;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @color--accent;
+	}
+}
+
+// Blockquote
+
 blockquote {
 	padding: 30px;
 	word-break: break-word;
+
 	&:before {
 		content: open-quote !important;
 		left: -10px !important;
@@ -111,8 +206,25 @@ blockquote {
 	}
 }
 
-pre {
-	padding-bottom: 1em;
+// Legend
+
+legend {
+	text-transform: uppercase;
+	font-weight: 700;
+
+	.style--light & {
+	    color: @contrast--light;
+	}
+
+	.style--accent & {
+	    color: @contrast--accent;
+	}
+
+	.style--dark & {
+	    color: @contrast--dark;
+	}
+}
+
 	margin: 0;
 	line-height: 1.8em;
 	overflow: auto;
