@@ -73,7 +73,7 @@ h6, .contentgroup__h6 {
 	p, span, small, pre, code,
 	table, th, td,
 	&.content {
-		color: @font-swatch5-color;
+		color: @color__p--text;
 	
 		.style--light & {
 			color: @contrast--light;
@@ -156,7 +156,7 @@ pre, code {
 	padding: 0.5em 1em;
 	border: none;
 	.border-radius(0);
-	background-color: darken(@color-swatch1, 10%);
+	background-color: darken(@color__container--background, 10%);
 	overflow: auto;
 	.paragraph;
 	font-family: monospace;
@@ -175,7 +175,7 @@ pre, code {
 }
 
 code {
-	border-left: 1px solid @color-swatch5;
+	border-left: 1px solid @color__p--text;
 
 	.style--light & {
 		border-color: @color--accent;
