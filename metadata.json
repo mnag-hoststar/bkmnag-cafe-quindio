@@ -238,6 +238,7 @@
             "font__button--letter-spacing": "inherit"
         },
         "gallery": {
+			"color__image--background": "#ffffff",
             "color__gallery-title--text": "#ffffff",
             "color__gallery-description--text": "#ffffff",
             "color__gallery-caption--background": "fade(#000000, 40%)"

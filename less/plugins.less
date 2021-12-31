@@ -557,7 +557,7 @@ a.button.button--pagination.button--next {
     -o-background-size: contain;
     background-size: contain;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: @color__image--background;
 }
 
 .product-item-details {
@@ -762,24 +762,24 @@ a.button.button--pagination.button--next {
         font-size: @font__button--font-size;
         font-weight: @font__button--font-weight;
         background-color: transparent !important;
-        color: @color__button--text!important;
+        color: @color__button--text !important;
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
 
         .style--light & {
             border-color: @color--accent;
-            color: @contrast--light!important;
+            color: @contrast--light !important;
         }
 
         .style--accent & {
             border-color: @contrast--accent;
-            color: @contrast--accent!important;
+            color: @contrast--accent !important;
         }
 
         .style--dark & {
             border-color: @contrast--dark;
-            color: @contrast--dark!important;
+            color: @contrast--dark !important;
         }
 
         &:hover {
@@ -907,9 +907,21 @@ a.button.button--pagination.button--next {
         // The whole list of the basket.
 
         .basket-list {
-            border-top: 1px solid #e4e4e4;
-            border-bottom: 1px solid #e4e4e4;
             padding: 0;
+            border-top: 1px solid @color__button--text;
+            border-bottom: 1px solid @color__button--text;
+
+            .style--light & {
+                border-color: @color--accent;
+            }
+
+            .style--accent & {
+                border-color: @contrast--accent;
+            }
+
+            .style--dark & {
+                border-color: @contrast--dark;
+            }
         }
 
         // A single item on the list.
@@ -923,7 +935,19 @@ a.button.button--pagination.button--next {
                 display: table-cell;
                 padding: 25px 12px;
                 vertical-align: middle;
-                border-bottom: 1px solid #e4e4e4;
+                border-bottom: 1px solid @color__button--text;
+    
+                .style--light & {
+                    border-color: @color--accent;
+                }
+    
+                .style--accent & {
+                    border-color: @contrast--accent;
+                }
+    
+                .style--dark & {
+                    border-color: @contrast--dark;
+                }
             }
 
             &:last-child > * {
@@ -1021,9 +1045,21 @@ a.button.button--pagination.button--next {
         .basket-total {
             margin-bottom: 1em;
             padding: 25px 12px;
-            border-bottom: 1px solid #e4e4e4;
             background-color: @color-text--lightest;
             text-align: right;
+            border-bottom: 1px solid @color__button--text;
+
+            .style--light & {
+                border-color: @color--accent;
+            }
+
+            .style--accent & {
+                border-color: @contrast--accent;
+            }
+
+            .style--dark & {
+                border-color: @contrast--dark;
+            }
 
             @media @basketsummary-medium {
                 text-align: right;
