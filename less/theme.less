@@ -698,14 +698,15 @@ label {
 	padding: 0.6em 1em;
 }
 
+input,
 input[type=search],
 input[type=text],
 input[type=email],
-textarea,
-select,
 .contactform__input,
 .signupform__input,
 .blogsearch__input,
+textarea,
+select,
 input#search-term {
 	background-color: @color__form--background;
 	border: none;
@@ -755,6 +756,7 @@ textarea {
 	width: 100%;
 }
 
+input,
 input[type=search],
 input[type=text],
 input[type=email],
@@ -1222,6 +1224,42 @@ footer.bk-footer .widget.profile .form-group.profile__form-group.profile__form-g
 		min-width: 20%;
 		vertical-align: bottom;
 		margin-top: 21px;
+	}
+}
+
+// Registration Form
+
+.widget.userregistration {
+	fieldset {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		max-width: 400px;
+		
+		@media @mobile {
+			max-width: none;
+		}
+
+		.responsivecolumns & {
+			max-width: none;
+		}
+
+		input {
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.error {
+			padding: 20px 0 0;
+
+			&[style*="display: block"] {
+				padding: 20px 0;
+			}
+
+			&[style*="display: none"] {
+				display: block !important;
+			}
+		}
 	}
 }
 
