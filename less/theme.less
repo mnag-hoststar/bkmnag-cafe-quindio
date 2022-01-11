@@ -20,6 +20,51 @@
 @button-color: @color__button--background;
 @spare-color: @color-swatch7;
 
+// Font Mixins
+
+.make-font-a-little-smaller(@font-size, @size-mobile: 0.95) when (@font-size >= 13px) {
+	@media @mobile {
+		font-size: @font-size*@size-mobile;
+	}
+}
+
+.make-font-smaller(@font-size, @size-mobile: 0.9) when (@font-size >= 15px) {
+	@media @mobile {
+		font-size: @font-size*@size-mobile;
+	}
+}
+
+.make-font-a-lot-smaller(@font-size, @size-tablet: 0.9, @size-mobile: 0.8) when (@font-size >= 17px) {
+	@media @tablet {
+		font-size: @font-size*@size-tablet;
+	}
+	@media @mobile {
+		font-size: @font-size*@size-mobile;
+	}
+}
+
+.make-line-height-a-little-smaller(@line-height-size, @size-mobile: 0.95) when (@line-height-size >= 13px) {
+	@media @mobile {
+		line-height: @line-height-size*@size-mobile;
+	}
+}
+
+.make-line-height-smaller(@line-height-size, @size-mobile: 0.9) when (@line-height-size >= 15px) {
+	@media @mobile {
+		line-height: @line-height-size*@size-mobile;
+	}
+}
+
+.make-line-height-a-lot-smaller(@line-height-size, @size-tablet: 0.9, @size-mobile: 0.8) when (@line-height-size >= 17px) {
+	@media @tablet {
+		line-height: @line-height-size*@size-tablet;
+	}
+
+	@media @mobile {
+		line-height: @line-height-size*@size-mobile;
+	}
+}
+
 // Main
 
 body {
