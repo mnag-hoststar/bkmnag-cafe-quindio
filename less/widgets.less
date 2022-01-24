@@ -143,41 +143,104 @@ a.companyname__company-link {
 
 // Selected Class
 
-.extendednavigation li.selected > a {
-    text-decoration: none;
-    color: @color__navigation--text;
-
-    @media @tablet {
-        text-decoration: none;
-        color: @color__navigation--text;
-    }
-}
-
-.navigation-item {
+.widget.navigation,
+.widget.extendednavigation {
     position: relative;
 
-    &.folder {
-        .item-name {
-            padding-right: 1em;
-    
-            &:after {
-                position: absolute;
-            }
-        }
-        
-        .navigation-item--child a {
-            color: @color__navigation--text;
-
-            @media @tablet {
+    ul {
+        li {
+            &.selected > a {
+                text-decoration: none;
                 color: @color__navigation--text;
+            
+                @media @tablet {
+                    text-decoration: none;
+                    color: @color__navigation--text;
+                }
             }
+
+            &.folder {
+				&:after {
+					content: none;
+				}
+					
+                > .text {
+                    // Folder Arrow
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: 0.5em;
+                        border: 2px solid fade(@font-swatch6-color, 60%);
+                        border-top: transparent;
+                        border-left: transparent;
+                        transform: rotate(45deg);
+                        margin-top: -0.5em;
+                        width: 0.5em;
+                        height: 0.5em;
+                    }
+                
+                    &:hover:after {
+                        border-color: @font-swatch6-color-hover;
+                    }
+                }
+
+                .item-name {
+                    padding-right: 1em;
+            
+                    &:after {
+                        position: absolute;
+                    }
+                }
+                
+                .navigation-item--child a {
+                    color: @color__navigation--text;
+        
+                    @media @tablet {
+                        color: @color__navigation--text;
+                    }
+                }
+
+                &.selected .selected {
+                    color: @color__navigation--text;
+                    text-decoration: none;
+                }
+            }
+
+			> ul,
+			&:hover > ul {
+				z-index: 500;
+				display: none;
+				position: absolute;
+				right: 0;
+				left: auto;
+				width: auto;
+				min-width: 200px;
+				max-width: 400px;
+
+				@media @tablet {
+					display: none;
+					position: static;
+					width: 100%;
+					min-width: auto;
+					max-width: none;
+				}
+			}
+	
+            // Folder Open
+			
+			&.folder-open > ul,
+			&.folder-open:hover > ul {
+				display: block;
+
+				@media @tablet {
+					display: block;
+				}
+			}
         }
     }
-}
-    
-.extendednavigation__navigation-item.folder.selected .selected {
-    color: @color__navigation--text;
-    text-decoration: none;
 }
     
 // Burger Icon
