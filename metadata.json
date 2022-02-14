@@ -1,9 +1,9 @@
 {
 	"name": "Cafe Quindio",
-	"thumbnail": "thumbnail.png",
-	"screenshot": "screenshot.png",
+	"thumbnail": "images/thumbnail.png",
+	"screenshot": "images/screenshot.png",
 	"templateType": "standard",
-	"pageTypes":["home"],
+	"pageTypes": ["home"],
     "widgetVersion": 2,
     "versionTenCompatible": 1,
 	"tags": {
@@ -11,10 +11,10 @@
 	},
 	"images": [
 		"images/feature-bg.jpg",
-		"images/gallery/1.jpg",
-		"images/gallery/2.jpg",
-		"images/gallery/3.jpg",
-		"images/gallery/4.jpg"
+		"images/gallery/gallery-image--1.jpg",
+		"images/gallery/gallery-image--2.jpg",
+		"images/gallery/gallery-image--3.jpg",
+		"images/gallery/gallery-image--4.jpg"
 	],
 	"colorSwatches":
 	{

@@ -122,8 +122,9 @@ a.companyname__company-link {
     .item-name--parent:after {
         float: right;
         content: '';
-        background: image('/images/arrow-small-down.svg') no-repeat center center;
-        background-size: 70%;
+        background: no-repeat center center;
+        background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
+        background-size: 1.2em;
         color: transparent;
         min-width: 1em;
         height: @font__navigation--line-height;
@@ -454,7 +455,9 @@ a.companyname__company-link {
                 top: 50%;
                 right: 0;
                 content: '';
-    	        background: image('/images/arrow-small-down.svg') no-repeat center center;
+                background: no-repeat center center;
+                background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
+    	        background-size: 1.2em;
                 color: transparent;
                 margin-top: -(@font__navigation--line-height/2);
                 min-width: 1em;
@@ -1688,78 +1691,82 @@ button.ecombasket-remove-button.js-remove,
 .widget__socialicons,
 .widget__profile .profile__socialicons {
     margin: 40px 0px;
-}
 
-.socialicons__social {
-    &-list {
-        padding: 0px;
-    }
+    .socialicons__social {
+        &-list {
+            padding: 0px;
+        }
+        
+        &-item {
+            display: inline-block;
+            padding-bottom: 10px;
+        
+            &:hover {
+                background-color: transparent;
+                box-shadow: 0 2px 0 @color__socialicons--icon;
+                .transition (all, 0.2s, ease);
+        
+                .style--light & {
+                    box-shadow: 0 2px 0 @contast--light;
+                }
+        
+                .style--accent & {
+                    box-shadow: 0 2px 0 @contast--accent;
+                }
+        
+                .style--dark & {
+                    box-shadow: 0 2px 0 @contast--dark;
+                }
+            }
     
-    &-item {
-        display: inline-block;
-        padding-bottom: 10px;
-    
-        &:hover {
+            .icon:before {
+                font-size: 18px !important;
+            }
+        }
+        
+        &-link {
+            color: @color__socialicons--icon;
+            background-size: 32px;
             background-color: transparent;
-            box-shadow: 0 2px 0 @color__socialicons--icon;
-            .transition (all, 0.2s, ease);
-    
+            margin: 0 5px;
+            width: 35px;
+            height: 35px;
+        
+            @media @mobile {
+                margin: 0 2px;
+            }
+        
+            &:before {
+                font-size: 20px;
+            }
+        
+            &:hover {
+                font-weight: 300;
+            }
+        
             .style--light & {
-                box-shadow: 0 2px 0 @contast--light;
+                color: @contrast--light;
             }
-    
+        
             .style--accent & {
-                box-shadow: 0 2px 0 @contast--accent;
+                color: @contrast--accent;
             }
-    
+        
             .style--dark & {
-                box-shadow: 0 2px 0 @contast--dark;
+                color: @contrast--dark;
             }
         }
-    }
-    
-    &-link {
-        color: @color__socialicons--icon;
-        background-size: 32px;
-        background-color: transparent;
-        margin: 0 5px;
-        width: 35px;
-        height: 35px;
-    
-        @media @mobile {
-            margin: 0 2px;
+        
+        &-name {
+            display: none;
         }
-    
-        &:before {
-            font-size: 20px;
-        }
-    
-        &:hover {
-            font-weight: 300;
-        }
-    
-        .style--light & {
-            color: @contrast--light;
-        }
-    
-        .style--accent & {
-            color: @contrast--accent;
-        }
-    
-        .style--dark & {
-            color: @contrast--dark;
-        }
-    }
-    
-    &-name {
-        display: none;
     }
 }
 
 .widget__companyphone {
     .phone-number-link {
         padding-bottom: 10px;
-        letter-spacing: 1.15px!important;
+        letter-spacing: 1.15px !important;
         color: @color__link--text;
 
         &:hover {

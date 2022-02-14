@@ -12,8 +12,34 @@
 
 
 	<section class="bk-section">
-		{{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Go to Gallery","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-		{{widget('gallery', 'gallery1', {'albumRef':0,'showDescription': true,'showTitle': true,'images':[{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/1.jpg'), 'title':'Image  1',  'description': 'This is image 1'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/2.jpg'), 'title':'Image  2',  'description': 'This is image 2'},{'imageHeight':'667', 'imageWidth':'667', 'url':asset('/images/gallery/3.jpg'), 'title':'Image  3',  'description': 'This is image 3'},]})|raw}}
+		{{widget('feature', 'featurehome', {
+			"header": "profile",
+			"strapline":"profile",
+			"buttonText":"Go to Gallery",
+			"defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50', 'showBtn': true})|raw}}
+		{{widget('gallery', 'gallery1', {
+			'albumRef':0,
+			'showDescription': true,
+			'showTitle': true,
+			'images':[
+				{'imageHeight':'667',
+				'imageWidth':'667',
+				'url':asset('/images/gallery/gallery-image--1.jpg'),
+				'title':'Image  1',
+				'description': 'This is image 1'},
+
+				{'imageHeight':'667',
+				'imageWidth':'667',
+				'url':asset('/images/gallery/gallery-image--2.jpg'),
+				'title':'Image  2', 
+				'description': 'This is image 2'},
+
+				{'imageHeight':'667',
+				'imageWidth':'667',
+				'url':asset('/images/gallery/gallery-image--3.jpg'),
+				'title':'Image  3',
+				'description': 'This is image 3'},]}
+				)|raw}}
 	</section>
 
 
