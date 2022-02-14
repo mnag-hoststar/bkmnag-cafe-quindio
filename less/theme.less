@@ -695,6 +695,7 @@ span.expand.button.button--expand {
 label, .label {
 	font-size: @font__p--font-size !important;
     letter-spacing: @font__p--letter-spacing !important;
+	word-break: break-word;
 }
 
 .form-text--spacing() when not (@color__form--background = @color__container--background) {
@@ -801,15 +802,18 @@ input.js-email.email {
 
 .select-wrap {
 	position: relative;
-	max-width: 50%;
 
-	@media @tablet {
-		max-width: 100%;
-	}
+    .advancedcontactform & {
+        max-width: 50%;
 
-	.responsivecolumns & {
-		max-width: 100%;
-	}
+        @media @tablet {
+            max-width: 100%;
+        }
+    
+        .responsivecolumns & {
+            max-width: 100%;
+        }
+    }
 }
 
 select {
