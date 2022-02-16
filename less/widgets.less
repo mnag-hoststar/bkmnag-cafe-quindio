@@ -756,7 +756,7 @@ a.companyname__company-link {
         }
 
         .style--light & {
-            color: @contrast--light;
+            color: @color__image-title--text;
         }
 
         .style--accent & {
@@ -780,7 +780,7 @@ a.companyname__company-link {
         }
 
         .style--light & {
-            color: contrast(@color--light, lighten(@color--dark, 10%), lighten(@color--accent, 10%));
+            color: lighten(@color__image-description--text, 10%);
         }
 
         .style--accent & {
@@ -976,7 +976,7 @@ a.companyname__company-link {
     overflow: scroll;
 
     .style--light & {
-        border-color: @color--light;
+        border-color: @color__gallery-title--text;
     }
 
     .style--accent & {
@@ -1405,7 +1405,7 @@ a.companyname__company-link {
     
         &.selected .button {
             .style--light & {
-                background-color: @color--accent;
+                background-color: @color__slideshow-pagination-item--background-selected;
             }
         
             .style--accent & {
@@ -1454,7 +1454,7 @@ button.ecombasket-remove-button.js-remove,
     outline: none;
 
     .style--light & {
-        color: @color--accent;
+        color: @color__button--text;
     }
 
     .style--accent & {
@@ -1484,7 +1484,7 @@ button.ecombasket-remove-button.js-remove,
         transition: 0.3s ease;
 
         .style--light & {
-            border-color: @color--accent;
+            border-color: @color__button--text;
         }
 
         .style--accent & {
@@ -1515,7 +1515,7 @@ button.ecombasket-remove-button.js-remove,
         transition: 0.3s ease;
 
         .style--light & {
-            border-color: @color--accent;
+            border-color: @color__button--text;
         }
 
         .style--accent & {
@@ -1548,8 +1548,8 @@ button.ecombasket-remove-button.js-remove,
     letter-spacing: 1.15px!important;
 
     .style--light & {
-        border-color: @color--accent;
-        color: @contrast--light;
+        border-color: @color__button--text;
+        color: @color__button--text;
     }
 
     .style--accent & {
@@ -1576,7 +1576,7 @@ button.ecombasket-remove-button.js-remove,
         letter-spacing: 1px;
 
         .style--light & {
-            box-shadow: 0 1.5px 0 @contrast--light;
+            box-shadow: 0 1.5px 0 @color__button--text;
         }
 
         .style--accent & {
@@ -1593,7 +1593,7 @@ button.ecombasket-remove-button.js-remove,
 	color: @font-swatch7-color;
 
 	.style--light & {
-		color: @contrast--accent;
+		color: @font-swatch7-color;
 	}
 
 	.style--accent & {
@@ -1651,7 +1651,7 @@ button.ecombasket-remove-button.js-remove,
     word-break: break-word;
 
     .style--light & {
-        color: @contrast--light;
+        color: @color__form-label--text;
     }
 
     .style--accent & {
@@ -1711,7 +1711,7 @@ button.ecombasket-remove-button.js-remove,
                 .transition (all, 0.2s, ease);
         
                 .style--light & {
-                    box-shadow: 0 2px 0 @contast--light;
+                    box-shadow: 0 2px 0 @color__socialicons--icon;
                 }
         
                 .style--accent & {
@@ -1736,6 +1736,18 @@ button.ecombasket-remove-button.js-remove,
             width: 35px;
             height: 35px;
         
+            .style--light & {
+                color: @color__socialicons--icon;
+            }
+        
+            .style--accent & {
+                color: @contrast--accent;
+            }
+        
+            .style--dark & {
+                color: @contrast--dark;
+            }
+        
             @media @mobile {
                 margin: 0 2px;
             }
@@ -1746,18 +1758,6 @@ button.ecombasket-remove-button.js-remove,
         
             &:hover {
                 font-weight: 300;
-            }
-        
-            .style--light & {
-                color: @contrast--light;
-            }
-        
-            .style--accent & {
-                color: @contrast--accent;
-            }
-        
-            .style--dark & {
-                color: @contrast--dark;
             }
         }
         
@@ -1773,12 +1773,24 @@ button.ecombasket-remove-button.js-remove,
         letter-spacing: 1.15px !important;
         color: @color__link--text;
 
+        .style--light & {
+            color: @color__link--text;
+        }
+
+        .style--accent & {
+            color: @contrast--accent;
+        }
+
+        .style--dark & {
+            color: @contrast--dark;
+        }
+
         &:hover {
             box-shadow: 0 1.5px 0 @color__link--text;
             letter-spacing: 1px;
 
             .style--light & {
-                box-shadow: 0 1.5px 0 @contrast--light;
+                box-shadow: 0 1.5px 0 @color__link--text;
             }
 
             .style--accent & {
@@ -1788,18 +1800,6 @@ button.ecombasket-remove-button.js-remove,
             .style--dark & {
                 box-shadow: 0 1.5px 0 @contrast--dark;
             }
-        }
-
-        .style--light & {
-            color: @contrast--light;
-        }
-
-        .style--accent & {
-            color: @contrast--accent;
-        }
-
-        .style--dark & {
-            color: @contrast--dark;
         }
     }
 }
@@ -1822,7 +1822,7 @@ button.ecombasket-remove-button.js-remove,
         border: 1px solid @color__primary;
     
         .style--light & {
-            border-color: @contrast--light;
+            border-color: @color__primary;
         }
     
         .style--accent & {
@@ -1865,7 +1865,7 @@ button.ecombasket-remove-button.js-remove,
         }
     
         .style--light & {
-            color: @contrast--light;
+            color: @color__p--text;
         }
     
         .style--accent & {
@@ -1907,7 +1907,7 @@ hr.rule {
     height: 1px;
 
     .style--light & {
-        background-color: @contrast--light;
+        background-color: @color__primary;
     }
 
     .style--accent & {
@@ -1926,7 +1926,7 @@ hr.rule {
     margin-bottom: 40px;
 
     .style--light & {
-        border-color: @contrast--light;
+        border-color: @color__primary;
     }
 
     .style--accent & {
@@ -1972,7 +1972,7 @@ hr.rule {
     padding: 15px;
 
     .style--light & {
-        border-color: @contrast--light;
+        border-color: @color__primary;
     }
 
     .style--accent & {
@@ -2010,7 +2010,7 @@ hr.rule {
             }
         
             .style--light & {
-                color: @contrast--light;
+                color: @color__link--text;
             }
         
             .style--accent & {

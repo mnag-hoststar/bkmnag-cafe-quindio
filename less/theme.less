@@ -75,18 +75,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: geometricPrecision;
 	letter-spacing: .04em;
-
-	.style--light & {
-	    color: @contrast--light;
-	}
-
-	.style--accent & {
-	    color: @contrast--accent;
-	}
-
-	.style--dark & {
-	    color: @contrast--dark;
-	}
 }
 
 // Tyopgraphy
@@ -99,10 +87,6 @@ h5, .contentgroup__h5,
 h6, .contentgroup__h6 {
 	padding-bottom: 7px;
     word-break: break-word;
-
-	.style--light & {
-	    color: @contrast--light;
-	}
 
 	.style--accent & {
 	    color: @contrast--accent;
@@ -135,7 +119,7 @@ h6, .contentgroup__h6 {
 			color: @color__p--text;
 		
 			.style--light & {
-				color: @contrast--light;
+				color: @color__p--text;
 			}
 		
 			.style--accent & {
@@ -159,8 +143,10 @@ label,
 .label,
 blockquote,
 .contentgroup__body {
+	color: fade(@color__p--text, 80%);
+
 	.style--light & {
-	    color: fade(@contrast--light, 80%);
+	    color: fade(@color__p--text, 80%);
 	}
 
 	.style--accent & {
@@ -190,7 +176,7 @@ a {
 	color: @color__link--text;
 
 	.style--light & {
-	    color: @color--accent;
+	    color: @color__link--text;
 	}
 
 	.style--accent & {
@@ -222,7 +208,7 @@ pre, code {
 	font-family: monospace;
 
 	.style--light & {
-		background-color: fade(@contrast--light, 10%);
+		background-color: darken(@color__container--background, 10%);
 	}
 
 	.style--accent & {
@@ -238,7 +224,7 @@ code {
 	border-left: 1px solid @color__p--text;
 
 	.style--light & {
-		border-color: @contrast--light;
+		border-color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -324,9 +310,10 @@ blockquote {
 legend {
 	text-transform: uppercase;
 	font-weight: 700;
+	color: @color__p--text;
 
 	.style--light & {
-	    color: @contrast--light;
+	    color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -352,8 +339,8 @@ table {
 	color: @color__p--text;
 
 	.style--light & {
-		border-top-color: @contrast--light;
-		color: @contrast--light;
+		border-top-color: @color__p--text;
+		color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -386,8 +373,8 @@ th {
 	color: @color__h4--text;
 
 	.style--light & {
-		border-bottom-color: @contrast--light;
-		color: @contrast--light;
+		border-bottom-color: @color__p--text;
+		color: @color__h4--text;
 	}
 
 	.style--accent & {
@@ -419,7 +406,7 @@ td {
 	letter-spacing: @font__p--letter-spacing;
 
 	.style--light & {
-		border-bottom-color: fade(@contrast--light, 60%);
+		border-bottom-color: fade(@color__p--text, 60%);
 	}
 
 	.style--accent & {
@@ -458,7 +445,7 @@ td {
 			border-bottom: 1px solid fade(@color__p--text, 60%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: fade(@color__p--text, 60%);
 			}
 		
 			.style--accent & {
@@ -475,7 +462,7 @@ td {
 			border-bottom: 1px solid fade(@color__p--text, 60%);
 
 			.style--light & {
-				border-bottom-color: fade(@contrast--light, 60%);
+				border-bottom-color: fade(@color__p--text, 60%);
 			}
 		
 			.style--accent & {
@@ -493,7 +480,7 @@ tr:last-child td {
 	border-bottom: 1px solid @color__p--text;
 
 	.style--light & {
-		border-bottom-color: @contrast--light;
+		border-bottom-color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -517,7 +504,7 @@ tr:last-child td {
 			border-bottom: 1px solid @color__p--text;
 
 			.style--light & {
-				border-bottom-color: @contrast--light;
+				border-bottom-color: @color__p--text;
 			}
 		
 			.style--accent & {
@@ -533,7 +520,7 @@ tr:last-child td {
 			border-bottom: 1px solid @color__p--text;
 
 			.style--light & {
-				border-bottom-color: @contrast--light;
+				border-bottom-color: @color__p--text;
 			}
 		
 			.style--accent & {
@@ -657,27 +644,27 @@ span.expand.button.button--expand {
 	border-bottom: 1px solid @color__link--text;
 	letter-spacing: 1px;
 
+	.style--light & {
+		color: @color__link--text;
+		border-color: @color__link--text;
+	}
+
+	.style--accent & {
+		color: @contrast--accent;
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		color: @contrast--dark;
+		border-color: @contrast--dark;
+	}
+
 	&:hover {
 		letter-spacing: 1px!important;
 		border-bottom: 2px solid @color__link--text;
 		cursor: pointer;
 		background-color: transparent;
 		.transition (all, 0.2s, ease);
-	}
-
-	.style--light & {
-		border-color: @contrast--light;
-		color: @contrast--light;
-	}
-
-	.style--accent & {
-		border-color: @contrast--accent;
-		color: @contrast--accent;
-	}
-
-	.style--dark & {
-		border-color: @contrast--dark;
-		color: @contrast--dark;
 	}
 }
 
@@ -721,29 +708,38 @@ input#search-term {
 	box-shadow: none;
 	transition: all 0.3s;
 	.form-text--spacing();
-	
-	&:focus {
-		border-bottom: 2px solid @color__form--border;
-		box-shadow: none;
-		background-color: fade(@color__form--background, 20%);
-	}
 
 	.style--light & {
-		background-color: @color--light;
-		border-color: @contrast--light;
-		color: @contrast--light;
+		background-color: @color__form--background;
+		border-color: @color__form--border;
 	}
 
 	.style--accent & {
 		background-color: @color--accent;
 		border-color: @contrast--accent;
-		color: @contrast--accent;
 	}
 
 	.style--dark & {
 		background-color: @color--dark;
 		border-color: @contrast--dark;
-		color: @contrast--dark;
+	}
+	
+	&:focus {
+		border-bottom-width: 2px;
+		box-shadow: none;
+		background-color: fade(@color__form--background, 20%);
+
+		.style--light & {
+			border-color: fade(@color__form--background, 20%);
+		}
+	
+		.style--accent & {
+			border-color: fade(@contrast--accent, 20%);
+		}
+	
+		.style--dark & {
+			border-color: fade(@contrast--dark, 20%);
+		}
 	}
 
 	.style--background-image & {
@@ -817,10 +813,6 @@ input.js-email.email {
 }
 
 select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	-ms-appearance: none;
-	-o-appearance: none;
 	appearance: none;
 	border: none;
 	border-radius: 0;
@@ -845,13 +837,25 @@ select {
 	overflow: hidden;
 	text-overflow: ellipsis;
 
+	.style--light & {
+		border-color: @color__form--border;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @contrast--dark;
+	}
+
 	&:hover {
 		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-		background-color: transparent!important;
+		background-color: transparent !important;
 	}
 
 	&:focus {
-		background-color: transparent!important;
+		background-color: transparent !important;
 	}
 
 	& span {
@@ -862,30 +866,29 @@ select {
 		font-size: 10px;
 	}
 
-	.style--light & {
-		border-color: @contrast--light;
-		color: @contrast--light;
-	}
-
-	.style--accent & {
-		border-color: @contrast--accent;
-		color: @contrast--accent;
-	}
-
-	.style--dark & {
-		border-color: @contrast--dark;
-		color: @contrast--dark;
-	}
-
 	option {
 		background-color: @color__container--background;
 		color: @color__p--text;
+
+		.style--light & {
+			color: @color__p--text;
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 }
 
 .widget [class*="form"] label[for*="input--terms"] .form__link {
+	color: @color__p--text;
+
 	.style--light & {
-		color: @contrast--light;
+		color: @color__p--text;
 	}
 
 	.style--accent & {
@@ -952,18 +955,6 @@ select {
 			line-height: @font-swatch5-line-height;
 			letter-spacing: @font-swatch5-letter-spacing;
 		}
-
-		.style--light & {
-			color: @contrast--light;
-		}
-
-		.style--accent & {
-			color: @contrast--accent;
-		}
-
-		.style--dark & {
-			color: @contrast--dark;
-		}
 			
 		&:before,
 		&:after {
@@ -982,18 +973,6 @@ select {
 			width: floor(@font-swatch5-line-height*0.8);
 			background-color: @color-swatch1;
 			border: 1px solid @font-swatch7-background-color;
-
-			.style--light & {
-				border-color: @color--accent;
-			}
-
-			.style--accent & {
-				border-color: @color--dark;
-			}
-
-			.style--dark & {
-				border-color: @color--accent;
-			}
 		}
 
 		&:after {
@@ -1016,8 +995,8 @@ select {
 			transform: scale(50%);
 
 			.style--light & {
-				background-color: @color--accent;
-				border: 1px solid @color--accent;
+				background-color: @font-swatch7-background-color;
+				border: 1px solid @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1042,7 +1021,7 @@ select {
 			transform: scale(50%) rotate(45deg);
 
 			.style--light & {
-				box-shadow: -6px -6px 0 0 inset @color--accent;
+				box-shadow: -6px -6px 0 0 inset @font-swatch7-background-color;
 			}
 
 			.style--accent & {
@@ -1134,15 +1113,15 @@ select {
         box-sizing: border-box;
 
         .style--light & {
-			border-color: @contrast--light!important;
+			border-color: @primary-color !important;
 		}
 
 		.style--accent & {
-			border-color: @contrast--accent!important;
+			border-color: @contrast--accent !important;
 		}
 
 		.style--dark & {
-			border-color: @contrast--dark!important;
+			border-color: @contrast--dark !important;
 		}
     }
 
@@ -1165,9 +1144,9 @@ select {
         box-shadow: 0px 0px 0px 2px @color__primary;
 
         .style--light & {
-			background: @contrast--light;
-			border-color: @color--light !important;
-			box-shadow: 0px 0px 0px 2px @contrast--light;
+			background: @color__primary;
+			border-color: @color__form--background !important;
+			box-shadow: 0px 0px 0px 2px @color__primary;
 		}
 
 		.style--accent & {
@@ -1305,7 +1284,7 @@ select {
    color: @color-text--light;
 
     .style--light & {
-        color: @contrast--light;
+        color: @color-text--light;
     }
 
     .style--accent & {
@@ -1321,7 +1300,7 @@ select {
    color: @color-text--light;
 
    .style--light & {
-        color: @contrast--light;
+        color: @color-text--light;
     }
 
     .style--accent & {
@@ -1337,7 +1316,7 @@ select {
    color: @color-text--light;
 
    .style--light & {
-        color: @contrast--light;
+        color: @color-text--light;
     }
 
     .style--accent & {
@@ -1353,7 +1332,7 @@ select {
    color: @color-text--light;
 
    .style--light & {
-        color: @contrast--light;
+        color: @color-text--light;
     }
 
     .style--accent & {

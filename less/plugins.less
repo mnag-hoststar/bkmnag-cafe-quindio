@@ -63,8 +63,8 @@
     border-bottom: 1px solid @color__link--text;
 
     .style--light & {
-        border-color: @color--accent;
-        color: @contrast--light;
+        border-color: @color__link--text;
+        color: @color__link--text;
     }
 
     .style--accent & {
@@ -84,7 +84,7 @@
         .transition (all, 0.2s, ease);
 
         .style--light & {
-            box-shadow: 0 1.5px 0 @color--accent;
+            box-shadow: 0 1.5px 0 @color__link--text;
         }
 
         .style--accent & {
@@ -105,18 +105,6 @@
         float: right;
         padding: 14px 0px;
         letter-spacing: 0px;
-    
-        .style--light & {
-            color: @contrast--light;
-        }
-    
-        .style--accent & {
-            color: @contrast--accent;
-        }
-    
-        .style--dark & {
-            color: @contrast--dark;
-        }
     }
 }
 
@@ -151,17 +139,17 @@ a.button.button--pagination.button--next {
     box-sizing: border-box;
 
     .style--light & {
-        border-bottom: @color--accent;
-        color: @contrast--light;
+        border-bottom-color: @color__link--text;
+        color: @color__link--text;
     }
 
     .style--accent & {
-        border-bottom: @contrast--accent;
+        border-bottom-color: @contrast--accent;
         color: @contrast--accent;
     }
 
     .style--dark & {
-        border-bottom: @contrast--dark;
+        border-bottom-color: @contrast--dark;
         color: @contrast--dark;
     }
 
@@ -175,7 +163,7 @@ a.button.button--pagination.button--next {
         font-weight: 700;
 
         .style--light & {
-            box-shadow: 0 1.5px 0 @color--accent;
+            box-shadow: 0 1.5px 0 @color__link--text;
         }
 
         .style--accent & {
@@ -211,15 +199,15 @@ a.button.button--pagination.button--next {
     padding-bottom: 25px;
 
     .style--light & {
-        border-bottom: @color--accent;
+        border-bottom-color: @color__primary;
     }
 
     .style--accent & {
-        border-bottom: @contrast--accent;
+        border-bottom-color: @contrast--accent;
     }
 
     .style--dark & {
-        border-bottom: @contrast--dark;
+        border-bottom-color: @contrast--dark;
     }
 }
 
@@ -245,7 +233,7 @@ a.button.button--pagination.button--next {
         margin: 5px 0;
 
         .style--light & {
-            border-color: @color--accent;
+            border-color: @color__primary;
         }
 
         .style--accent & {
@@ -270,7 +258,7 @@ a.button.button--pagination.button--next {
     text-transform: uppercase;
 
     .style--light & {
-        border-color: @color--accent;
+        border-color: @color__primary;
     }
 
     .style--accent & {
@@ -291,7 +279,7 @@ a.button.button--pagination.button--next {
     color: @color__link--text;
 
     .style--light & {
-        color: @color--accent;
+        color: @color__link--text;
     }
 
     .style--accent & {
@@ -309,7 +297,7 @@ a.button.button--pagination.button--next {
         letter-spacing: 1px;
 
         .style--light & {
-            border-color: darken(@color--accent, 15%);
+            border-color: darken(@color__link--text, 15%);
         }
 
         .style--accent & {
@@ -555,7 +543,7 @@ a.button.button--pagination.button--next {
     padding-bottom: 25px;
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
+        border-color: @color__body--background;
     }
 
     .style--accent & {
@@ -576,7 +564,7 @@ a.button.button--pagination.button--next {
     margin-bottom: 5em;
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
+        border-color: darken(@color__body--background, 7%);
     }
 
     .style--accent & {
@@ -592,18 +580,18 @@ a.button.button--pagination.button--next {
         border: 1px solid @color__primary;
 
         .style--light & {
-            border-color: darken(@color--light, 25%);
-            color: @contrast--light;
+            color: @color__primary;
+            border-color: @color__primary;
         }
 
         .style--accent & {
-            border-color: lighten(@color--accent, 25%);
             color: @contrast--accent;
+            border-color: lighten(@color--accent, 25%);
         }
 
         .style--dark & {
-            border-color: lighten(@color--dark, 25%);
             color: @contrast--dark;
+            border-color: lighten(@color--dark, 25%);
         }
     }
 }
@@ -633,25 +621,25 @@ a.button.button--pagination.button--next {
     text-decoration: none;
 
     .style--light & {
-        border-color: darken(@color--light, 10%);
-        color: @contrast--light;
+        color: @color__button--text;
+        border-color: darken(@color__body--background, 7%);
     }
 
     .style--accent & {
-        border-color: lighten(@color--accent, 10%);
         color: @contrast--accent;
+        border-color: lighten(@color--accent, 10%);
     }
 
     .style--dark & {
-        border-color: lighten(@color--dark, 10%);
         color: @contrast--dark;
+        border-color: lighten(@color--dark, 10%);
     }
 
     &:hover {
         border: 1px solid @color__button--text--hover;
 
         .style--light & {
-            border-color: darken(@color--light, 25%);
+            border-color: @color__button--text--hover;
         }
 
         .style--accent & {
@@ -668,7 +656,7 @@ a.button.button--pagination.button--next {
         color: @color__button--text;
 
         .style--light & {
-            color: @contrast--light;
+            color: @color__button--text;
         }
 
         .style--accent & {
@@ -756,8 +744,8 @@ a.button.button--pagination.button--next {
         display: inline-block;
 
         .style--light & {
-            border-color: @color--accent;
-            color: @contrast--light !important;
+            border-color: @color__button--text;
+            color: @color__button--text !important;
         }
 
         .style--accent & {
@@ -776,7 +764,7 @@ a.button.button--pagination.button--next {
             box-shadow: 0 1.5px 0 @color__button--text;
 
             .style--light & {
-                box-shadow: 0 1.5px 0 @color--accent;
+                box-shadow: 0 1.5px 0 @color__button--text;
             }
 
             .style--accent & {
@@ -899,7 +887,7 @@ a.button.button--pagination.button--next {
             border-bottom: 1px solid @color__button--text;
 
             .style--light & {
-                border-color: @color--accent;
+                border-color: @color__button--text;
             }
 
             .style--accent & {
@@ -925,7 +913,7 @@ a.button.button--pagination.button--next {
                 border-bottom: 1px solid @color__button--text;
     
                 .style--light & {
-                    border-color: @color--accent;
+                    border-color: @color__button--text;
                 }
     
                 .style--accent & {
@@ -1048,7 +1036,7 @@ a.button.button--pagination.button--next {
             border-bottom: 1px solid @color__button--text;
 
             .style--light & {
-                border-color: @color--accent;
+                border-color: @color__button--text;
             }
 
             .style--accent & {
@@ -1202,7 +1190,7 @@ a.button.button--pagination.button--next {
         border-top: 1px solid @color__link--text;
 
         .style--light & {
-            border-color: @color--accent;
+            border-color: @color__link--text;
         }
 
         .style--accent & {
@@ -1268,7 +1256,7 @@ button.ecombasketsummary__quantity-plus {
     border-bottom: 1px solid @color__button--text;
 
     .style--light & {
-        border-color: @color--accent;
+        border-color: @color__button--text;
     }
 
     .style--accent & {
@@ -1285,7 +1273,7 @@ button.ecombasketsummary__quantity-plus {
         box-shadow: 0 1px 0 @color__button--text;
 
         .style--light & {
-            box-shadow: 0 1px 0 @color--accent;
+            box-shadow: 0 1px 0 @color__button--text;
         }
 
         .style--accent & {
