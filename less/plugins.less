@@ -55,46 +55,7 @@
 }
 
 .blogpostlist__read-more {
-    font-family: @font-swatch4-font-family;
-    font-size: 12px;
-    color: @color__link--text;
-    text-transform: uppercase;
-    padding: 12px;
-    border-bottom: 1px solid @color__link--text;
-
-    .style--light & {
-        border-color: @color__link--text;
-        color: @color__link--text;
-    }
-
-    .style--accent & {
-        border-color: @contrast--accent;
-        color: @contrast--accent;
-    }
-
-    .style--dark & {
-        border-color: @contrast--dark;
-        color: @contrast--dark;
-    }
-
-    &:hover {
-        letter-spacing: 1px !important;
-        box-shadow: 0 1.5px 0 @color__link--text;
-        cursor: pointer;
-        .transition (all, 0.2s, ease);
-
-        .style--light & {
-            box-shadow: 0 1.5px 0 @color__link--text;
-        }
-
-        .style--accent & {
-            box-shadow: 0 1.5px 0 @contrast--accent;
-        }
-
-        .style--dark & {
-            box-shadow: 0 1.5px 0 @contrast--dark;
-        }
-    }
+    margin-top: 20px;
 }
 
 // Blog List Footer
@@ -437,7 +398,7 @@ a.button.button--pagination.button--next {
         display: -ms-flex;
         display: flex;
         width: 100%;
-        margin: 20px -5px 0;
+        margin: 20px 0 0;
 
         @media @tablet {
             display: block;
@@ -462,10 +423,6 @@ a.button.button--pagination.button--next {
         .responsivecolumns & {
             display: block;
             width: 100%;
-        }
-
-        select {
-            background-size: 25px !important;
         }
     }
 }
@@ -726,63 +683,6 @@ a.button.button--pagination.button--next {
     }
 }
 
-.ecomproduct__product-actions {
-    display: inline;
-
-    button.button.icon.icon--add,
-    a.button.icon.icon--basket {
-        padding: 12px 35px;
-        margin: 0 0 10px;
-        border-bottom: 1px solid @color__button--text;
-        font-family: @font__button--font-family;
-        font-size: @font__button--font-size;
-        font-weight: @font__button--font-weight;
-        background-color: transparent !important;
-        color: @color__button--text !important;
-        text-decoration: none;
-        text-transform: uppercase;
-        display: inline-block;
-
-        .style--light & {
-            border-color: @color__button--text;
-            color: @color__button--text !important;
-        }
-
-        .style--accent & {
-            border-color: @contrast--accent;
-            color: @contrast--accent !important;
-        }
-
-        .style--dark & {
-            border-color: @contrast--dark;
-            color: @contrast--dark !important;
-        }
-
-        &:hover {
-            background-color: transparent !important;
-            cursor: pointer;
-            box-shadow: 0 1.5px 0 @color__button--text;
-
-            .style--light & {
-                box-shadow: 0 1.5px 0 @color__button--text;
-            }
-
-            .style--accent & {
-                box-shadow: 0 1.5px 0 @contrast--accent;
-            }
-
-            .style--dark & {
-                box-shadow: 0 1.5px 0 @contrast--dark;
-            }
-        }
-
-        &:before,
-        &:after {
-            display: none;
-        }
-    }
-}
-
 .ecomproduct__product-attributes {
     a.tag-link,
     a.category-link {
@@ -832,12 +732,6 @@ a.button.button--pagination.button--next {
     font-size: 0;
     .box-shadow(none);
 
-    &:hover {
-        cursor: pointer;
-        background-color: transparent !important;
-        box-shadow: 0 1.5px 0 @color__button--text;
-    }
-
     .item-count {
         font-family: @font__button--font-family;
         font-size: @font__button--font-size;
@@ -850,13 +744,29 @@ a.button.button--pagination.button--next {
         color: @color__button--text;
     }
 
+    &:before,
+    &:after {
+        content: none;
+    }
+
     &:before {
+        content: '\f07a';
+        font-family: 'FontAwesome';
         display: block !important;
         float: right;
         margin: 0;
         padding-right: 0.5em;
         font-size: @font__button--font-size;
         line-height: @font__button--line-height;
+        height: auto;
+        width: auto;
+        border: none;
+        position: static;
+    }
+
+    &:hover:before {
+        height: auto;
+        width: auto;
     }
 }
 
@@ -957,14 +867,6 @@ a.button.button--pagination.button--next {
             padding: 0;
             text-align: left;
             line-height: 1.2em;
-
-            .make-font-a-little-smaller(@font__p--font-size*0.8);
-            .make-font-smaller(@font__p--font-size*0.8);
-            .make-font-a-lot-smaller(@font__p--font-size*0.8);
-	
-            .make-line-height-a-little-smaller(@font__p--line-height*0.8);
-            .make-line-height-smaller(@font__p--line-height*0.8);
-            .make-line-height-a-lot-smaller(@font__p--line-height*0.8);
         }
 
         .basket-item-price {
@@ -987,31 +889,26 @@ a.button.button--pagination.button--next {
             border: none;
             font-size: @font__p--font-size;
             line-height: unit(@font__p--line-height*0.1, em);
-
-            .make-font-a-little-smaller(@font__p--font-size);
-            .make-font-smaller(@font__p--font-size);
-            .make-font-a-lot-smaller(@font__p--font-size);
-	
-            .make-line-height-a-little-smaller(@font__p--line-height);
-            .make-line-height-smaller(@font__p--line-height);
-            .make-line-height-a-lot-smaller(@font__p--line-height);
+            border: 2px solid !important;
 
             &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
+                content: '\2013';
                 margin-right: 0;
                 font-size: @font__p--font-size;
-                line-height: unit(@font__p--line-height*0.1, em) + 0.1;
+                line-height: calc((unit(@font__p--line-height*0.1, em) + 0.1) ~"- 2px");
                 width: unit(@font__p--line-height*0.1, em) + 0.1;
+                height: unit(@font__p--line-height*0.1, em) + 0.1;
+                border: none;
+                position: static;
+            }
+        
+            &:hover:before {
+                height: auto;
+                width: auto;
+            }
 
-                .make-font-a-little-smaller(@font__p--font-size);
-                .make-font-smaller(@font__p--font-size);
-                .make-font-a-lot-smaller(@font__p--font-size);
-	
-                .make-line-height-a-little-smaller(@font__p--line-height);
-                .make-line-height-smaller(@font__p--line-height);
-                .make-line-height-a-lot-smaller(@font__p--line-height);
+            &:after {
+                content: none;
             }
         }
 
@@ -1097,10 +994,12 @@ a.button.button--pagination.button--next {
 }
 
 .ecombasketsummary__quantity-field {
-    margin: 20px;
+    margin: 0 20px;
+    line-height: 30px;
 
     @media @tablet {
-        margin: 12px;
+        margin: 0 12px;
+        line-height: 30px;
     }
 }
 
@@ -1253,36 +1152,16 @@ button.ecombasketsummary__quantity-minus,
 button.ecombasketsummary__quantity-plus {
     font-weight: 300;
     font-size: 22px !important;
-    border-bottom: 1px solid @color__button--text;
+    border: 2px solid;
+    line-height: 28px;
 
-    .style--light & {
-        border-color: @color__button--text;
+    @media @mobile {
+        line-height: 23px;
     }
 
-    .style--accent & {
-        border-color: @contrast--accent;
-    }
-
-    .style--dark & {
-        border-color: @contrast--dark;
-    }
-
-    &:hover {
-        background-color: transparent;
-        font-weight: 700;
-        box-shadow: 0 1px 0 @color__button--text;
-
-        .style--light & {
-            box-shadow: 0 1px 0 @color__button--text;
-        }
-
-        .style--accent & {
-            box-shadow: 0 1px 0 @contrast--accent;
-        }
-
-        .style--dark & {
-            box-shadow: 0 1px 0 @contrast--dark;
-        }
+    &:before,
+    &:after {
+        content: none;
     }
 }
 

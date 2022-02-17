@@ -99,36 +99,34 @@ h6, .contentgroup__h6 {
 
 // Normal Text
 
-.widget.content,
-.widget.content.in-editing {
-	.wysihtml-editor-content,
-	.embed-content {
-		font-size: @font__p--font-size !important;
-		line-height: @font__p--font-size !important;
+.widget .content,
+.widget .content.in-editing,
+.widget .embed .embed-content {
+	font-size: @font__p--font-size !important;
+	line-height: @font__p--font-size !important;
 
-		.make-font-a-little-smaller(@font__p--font-size, ~"!important");
-		.make-font-smaller(@font__p--font-size, ~"!important");
-		.make-font-a-lot-smaller(@font__p--font-size, ~"!important");
-		
-		.make-line-height-a-little-smaller(@font__p--line-height, ~"!important");
-		.make-line-height-smaller(@font__p--line-height, ~"!important");
-		.make-line-height-a-lot-smaller(@font__p--line-height, ~"!important");
+	.make-font-a-little-smaller(@font__p--font-size, ~"!important");
+	.make-font-smaller(@font__p--font-size, ~"!important");
+	.make-font-a-lot-smaller(@font__p--font-size, ~"!important");
 	
-		&, p, span, small, pre, code,
-		table, th, td {
+	.make-line-height-a-little-smaller(@font__p--line-height, ~"!important");
+	.make-line-height-smaller(@font__p--line-height, ~"!important");
+	.make-line-height-a-lot-smaller(@font__p--line-height, ~"!important");
+
+	&, p, span, small, pre, code,
+	table, th, td {
+		color: @color__p--text;
+	
+		.style--light & {
 			color: @color__p--text;
-		
-			.style--light & {
-				color: @color__p--text;
-			}
-		
-			.style--accent & {
-				color: @contrast--accent;
-			}
-		
-			.style--dark & {
-				color: @contrast--dark;
-			}
+		}
+	
+		.style--accent & {
+			color: @contrast--accent;
+		}
+	
+		.style--dark & {
+			color: @contrast--dark;
 		}
 	}
 }
@@ -144,6 +142,8 @@ label,
 blockquote,
 .contentgroup__body {
 	color: fade(@color__p--text, 80%);
+	list-style: none;
+    word-break: break-word;
 
 	.style--light & {
 	    color: fade(@color__p--text, 80%);
@@ -206,6 +206,7 @@ pre, code {
 	background-color: darken(@color__container--background, 10%);
 	overflow: auto;
 	font-family: monospace;
+	font-size: 1em;
 
 	.style--light & {
 		background-color: darken(@color__container--background, 10%);
@@ -254,9 +255,14 @@ blockquote {
 
 // Unordered and Ordered List
 
-.widget.content,
-.blog-post-content,
-.ecom-product-long-description {
+ul, ol {
+    margin: 0;
+	padding: 0;
+}
+
+.widget .content,
+.blogpost__post-body,
+.ecomproduct__product-body {
 	ul {
 		margin: 0.5em 0 0.5em 2em;
 		padding-left: 0;
@@ -568,6 +574,7 @@ body.edit .widget.extendednavigation {
 .bk-footer {
 	border-top: 1px solid @color__footer--border;
 	background-color: @color__footer--background;
+	padding: 30px 0;
 
 	.widget__profile {
 		label {
@@ -699,29 +706,33 @@ input[type=email],
 textarea,
 select,
 input#search-term {
-	background-color: @color__form--background;
+	background-color: fade(@color__form--background, 10%);
 	border: none;
 	border-bottom: 1px solid @color__form--border;
 	height: 3rem;
 	font-size: 1rem;
-	padding: 0;
+	padding: 0 0.5em;
 	box-shadow: none;
 	transition: all 0.3s;
 	.form-text--spacing();
+	color: @color__p--text;
 
 	.style--light & {
-		background-color: @color__form--background;
+		background-color: fade(@color__form--background, 10%);
 		border-color: @color__form--border;
+		color: @color__p--text;
 	}
 
 	.style--accent & {
-		background-color: @color--accent;
+		background-color: fade(@contrast--accent, 10%);
 		border-color: @contrast--accent;
+		color: @contrast--accent;
 	}
 
 	.style--dark & {
-		background-color: @color--dark;
+		background-color: fade(@contrast--dark, 10%);
 		border-color: @contrast--dark;
+		color: @contrast--dark;
 	}
 	
 	&:focus {
@@ -754,6 +765,20 @@ textarea {
 	min-height: 150px;
 	margin-bottom: 20px;
 	width: 100%;
+	padding: 0.5em;
+	border: 1px solid @color__form--border;
+
+	.style--light & {
+		border-color: @color__form--border;
+	}
+
+	.style--accent & {
+		border-color: @contrast--accent;
+	}
+
+	.style--dark & {
+		border-color: @contrast--dark;
+	}
 }
 
 input,
@@ -812,7 +837,8 @@ input.js-email.email {
     }
 }
 
-select {
+select,
+.advancedcontactform__select {
 	appearance: none;
 	border: none;
 	border-radius: 0;
@@ -821,13 +847,13 @@ select {
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
-	border-bottom: 1px solid @color__form--border;
+	border: 1px solid @color__form--border;
 	outline: none;
 	height: 3rem;
 	line-height: 3rem;
 	font-size: 1rem;
 	margin: 0 0 15px 0;
-	padding: 0 30px 0 0;
+	padding: 0 2.4em 0 0.5em;
 	display: block;
 	background-image: url("data:image/svg+xml;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0IDI0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNCAyNCI+Cgk8cG9seWxpbmUgc3Ryb2tlPSIjNzY3ODgwIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjMiIHBvaW50cz0iMjAuMSw4LjYgMTIsMTYuNyAzLjksOC42IiAvPgo8L3N2Zz4=");
 	background-repeat: no-repeat;
@@ -849,13 +875,9 @@ select {
 		border-color: @contrast--dark;
 	}
 
-	&:hover {
-		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-		background-color: transparent !important;
-	}
-
+	&:hover,
 	&:focus {
-		background-color: transparent !important;
+		box-shadow: none;
 	}
 
 	& span {
@@ -1057,7 +1079,6 @@ select {
 
 	.select-wrap {
 		width: 100%;
-		margin: 0px auto;
 
 		&:hover {
 			background-color: transparent;
@@ -1138,6 +1159,7 @@ select {
     .form-group[class$="form-group--terms"] input[type="checkbox"]:checked + label:before {
         width: 13px !important;
         height: 13px !important;
+		min-height: 13px;
         outline: none;
         background: @color__primary;
         border: 2.5px solid @color__form--background !important;
@@ -1191,11 +1213,18 @@ select {
         color: @color__p--text;
         text-transform: none;
 		word-break: break-word;
-	}
 
-	.option-item>.label--checkbox,
-	.option-item>.label--radio {
-		bottom: 5px;
+        .style--light & {
+			color: @color__primary;
+		}
+
+		.style--accent & {
+			color: @contrast--accent;
+		}
+
+		.style--dark & {
+			color: @contrast--dark;
+		}
 	}
 
 	.option-item--radio,
