@@ -166,7 +166,7 @@ a.companyname__company-link {
 				}
 					
                 > .text {
-                    // Folder Arrow
+					word-break: break-word;
 
                     &:after {
                         content: '';
@@ -756,13 +756,10 @@ a.companyname__company-link {
 
     .image-title {
         margin: 10px 0 0;
-        color: @color__image-title--text;
         text-align: left;
         text-transform: uppercase;
         font-weight: 700;
-        &:hover {
-            color: lighten(@color__image-title--text, 10%);
-        }
+        color: @color__image-title--text;
 
         .style--light & {
             color: @color__image-title--text;
@@ -775,29 +772,57 @@ a.companyname__company-link {
         .style--dark & {
             color: @contrast--dark;
         }
+
+        &:hover {
+            color: @color__image-title--text;
+    
+            .style--light & {
+                color: @color__image-title--text;
+            }
+    
+            .style--accent & {
+                color: @contrast--accent;
+            }
+    
+            .style--dark & {
+                color: @contrast--dark;
+            }
+        }
     }
 
     .image-description {
         margin: 0 0 10px;
-        color: @color__image-description--text;
         text-align: left;
         letter-spacing: 0px;
-
-        &:hover {
-            color: lighten(@color__image-description--text, 10%);
-            letter-spacing: 0px;
-        }
+        color: @color__image-description--text;
 
         .style--light & {
-            color: lighten(@color__image-description--text, 10%);
+            color: @color__image-description--text;
         }
 
         .style--accent & {
-            color: contrast(@color--accent, lighten(@color--dark, 10%), lighten(@color--light, 10%));
+            color: fade(@contrast--accent, 80%);
         }
 
         .style--dark & {
-            color: contrast(@color--dark, lighten(@color--accent, 10%), lighten(@color--light, 10%));
+            color: fade(@contrast--dark, 80%);
+        }
+
+        &:hover {
+            letter-spacing: 0px;
+            color: @color__image-description--text;
+    
+            .style--light & {
+                color: @color__image-description--text;
+            }
+    
+            .style--accent & {
+                color: fade(@contrast--accent, 80%);
+            }
+    
+            .style--dark & {
+                color: fade(@contrast--dark, 80%);
+            }
         }
     }
 }
@@ -1116,15 +1141,15 @@ a.companyname__company-link {
         }
 
         @media @tablet-to-desktop {
-            min-height: 450px!important;
+            min-height: 450px !important;
         }
 
         @media @mobile-small-to-mobile {
-            min-height: 280px!important;
+            min-height: 280px !important;
         }
 
         @media @mobile {
-            min-height: 200px!important;
+            min-height: 200px !important;
         }
 
         .columns-two-left &,
