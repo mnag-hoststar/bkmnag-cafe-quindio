@@ -1929,13 +1929,6 @@ hr.rule {
             border-bottom: 1px solid @color__link--text;
             letter-spacing: 1px;
         
-            &:hover {
-                letter-spacing: 1px!important;
-                box-shadow: 0 1.5px 0 @color__link--text;
-                cursor: pointer;
-                .transition (all, 0.2s, ease);
-            }
-        
             .style--light & {
                 color: @color__link--text;
             }
@@ -1946,6 +1939,13 @@ hr.rule {
         
             .style--dark & {
                 color: @contrast--dark;
+            }
+        
+            &:hover {
+                letter-spacing: 1px!important;
+                box-shadow: 0 1.5px 0 @color__link--text;
+                cursor: pointer;
+                .transition (all, 0.2s, ease);
             }
         }
         
