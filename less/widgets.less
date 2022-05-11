@@ -229,6 +229,11 @@ a.companyname__company-link {
 					min-width: auto;
 					max-width: none;
 				}
+
+                a .text {
+                    overflow: visible;
+                    word-break: break-word;
+                }
 			}
 	
             // Folder Open
@@ -1407,11 +1412,13 @@ button.ecombasket-remove-button.js-remove,
     color: @color__button--text;
     position: relative;
     padding: 1em 3em;
+    height: auto !important;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+    text-align: center;
 
     .style--light & {
         color: @color__button--text;
