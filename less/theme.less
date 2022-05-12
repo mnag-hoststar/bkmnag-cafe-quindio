@@ -189,7 +189,6 @@ a {
 
 	&:hover {
 		font-weight: 700;
-		letter-spacing: 0.615px;
 		.transition (all, 0.1s, ease);
 		text-decoration: none;
 	}
@@ -714,7 +713,8 @@ input#search-term {
 	background-color: fade(@color__form--background, 10%);
 	border: none;
 	border-bottom: 1px solid @color__form--border;
-	height: 3rem;
+	min-height: 3rem;
+    height: auto !important;
 	font-size: 1rem;
 	padding: 0 0.5em;
 	box-shadow: none;
@@ -972,6 +972,7 @@ select,
 		padding-left: 2em;
 		margin-bottom: 0;
 		line-height: floor(@font-swatch5-line-height*0.8+2);
+		min-height: floor(@font-swatch5-line-height*0.8+2);;
 		font-size: @font-swatch5-font-size;
 		word-break: break-word;
 		text-align: left;
@@ -991,7 +992,7 @@ select,
 			display: block;
 			content: ' ';
 			position: absolute;
-			top: 0;
+			top: ceil(@font-swatch5-line-height*1.2);
 			left: 0;
 		}
 
@@ -1118,7 +1119,7 @@ select,
     .form-group[class$="form-group--terms"] label {
         display: block;
         position: relative;
-        margin-left: 2em;
+        margin-left: 0;
     }
 
 	input[type="radio"] + label:before,
@@ -1134,9 +1135,9 @@ select,
         position: absolute;
         outline: none;
         border-radius: 0;
-        border: 2px solid @primary-color;
+        border: 1px solid @primary-color;
         top: @font__p--line-height/2;
-        left: -2em;
+        left: 0;
         box-sizing: border-box;
 
         .style--light & {
@@ -1166,6 +1167,7 @@ select,
         width: 13px !important;
         height: 13px !important;
 		min-height: 13px;
+		min-width: 13px;
         outline: none;
         background: @color__primary;
         border: 2.5px solid @color__form--background !important;

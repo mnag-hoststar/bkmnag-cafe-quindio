@@ -1,7 +1,6 @@
 <!doctype html>
 
 <html class="no-js" lang="{{ page.seoLang }}">
-
 	<head>
 		<meta charset="utf-8" />
 		<title>{{ page.title }}</title>
@@ -21,7 +20,8 @@
 	</head>
 
 	<body class="{{ page.backgroundClass }}" {{ isV10sSite ? 'id="migrated"' : '' }}>
-		{% block content %} {% endblock %} {% include basekit.bodyScript %}
+		{% block content %} {% endblock %}
+		{% include basekit.bodyScript %}
 		<script type="text/javascript">
 			! function () {
 				function supportsSVG() {
@@ -30,5 +30,7 @@
 				if (supportsSVG()) document.documentElement.className += ' svg'
 			}();
 		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   		<script src="{{asset('js/navigation.js')}}"></script>
 	</body>
 </html>
