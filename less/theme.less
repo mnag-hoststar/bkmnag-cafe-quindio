@@ -17,7 +17,6 @@
 
 @bg-color: @color__body--background;
 @color__primary: @color__secondary;
-@button-color: @color__button--background;
 @spare-color: @color-swatch7;
 
 // Font Mixins
@@ -746,15 +745,15 @@ input#search-term {
 		background-color: fade(@color__form--background, 20%);
 
 		.style--light & {
-			border-color: fade(@color__form--background, 20%);
+			background-color: fade(@color__form--background, 20%);
 		}
 	
 		.style--accent & {
-			border-color: fade(@contrast--accent, 20%);
+			background-color: fade(@contrast--accent, 20%);
 		}
 	
 		.style--dark & {
-			border-color: fade(@contrast--dark, 20%);
+			background-color: fade(@contrast--dark, 20%);
 		}
 	}
 
