@@ -1363,11 +1363,16 @@ button.ecombasket-remove-button.js-remove,
 .button--submit.ecomproductslist__button,
 .continue-shopping.button,
 .contentgroup__link {
-    background-color: transparent;
     display: inline-block;
+    background-color: @color__button--background;
+    font-family: @font__button--font-family;
+    font-weight: @font__button--font-weight;
+    font-size: @font__button--font-size;
+    line-height: @font__button--line-height;
+    letter-spacing: @font__button--letter-spacing;
     color: @color__button--text;
     position: relative;
-    padding: 1em 3em;
+    padding: 9px 3em;
     height: auto;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
@@ -1393,18 +1398,36 @@ button.ecombasket-remove-button.js-remove,
         padding: 0.5em 1.5em;
     }
 
-    &:before {
+    &:hover,
+    &:focus {
+        outline: none;
+        color: @color__button--text--hover;
+        background-color: @color__button--background--hover;
+
+        .style--light & {
+            color: @color__button--text--hover;
+        }
+    
+        .style--accent & {
+            color: darken(@contrast--accent, 5%);
+        }
+    
+        .style--dark &,
+        .style--background-image & {
+            color: darken(@contrast--dark, 5%);
+        }
+    }
+
+    &:before,
+    &:after {
         content: '';
         display: block;
         height: 1em;
         width: 1em;
-        border-bottom: 2px solid @color__button--text;
-        border-left: 2px solid @color__button--text;
         position: absolute;
-        left: 0;
-        bottom: 0;
         -webkit-transition: 0.3s ease;
         transition: 0.3s ease;
+        border-color: @color__button--text;
 
         .style--light & {
             border-color: @color__button--text;
@@ -1420,40 +1443,41 @@ button.ecombasket-remove-button.js-remove,
         }
     }
 
-    &:focus {
-        outline: none;
+    &:before {
+        border-bottom: 2px solid;
+        border-left: 2px solid;
+        left: 0;
+        bottom: 0;
     }
 
     &:after {
-        content: '';
-        display: block;
-        height: 1em;
-        width: 1em;
-        border-top: 2px solid @color__button--text;
-        border-right: 2px solid @color__button--text;
-        position: absolute;
+        border-top: 2px solid;
+        border-right: 2px solid;
         right: 0;
         top: 0;
-        -webkit-transition: 0.3s ease;
-        transition: 0.3s ease;
-
-        .style--light & {
-            border-color: @color__button--text;
-        }
-
-        .style--accent & {
-            border-color: @contrast--accent;
-        }
-
-        .style--dark & {
-            border-color: @contrast--dark;
-        }
     }
 
     &:hover:before,
-    &:hover:after {
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
         width: 100%;
         height: 100%;
+        
+        color: @color__button--text--hover;
+
+        .style--light & {
+            color: @color__button--text--hover;
+        }
+    
+        .style--accent & {
+            color: darken(@contrast--accent, 5%);
+        }
+    
+        .style--dark &,
+        .style--background-image & {
+            color: darken(@contrast--dark, 5%);
+        }
     }
 }
 

@@ -231,10 +231,10 @@
             "color__button--background--hover": "transparent",
             "font__button--font-family": "@font-swatch7-font-family",
             "color__button--text": "@color__primary",
-            "color__button--text--hover": "@color__secondary",
+            "color__button--text--hover": "darken(@color__primary, 5%)",
             "font__button--font-size": "14px",
             "font__button--font-weight": "700",
-            "font__button--line-height": "32px",
+            "font__button--line-height": "22px",
             "font__button--letter-spacing": "inherit"
         },
         "gallery": {
@@ -266,7 +266,6 @@
             "font__feature-headline--line-height": "70px",
             "color__feature-headline--text": "#ffffff",
             "font__feature-headline--letter-spacing": "inherit",
-
             "font__feature-strapline--font-family": "@font-swatch9-font-family",
             "font__feature-strapline--font-size": "16px",
             "font__feature-strapline--font-weight": "600",
