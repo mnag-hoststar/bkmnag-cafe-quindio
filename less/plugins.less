@@ -452,11 +452,13 @@ a.button.button--pagination.button--next {
         @media @tablet {
             display: block;
             width: 100%;
+            padding: 0;
         }
 
         .responsivecolumns & {
             display: block;
             width: 100%;
+            padding: 0;
         }
     }
 }
@@ -665,14 +667,12 @@ a.button.button--pagination.button--next {
 .ecomproduct__product-images {
     width: 50%;
     float: left;
-    margin-right: 40px;
-
-    @media @tablet {
-        width: 40% !important;
-    }
+    margin-right: 5%;
 
     @media @mobile {
         width: 100% !important;
+        float: none;
+        margin-right: 0;
     }
 }
 
@@ -698,12 +698,8 @@ a.button.button--pagination.button--next {
 }
 
 .ecomproduct__product-content {
-    width: 41%;
+    width: 45%;
     display: inline-block;
-
-    @media @tablet {
-        width: 44% !important;
-    }
 
     @media @mobile {
         width: 100% !important;

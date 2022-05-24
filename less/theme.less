@@ -338,6 +338,7 @@ legend {
 table {
 	overflow: auto;
 	min-width: 100%;
+	max-width: 100%;
 	border: none;
 	border-collapse: separate;
 	border-spacing: 0;
@@ -690,6 +691,7 @@ span.expand.button.button--expand {
 	width: 100%;
 	position: relative;
 	margin-top: 1rem;
+	margin-bottom: 0;
 }
 
 label, .label {
@@ -712,18 +714,20 @@ input[type="password"],
 .blogsearch__input,
 textarea,
 select,
+.advancedcontactform__select,
 input#search-term {
 	background-color: fade(@color__form--background, 10%);
 	border: none;
 	border-bottom: 1px solid @color__form--border;
-	min-height: 3rem;
     height: auto !important;
-	font-size: 1rem;
 	padding: 0 0.5em;
 	box-shadow: none;
+	line-height: 40px;
+	font-size: 1rem;
 	transition: all 0.3s;
 	.form-text--spacing();
 	color: @color__p--text;
+	min-height: 40px;
 
 	.style--light & {
 		background-color: fade(@color__form--background, 10%);
@@ -857,7 +861,6 @@ select,
 	border: none;
 	border: 1px solid @color__form--border;
 	outline: none;
-	height: 3rem;
 	line-height: 3rem;
 	font-size: 1rem;
 	margin: 0 0 15px 0;
