@@ -33,7 +33,11 @@
 a.companyname__company-link {
     display: inline-block;
     padding: 0.65em 0 0.8em;
-    letter-spacing: 1px;
+    font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
     color: @color__companyname--text;
     width: 100%;
 
@@ -630,10 +634,14 @@ a.companyname__company-link {
     }
         
     // Feature Content
-    
+
     h2.headline {
+        font-family: @font__feature-headline--font-family;
+        font-size: @font__feature-headline--font-size;
+        font-weight: @font__feature-headline--font-weight;
+        letter-spacing: @font__feature-headline--letter-spacing;
+        color: @color__feature-headline--text;
         text-shadow: 1px 1px 10px #000000;
-        letter-spacing: 0px;
         padding-bottom: 25px;
     
         @media @tablet {
@@ -650,6 +658,11 @@ a.companyname__company-link {
     }
     
     h3.strapline {
+        font-family: @font__feature-strapline--font-family;
+        font-size: @font__feature-strapline--font-size;
+        font-weight: @font__feature-strapline--font-weight;
+        line-height: @font__feature-strapline--line-height;
+        letter-spacing: @font__feature-strapline--letter-spacing;
         color: @color__feature-strapline--text;
         text-transform: uppercase;
         text-shadow: 1px 1px 10px #000000;
