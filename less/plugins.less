@@ -462,14 +462,8 @@ a.button.button--pagination.button--next {
 
 .fieldset--filters {
     .ecomproductslist__form-body {
-        display: table;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: -ms-flex;
         display: flex;
-        width: 100%;
-        margin: 20px 0 0;
+        margin: 20px -5px 0;
 
         @media @tablet {
             display: block;
@@ -481,8 +475,8 @@ a.button.button--pagination.button--next {
     }
     
     .form-group {
-        display: table-cell;
-        width: 33.3%;
+        flex-grow: 1;
+        width: 100%/3;
         margin: 0;
         padding: 0 5px;
 
