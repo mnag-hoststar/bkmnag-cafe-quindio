@@ -472,6 +472,10 @@ a.button.button--pagination.button--next {
         .responsivecolumns & {
             display: block;
         }
+
+        @media @mobile {
+            margin: 20px 0 0;
+        }
     }
     
     .form-group {
@@ -635,19 +639,6 @@ a.button.button--pagination.button--next {
             color: @contrast--dark;
             border-color: lighten(@color--dark, 25%);
         }
-    }
-}
-
-.ecomproductslist__button--clear {
-    background-color: transparent;
-    color: @color__button--text;
-    text-transform: uppercase;
-    border-bottom: 1px solid @color__button--text;
-
-    &:hover {
-        box-shadow: 0 1.5px 0 @color__button--text;
-        background-color: transparent;
-        .transition (all, 0.1s, ease);
     }
 }
 
