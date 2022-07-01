@@ -796,6 +796,59 @@ a.button.button--pagination.button--next {
     }
 }
 
+// Pagination
+
+.listing-pagination {
+    .pagination-list {
+        margin-left: 0;
+
+        .pagination-item {
+            margin: 0.25em;
+            padding: 0;
+
+            .responsivecolumns & {
+                margin: 0.25em 0.1em;
+            }
+
+            @media @mobile {
+                margin: 0.25em 0.1em;
+            }
+
+            &, &:hover {
+                border: none;
+                background: none;
+            }
+
+            a.button {
+                padding: 0;
+                width: 32px;
+                height: 32px;
+                letter-spacing: 0;
+                line-height: 30px;
+                font-size: 14px;
+                border: 1px solid fade(@color__p--text, 40%);
+                color: @color__p--text;
+                
+                &:hover {
+                    background-color: fade(@color__p--text, 10%);
+                    border-color: fade(@color__p--text, 40%);
+                    color: @color__p--text;
+                }
+
+                &:before,
+                &:after {
+                    content: none;
+                }
+            }
+
+            &.current a.button {
+                background-color: fade(@color__p--text, 20%);
+                border-color: @color__p--text;
+            }
+        }
+    }
+}
+
 // Basket
 
 .ecombasket {
