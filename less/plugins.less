@@ -271,14 +271,15 @@ a.button.button--pagination.button--next {
 }
 
 .blogpost__post-attributes {
-    display: inline;
+    display: block;
+    margin-bottom: 4em;
 }
 
 .blogpost__post-category,
 .blogpost__post-tags {
     display: inline;
     border-right: 1px solid @color__primary;
-    padding: 0px 20px;
+    padding: 0;
     text-transform: uppercase;
 
     .style--light & {
@@ -296,10 +297,13 @@ a.button.button--pagination.button--next {
 
 .blogpost__tag-link,
 .blogpost__category-link {
+    display: inline-block;
+    word-break: break-word;
+    line-height: 1.4em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0px 5px;
+    margin: 0 0.5em 0 0;
     color: @color__link--text;
 
     .style--light & {
@@ -334,6 +338,12 @@ a.button.button--pagination.button--next {
     }
 }
 
+.blogpost__category-title,
+.blogpost__tags-title {
+    padding: 0 0.5em 0 1em;
+    font-weight: bold;
+}
+
 // Social Sharing Icon Group
 
 .blogpost__sharing-links {
@@ -350,7 +360,6 @@ a.button.button--pagination.button--next {
     button.button.icon.icon--googleplus {
         width: auto;
         display: inline-block;
-        height: 35px;
         background-color: transparent;
         color: @color__socialicons--icon;
         font-size: 12px;
@@ -362,13 +371,11 @@ a.button.button--pagination.button--next {
         }
 
         &:hover {
-            box-shadow: 0 1.5px 0 @color__socialicons--icon;
             .transition (all, 0.1s, ease);
             outline: none;
         }
 
         &:active {
-            box-shadow: 0 1.5px 0 @color__socialicons--icon;
             .transition (all, 0.1s, ease);
             outline: none;
         }
