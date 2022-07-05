@@ -763,10 +763,12 @@ a.button.button--pagination.button--next {
 .ecomproduct__product-attributes {
     a.tag-link,
     a.category-link {
+        display: inline-block;
+        word-break: break-word;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        margin: 0px 5px;
+        margin: 0 0.5em 0 0;
         text-transform: uppercase;
 
         &:hover {
@@ -801,6 +803,13 @@ a.button.button--pagination.button--next {
             width: 100% !important;
         }
     }
+}
+
+.ecomproduct__product-attribute-title,
+.ecomproduct__tags-title {
+    padding: 0 0.5em 0 0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 // Pagination
