@@ -618,6 +618,7 @@ a.companyname__company-link {
         height: 500px;
         width: 100%;
         display: table;
+        margin-bottom: 5px;
     
         @media @tablet {
             height: 350px;
@@ -811,12 +812,8 @@ a.companyname__company-link {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 15px 0;
+    margin: 0 -5px;
+    padding: 0;
 }
 
 // Gallery Item
@@ -824,27 +821,34 @@ a.companyname__company-link {
 .widget__gallery {
     .gallery-item {
         position: relative;
-        width: 32.5%;
-        margin-bottom: 15px;
+        width: 100%/3;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        padding: 5px;
 
         @media @tablet-small {
             width: 100%;
-            margin: 0 auto 20px;
         }
 
         @media @tablet {
-            width: 32.5%;
+            width: 100%/3;
         }
 
         @media @mobile {
             width: 100%
         }
 
-        .responsivecolumns & {
-            width: 100%
+        .responsivecolumns [class*="columns-three"] & {
+            width: 50%;
+    
+            @media @tablet {
+                width: 100%;
+            }
+        }
+
+        .responsivecolumns [class*="columns-four"] & {
+            width: 100%;
         }
         
         &:hover figcaption {
@@ -960,10 +964,30 @@ a.companyname__company-link {
 
 .gallery__caption {
     display: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: auto;
+    height: auto;
     margin: 0;
-    padding: 10px;
+    padding: 25px;
     background-color: @color__gallery-caption--background;
     border: 1px solid @color__gallery-title--text;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    overflow: hidden;
+
+    @media @tablet-to-desktop-small {
+        padding: 9px 15px;
+    }
 
     .style--light & {
         border-color: @color__gallery-title--text;
@@ -995,10 +1019,6 @@ a.companyname__company-link {
         &:hover {
             text-decoration: none;
         }
-    
-        .responsivecolumns & {
-            display: none;
-        }
     }
 }
 
@@ -1007,27 +1027,9 @@ a.companyname__company-link {
 .gallery__figure {
     &:hover {
         .gallery__caption {
-            text-align: center;
-            position: absolute;
-            top: 0;
             display: block;
-            width: 100%;
-            height: 100%;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-content: stretch;
-            align-items: center;
-            opacity: 0;
             transition: all 0.2s ease-in-out;
-            overflow: hidden;
             z-index: 9999;
-
-            @media @tablet-to-desktop-small {
-                padding: 9px 15px;
-            }
             
             &:hover {
                 opacity: 1;
